@@ -12,36 +12,33 @@ Here are some key characteristics and uses of JavaScript:
 5.	Cross-Browser Compatibility: JavaScript is supported by all major web browsers (such as Chrome, Firefox, Safari, and Edge), making it a universal language for web development.
 6.	Integration with HTML and CSS: JavaScript seamlessly integrates with HTML and CSS to manipulate the structure and style of web pages dynamically.
 7.	Node.js: While JavaScript is traditionally associated with front-end development, Node.js allows developers to use JavaScript on the server side as well. This enables full-stack JavaScript development, making it possible to use a single programming language for both the client and server.JavaScript is an essential skill for web developers, and it has
+_________________________________________________________________________________________________________________________________________________________________________________________
 
-
-
-js is static or dynamic
+**js is static or dynamic**
 
 JavaScript (JS) is a dynamic programming language. It is often referred to as a "dynamic" language because it allows for runtime changes, such as modifying the structure of objects or adding and removing properties.
 In contrast, static languages, like C or Java, require variable types to be declared and checked at compile-time, and their structure is more rigid once the code is compiled.
 JavaScript is commonly used for building dynamic web applications, where it can be executed in web browsers to create interactive and responsive user interfaces. Its dynamic nature allows developers to write flexible and adaptable code during runtime.
+_______________________________________________________________________________________________________________________________________________________________________________________
 
-
-
-js is synchronous or asynchronous
+**js is synchronous or asynchronous**
 JavaScript (JS) is inherently a single-threaded language, meaning it executes one operation at a time in a single sequence. However, JavaScript also supports asynchronous programming through features like callbacks, Promises, and async/await.
 Asynchronous programming allows certain operations, such as fetching data from a server or reading from a file, to be performed without blocking the main execution thread. Instead of waiting for the operation to complete, the program can continue with other tasks, and a callback function or a Promise resolution handles the result of the asynchronous operation when it's ready.
 So, while JavaScript has a synchronous execution model, it provides mechanisms for handling asynchronous tasks to ensure better responsiveness in web applications, especially when dealing with operations that might take time, such as network requests.
 
+________________________________________________________________________________________________________________________________________________________________________________________
 
-
-WHAT IS JAVASCRIPT IS SINGLE THREAD OR MULTI THREAD
+**WHAT IS JAVASCRIPT IS SINGLE THREAD OR MULTI THREAD**
 JavaScript is inherently a single-threaded language, meaning it executes code in a single sequence or thread of execution. This single-threaded nature is due to the fact that JavaScript was originally designed to run in web browsers, where it is used to manipulate the Document Object Model (DOM), handle events, and interact with the user interface.
 The single-threaded model ensures that JavaScript code does not create conflicts or race conditions when modifying the DOM. However, this can sometimes lead to performance issues, especially when dealing with tasks that may take a significant amount of time, such as network requests or complex computations. Long-running tasks can cause the user interface to become unresponsbive.
 To address this limitation, modern JavaScript environments provide mechanisms for asynchronous programming. Callbacks, Promises, and the async/await syntax are examples of features introduced to handle asynchronous operations effectively. These mechanisms allow JavaScript to delegate time-consuming tasks to other threads (e.g., web workers in the browser or worker threads in Node.js) while keeping the main thread available for handling user interactions and maintaining a responsive user interface.
 It's important to note that while JavaScript itself is single-threaded, web browsers and server-side environments can use additional threads for certain tasks to improve overall performance and responsiveness. For example, web browsers may use separate threads for rendering, handling network requests, and executing JavaScript. This multi-threading is typically managed by the underlying runtime environment and is transparent to the JavaScript developer.
 
 
+____________________________________________________________________________________________________________________________________________________________________________
 
 
-
-
-primitive and non primitive data type in js
+**primitive and non primitive data type in js**
 In JavaScript, data types can be broadly categorized into two main groups: primitive types and non-primitive types (also known as reference types). Here's an explanation of each:
 Primitive Types:
 1.	String:
@@ -87,7 +84,7 @@ The main difference between primitive and non-primitive types is that primitive 
 
 
 -------------------------------------------------------------------------
-primitive and non primitive data type in js difference
+**primitive and non primitive data type in js difference**
 The primary differences between primitive and non-primitive (reference) data types in JavaScript lie in their nature, behavior, and how they are stored and accessed. Here's a summary of the key distinctions:
 Primitive Data Types:
 1.	Immutability:
@@ -123,10 +120,8 @@ Usage:
 
 
 
-
-
-
-VAR
+____________________________________________________________________________________________________________________________________________________________________
+**VAR**
 var, let, and const are all keywords used for variable declaration in JavaScript, but they have some key differences in terms of scope, hoisting, and reassignment. Here's an explanation of each:
 1.	var:
 •	Variables declared with var are function-scoped, meaning their scope is limited to the function in which they are declared.
@@ -141,7 +136,7 @@ function exampleVar() {
   console.log(x);  // Outputs 10
 }
 
-let:
+**let:**
 •	Variables declared with let have block scope, meaning their scope is limited to the block (statements enclosed in {}) in which they are declared.
 •	let variables are also hoisted, but they are not initialized until the actual declaration is encountered during runtime.
 •	let allows reassignment, but not redeclaration in the same scope.
@@ -155,7 +150,7 @@ function exampleLet() {
 •	}
 
  
-const:
+**const:**
 •	Variables declared with const are block-scoped like 
 •	const variables must be assigned a value during declaration, and once assigned, their value cannot be changed or reassigned.
 •	const does not allow redeclaration or reassignment.
@@ -167,25 +162,9 @@ function exampleConst() {
   // const z = 40;  // Error: Identifier 'z' has already been declared
 }
 
+__________________________________________________________________________________________________________________________________________________
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-JavaScript Functions 
+**JavaScript Functions **
 Functions are a fundamental concept in JavaScript, and they play a crucial role in structuring and organizing code. Here's an overview of JavaScript functions:
 
 Function Declaration:

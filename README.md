@@ -1,7 +1,7 @@
 # javascript_interview_thory
 
 
-WHAT IS JAVASCRIPT
+**WHAT IS JAVASCRIPT**
 
 JavaScript is a high-level, interpreted programming language primarily used for creating interactive and dynamic content on websites. It is a core technology for web development and is supported by all major web browsers, making it a crucial part of front-end development. JavaScript allows developers to add functionality, interactivity, and dynamic behavior to web pages.
 Here are some key characteristics and uses of JavaScript:

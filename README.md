@@ -3,6 +3,9 @@
 [https://github.com/BilgeGates/Js-Interview-Questions?tab=readme-ov-file#what-is-a-freeze-method
 ](https://github.com/BilgeGates/Js-Interview-Questions)
 
+
+https://github.com/Aakashdeveloper/JavaScript-Interview-Question?tab=readme-ov-file
+
 **WHAT IS JAVASCRIPT**
 
 JavaScript is a high-level, interpreted programming language primarily used for creating interactive and dynamic content on websites. It is a core technology for web development and is supported by all major web browsers, making it a crucial part of front-end development. JavaScript allows developers to add functionality, interactivity, and dynamic behavior to web pages.

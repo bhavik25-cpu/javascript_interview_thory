@@ -1,5 +1,7 @@
 # javascript_interview_thory
 
+https://github.com/BilgeGates/Js-Interview-Questions?tab=readme-ov-file#what-is-a-freeze-method
+
 
 **WHAT IS JAVASCRIPT**
 

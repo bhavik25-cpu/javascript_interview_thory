@@ -2583,7 +2583,7 @@ While callbacks are powerful, they can lead to "callback hell" or "pyramid of do
 
 
 
-
+_____________________________________________________________________________________________________________________
 
 JavaScript Callbacks hell
 
@@ -2591,8 +2591,6 @@ Callback hell, also known as the pyramid of doom, is a term used to describe the
 
 Here's an example of callback hell:
 
-javascript
-Copy code
 getUser(userId, function(user) {
   getOrders(user.id, function(orders) {
     getProducts(orders, function(products) {
@@ -2691,7 +2689,7 @@ The use of Promises or async/await can significantly improve code readability an
 
 
 
-
+______________________________________________________________________________________________________________________________________________________________________
 js synchronous or asynchronous
 javaScript is inherently a single-threaded, synchronous language. This means that it executes code line by line, in a sequential manner, and one operation must complete before moving on to the next. This is known as the JavaScript event loop, and it ensures that only one operation is in progress at any given time on the main thread.
 
@@ -2766,7 +2764,7 @@ While JavaScript itself is synchronous, its runtime environment provides asynchr
 
 
 
-
+_______________________________________________________________________________________________________________________________________
 Asynchronous JavaScript 
 Asynchronous JavaScript refers to the execution of code that doesn't run in a sequential order from top to bottom. Instead, it allows certain operations to be performed independently of the main program flow, particularly when dealing with tasks that may take time to complete, such as fetching data from a server, reading/writing to a file, or handling user interactions. Asynchronous programming helps prevent blocking the main thread, allowing the program to remain responsive.
 
@@ -2846,17 +2844,7 @@ Asynchronous JavaScript is essential for building responsive and efficient web a
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+______________________________________________________________________________________________________________________________________________
 synchronous in js
 
 In JavaScript, synchronous code refers to code that is executed in a sequential manner, line by line. Each operation is completed before moving on to the next one. Synchronous execution is the default behavior of JavaScript, and it follows the single-threaded execution model.

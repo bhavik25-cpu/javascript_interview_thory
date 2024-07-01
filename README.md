@@ -3060,8 +3060,6 @@ function fetchData(callback) {
 // ES6 (Promise-based)
 function fetchData() {
   return new Promise((resolve, reject) => {
-    // ...
-
     resolve(data);
   });
 }

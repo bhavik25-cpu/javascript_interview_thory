@@ -1366,7 +1366,7 @@ numbers.forEach(function (num) {
 // 2
 // 4
 // 6
-```
+
 These are just a few examples of the many methods available for working with arrays in JavaScript. Each method provides a different way to manipulate, iterate over, or query arrays based on your specific needs.
 
 

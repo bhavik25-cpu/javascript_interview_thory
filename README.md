@@ -2615,6 +2615,7 @@ getUserAndOrders(userId);
 Promises:
 
 Use Promises to handle asynchronous code in a more readable and linear fashion. Promises allow you to chain asynchronous operations without nesting.
+```javascript
 
 getUserPromise(userId)
   .then(user => getOrdersPromise(user.id))
@@ -2627,10 +2628,14 @@ getUserPromise(userId)
     console.error('An error occurred:', error);
   });
 
+```
 
 Async/Await:
 
 Use the async and await keywords, which provide a more synchronous-like syntax for handling asynchronous code.
+
+```javascript
+
 async function fetchData() {
   try {
     const user = await getUserAsync(userId);
@@ -2644,6 +2649,9 @@ async function fetchData() {
 }
 
 fetchData();
+
+```
+
 The use of Promises or async/await can significantly improve code readability and maintainability, reducing the likelihood of falling into callback hell. Choose the approach that best fits the requirements and preferences of your project.
 
 
@@ -2658,6 +2666,7 @@ Here's how asynchronous operations work in JavaScript:
 Callbacks:
 
 Callbacks are functions passed as arguments to other functions and are executed after the completion of a specific task. Callbacks are a way to handle asynchronous operations in JavaScript.
+```javascript
 
 function fetchData(callback) {
   setTimeout(function() {
@@ -2671,9 +2680,13 @@ function processData(data) {
 }
 
 fetchData(processData);
+```
+
+
 Promises:
 
 Promises provide a more structured way to handle asynchronous code. They represent a value that might be available now, or in the future, or never. Promises have three states: pending, resolved (fulfilled), and rejected.
+```javascript
 
 function fetchData() {
   return new Promise((resolve, reject) => {
@@ -2687,12 +2700,14 @@ function fetchData() {
 fetchData()
   .then(data => console.log('Data:', data))
   .catch(error => console.error('Error:', error));
-  
+  ```
+
 Async/Await:
 
 Async/Await is a syntax built on top of Promises that provides a more synchronous-like way of writing asynchronous code. The async keyword is used to define asynchronous functions, and the await keyword is used within these functions to wait for the resolution of a Promise.
-javascript
-Copy code
+
+
+```javascript
 async function fetchData() {
   return new Promise((resolve, reject) => {
     setTimeout(function() {
@@ -2712,6 +2727,8 @@ async function processData() {
 }
 
 processData();
+```javascript
+
 While JavaScript itself is synchronous, its runtime environment provides asynchronous APIs for handling tasks like network requests, file operations, and timers. Asynchronous programming in JavaScript allows developers to write non-blocking code and create responsive applications.
 
 
@@ -2724,6 +2741,7 @@ Here are key concepts and mechanisms for handling asynchronous JavaScript:
 
 1. Callbacks:
 Callbacks are functions that are passed as arguments to other functions and are executed after the completion of a specific task. They are fundamental in asynchronous programming and are commonly used in scenarios such as handling events, making API requests, and performing other non-blocking operations.
+```javascript
 
 function fetchData(callback) {
   setTimeout(function() {
@@ -2737,11 +2755,14 @@ function processData(data) {
 }
 
 fetchData(processData);
+
+```
+
 2. Promises:
 Promises provide a cleaner and more structured way to handle asynchronous code compared to callbacks. A Promise represents a value that might be available now, or in the future, or never. It has three states: pending, resolved (fulfilled), and rejected.
 
-javascript
-Copy code
+```javascript
+
 function fetchData() {
   return new Promise((resolve, reject) => {
     setTimeout(function() {
@@ -2754,8 +2775,12 @@ function fetchData() {
 fetchData()
   .then(data => console.log('Data:', data))
   .catch(error => console.error('Error:', error));
+
+```
+
 3. Async/Await:
 Async/Await is a syntax built on top of Promises that provides a more synchronous-like way of writing asynchronous code. The async keyword is used to define asynchronous functions, and the await keyword is used within these functions to wait for the resolution of a Promise.
+```javascript
 
 async function fetchData() {
   return new Promise((resolve, reject) => {
@@ -2765,7 +2790,6 @@ async function fetchData() {
     }, 1000);
   });
 }
-
 
 
 async function processData() {
@@ -2778,9 +2802,11 @@ async function processData() {
 }
 processData();
 
+```
 
 4. Event Loop:
 The event loop is a crucial concept in understanding how JavaScript handles asynchronous operations. It continuously checks the message queue for messages (events) and executes them in order. This allows JavaScript to handle multiple tasks concurrently without blocking the main thread.
+```javascript
 
 console.log('Start');
 
@@ -2789,6 +2815,8 @@ setTimeout(function() {
 }, 1000);
 
 console.log('End');
+```
+
 In this example, the order of log statements will be "Start," "End," and "Timeout completed" because the setTimeout function is asynchronous, and its callback is pushed to the message queue after the main code is executed.
 
 Asynchronous JavaScript is essential for building responsive and efficient web applications, especially in scenarios where operations may take time to complete. Callbacks, Promises, and Async/Await are tools that developers use to manage asynchronous code effectively.
@@ -2800,6 +2828,8 @@ ________________________________________________________________________________
 In JavaScript, synchronous code refers to code that is executed in a sequential manner, line by line. Each operation is completed before moving on to the next one. Synchronous execution is the default behavior of JavaScript, and it follows the single-threaded execution model.
 
 Here's a simple example of synchronous code:
+```javascript
+
 console.log('Start');
 function add(a, b) {
   return a + b;
@@ -2808,6 +2838,8 @@ const result = add(3, 4);
 console.log('Result:', result);
 
 console.log('End');
+```
+
 In this example:
 
 The code starts with console.log('Start').
@@ -2826,6 +2858,7 @@ Callback hell, also known as the pyramid of doom, occurs when you have multiple 
 Named Functions:
 
 Instead of using anonymous functions as callbacks, define named functions and pass them as arguments. This helps in keeping your code more modular and readable.
+```javascript
 
 function handleUser(user) {
   getOrders(user.id, handleOrders);
@@ -2842,9 +2875,13 @@ function handleProducts(products) {
 }
 
 getUser(userId, handleUser);
+
+```
+
 Modularization:
 
 Break down your code into smaller, modular functions. Each function should have a specific responsibility, making the code more organized.
+```javascript
 
 function getUserAndOrders(userId) {
   getUser(userId, function(user) {
@@ -2863,9 +2900,13 @@ function handleOrders(orders) {
 }
 
 getUserAndOrders(userId);
+
+```
+
 Promises:
 
 Use Promises to handle asynchronous code in a more readable and linear fashion. Promises allow you to chain asynchronous operations without nesting.
+```javascript
 
 getUserPromise(userId)
   .then(user => getOrdersPromise(user.id))
@@ -2878,9 +2919,12 @@ getUserPromise(userId)
     console.error('An error occurred:', error);
   });
 
+```
 
 Async/Await:
 Use the async and await keywords, which provide a more synchronous-like syntax for handling asynchronous code.
+```javascript
+
 async function fetchData() {
   try {
     const user = await getUserAsync(userId);
@@ -2894,6 +2938,9 @@ async function fetchData() {
 }
 
 fetchData();
+```
+
+
 Use Modules:
 
 Organize your code into separate modules or files. This can help reduce the complexity and make it easier to manage asynchronous operations in a modularized way.
@@ -2909,15 +2956,20 @@ Here are some key differences and improvements introduced in ES6 compared to the
 Let and Const Declarations:
 
 ES6 introduced let and const for variable declarations. let allows the declaration of variables with block scope, and const is used for constants.
+```javascript
 // ES5
 var x = 10;
 
 // ES6
 let y = 20;
 const z = 30;
+```
+
+
 Arrow Functions:
 
 Arrow functions provide a more concise syntax for writing function expressions. They also capture the value of this from the surrounding context.
+```javascript
 // ES5
 var add = function(a, b) {
   return a + b;
@@ -2925,16 +2977,24 @@ var add = function(a, b) {
 
 // ES6
 const add = (a, b) => a + b;
+
+```
+
+
 Template Literals:
 
 Template literals allow for the embedding of expressions inside string literals, providing a more readable way to concatenate strings.
+```javascript
 // ES5
 var message = "Hello, " + name + "!";
 // ES6
 const message = `Hello, ${name}!`;
+```
+
 Destructuring Assignment:
 
 Destructuring assignment allows you to extract values from arrays or objects and assign them to variables in a concise way.
+```javascript
 
 // ES5
 var person = { name: 'John', age: 30 };
@@ -2944,6 +3004,8 @@ var age = person.age;
 // ES6
 const person = { name: 'John', age: 30 };
 const { name, age } = person;
+```
+
 
 Classes:
 
@@ -2962,10 +3024,13 @@ class Person {
     this.age = age;
   }
 }
+
+
 Modules:
 ES6 introduced a standardized module system, allowing developers to organize code into reusable and maintainable modules.
 // ES5 (no built-in module system)
 // Module 1
+```javascript
 var module1 = (function() {
   // ...
 
@@ -2979,13 +3044,19 @@ var module1 = (function() {
 export const myFunction = () => {
   // ...
 };
+```
 
 // Module 2
+
+```javascript
 import { myFunction } from './module1';
+```
+
 Promises:
 
 ES6 introduced Promises as a native way to handle asynchronous operations, providing a cleaner alternative to callback-based asynchronous patterns.
 // ES5 (callback-based)
+```javascript
 function fetchData(callback) {
   // ...
 
@@ -2993,23 +3064,29 @@ function fetchData(callback) {
 }
 
 // ES6 (Promise-based)
+
 function fetchData() {
   return new Promise((resolve, reject) => {
     resolve(data);
   });
 }
+```
 
 Default Parameters:
-
 ES6 allows the definition of default parameter values in function declarations.
 // ES5
+```javascript
 function multiply(a, b) {
   b = b || 1;
   return a * b;
 }
+```
 
 // ES6
+```javascript
 const multiply = (a, b = 1) => a * b;
+```
+
 These are just a few examples of the many features introduced in ES6. Subsequent ECMAScript versions, such as ES7, ES8, and so on, have continued to bring additional improvements and features to JavaScript. It's worth noting that modern JavaScript development often leverages features from ES6 and beyond, as they provide more expressive and efficient ways to write code.
 
 _____________________________________________________________________________________________________________________________
@@ -3021,6 +3098,8 @@ Here's a basic overview of how promises work:
 Creating a Promise:
 
 You create a promise using the Promise constructor, which takes a function as an argument. This function, called the "executor," receives two functions as parameters: resolve and reject. Inside the executor function, you perform an asynchronous operation, and when it's completed, you call resolve with the result or reject with an error.
+
+```javascript
 const myPromise = new Promise((resolve, reject) => {
   // Asynchronous operation
   setTimeout(() => {
@@ -3028,19 +3107,24 @@ const myPromise = new Promise((resolve, reject) => {
     resolve(data);
   }, 1000);
 });
+
+```
+
 Consuming a Promise:
 
 You can consume the result of a promise using the .then() method, which is executed when the promise is resolved. Additionally, you can use the .catch() method to handle any errors that occur during the asynchronous operation.
-
+```javascript
 myPromise.then((result) => {
   console.log('Promise resolved with result:', result);
 }).catch((error) => {
   console.error('Promise rejected with error:', error);
 });
+
+```
+
 Chaining Promises:
-
 Promises can be chained using multiple .then() calls. Each .then() receives the result of the previous one.
-
+```javascript
 myPromise
   .then((result) => {
     console.log('Step 1:', result);
@@ -3056,10 +3140,13 @@ myPromise
   .catch((error) => {
     console.error('Error:', error);
   });
+
+```
+
 Handling Multiple Promises:
 
 You can use Promise.all() to handle multiple promises concurrently. It resolves when all promises in the array have been resolved or rejects if any of them are rejected.
-
+```javascript
 const promise1 = fetchDataFromServer();
 const promise2 = fetchUserData();
 
@@ -3071,10 +3158,11 @@ Promise.all([promise1, promise2])
   .catch((error) => {
     console.error('Error:', error);
   });
+  ```
 Creating Resolved and Rejected Promises:
 
 You can create a resolved or rejected promise using the Promise.resolve() and Promise.reject() methods, respectively.
-
+```javascript
 const resolvedPromise = Promise.resolve('Resolved data');
 const rejectedPromise = Promise.reject('Rejected error');
 
@@ -3085,6 +3173,7 @@ resolvedPromise.then((result) => {
 rejectedPromise.catch((error) => {
   console.error('Rejected:', error);
 });
+```
 Promises provide a more structured and readable way to handle asynchronous code compared to callback-based patterns. They are widely used in modern JavaScript development, and many APIs, including the Fetch API for making HTTP requests, return promises. Promises form the foundation for even more advanced asynchronous patterns, such as async/await.
 
 
@@ -3097,27 +3186,31 @@ Async/await is a syntactic sugar introduced in ECMAScript 2017 (ES8) that simpli
 Here's a basic overview of how async/await works:
 
 Defining an Async Function:
-
 Use the async keyword before a function declaration to mark it as asynchronous.
 
+```javascript
 async function fetchData() {
   // Asynchronous operation
   return 'Data fetched!';
 }
-Using Await to Wait for Promises:
+```
 
+Using Await to Wait for Promises:
 Inside an async function, the await keyword is used to pause the execution of the function until the Promise is resolved.
 
-
+```javascript
 async function fetchData() {
   // Asynchronous operation
   const result = await somePromise();
   console.log(result);
 }
+
+```
+
 Error Handling with Try-Catch:
 
 Use a try...catch block to handle errors in async/await code. If a Promise is rejected, the control will jump to the catch block.
-
+```javascript
 async function fetchData() {
   try {
     const result = await somePromise();
@@ -3126,10 +3219,14 @@ async function fetchData() {
     console.error('Error:', error);
   }
 }
+
+```
+
 Chaining Async/Await Functions:
 
 Async/await can be used to chain asynchronous operations in a more readable way.
 
+```javascript
 async function processData() {
   try {
     const data1 = await fetchData1();
@@ -3139,10 +3236,12 @@ async function processData() {
     console.error('Error:', error);
   }
 }
-Async/Await with Promise.all:
+```
 
+Async/Await with Promise.all:
 You can use Promise.all with async/await to execute multiple asynchronous operations concurrently.
 
+```javascript
 async function fetchAndProcessData() {
   try {
     const [data1, data2] = await Promise.all([fetchData1(), fetchData2()]);
@@ -3151,10 +3250,11 @@ async function fetchAndProcessData() {
     console.error('Error:', error);
   }
 }
+```
+
 Async/Await with For-of Loop:
-
 Async/await can be combined with a for-of loop to iterate over asynchronous tasks sequentially.
-
+```javascript
 async function processMultipleItems(items) {
   for (const item of items) {
     try {
@@ -3165,20 +3265,24 @@ async function processMultipleItems(items) {
     }
   }
 }
-
+```
 Async/await is particularly useful when dealing with asynchronous code that involves Promises. It provides a more synchronous-like syntax, making the code easier to read and maintain compared to nested callbacks or Promise chaining. Async/await is widely adopted in modern JavaScript development for handling asynchronous operations
 
 __________________________________________________________________________________________
 **IF ELSE VS SWITCH CASE IN JS**
 In JavaScript, both if-else statements and switch-case statements are used for conditional branching, allowing you to execute different code blocks based on different conditions. However, they have some differences in terms of syntax, use cases, and readability.
 
+
 if-else Statements:
+```javascript
 let condition = true;
 if (condition) {
   // Code to execute if the condition is true
 } else {
   // Code to execute if the condition is false
 }
+```
+
 Use Cases:
 
 Well-suited for scenarios where you have a few conditions to check.
@@ -3188,6 +3292,7 @@ Readability:
 Good for simple and straightforward conditions.
 Easily readable and understood.
 switch-case Statements:
+```javascript
 
 let option = 2;
 
@@ -3201,6 +3306,9 @@ switch (option) {
   default:
     // Code to execute if none of the cases match
 }
+
+```
+
 Use Cases:
 
 Useful when you have multiple conditions checking the equality of a single variable.
@@ -3232,6 +3340,7 @@ JSON.parse() is a built-in method in JavaScript used to parse a JSON string and 
 The JSON.parse() method takes a JSON-formatted string as its parameter and returns a JavaScript object corresponding to the parsed JSON data.
 
 Here's a basic example:
+```javascript
 
 const jsonString = '{"name": "John", "age": 30, "city": "New York"}';
 
@@ -3241,7 +3350,10 @@ const parsedObject = JSON.parse(jsonString);
 console.log(parsedObject.name); // Output: John
 console.log(parsedObject.age);  // Output: 30
 console.log(parsedObject.city); // Output: New York
+```
+
 Keep in mind that the JSON string must be well-formed, following the JSON syntax rules. If the JSON string is not valid, JSON.parse() will throw a SyntaxError.
+```javascript
 
 const invalidJsonString = '{"name": "John", "age": 30, "city": "New York",}';
 
@@ -3251,9 +3363,12 @@ try {
 } catch (error) {
   console.error('Error parsing JSON:', error.message);
 }
+```
+
 In this example, a trailing comma in the JSON string makes it invalid, and JSON.parse() throws a SyntaxError. Always ensure that the JSON string you are trying to parse is valid according to the JSON specification.
 
 Additionally, JSON.parse() can take a second parameter called a "reviver" function. The reviver function can be used to transform the parsed object before it is returned. This is useful for situations where you want to perform additional processing on the parsed data.
+```javascript
 
 const jsonStringWithDate = '{"date": "2022-01-01T12:00:00.000Z"}';
 
@@ -3266,6 +3381,7 @@ const parsedObjectWithDate = JSON.parse(jsonStringWithDate, (key, value) => {
 });
 
 console.log(parsedObjectWithDate.date instanceof Date); // Output: true
+```
 In this example, the reviver function converts the "date" property value from a string to a Date object during the parsing process.
 
 
@@ -3273,6 +3389,8 @@ In this example, the reviver function converts the "date" property value from a 
 JSON.stringify() 
 JSON.stringify() is a built-in method in JavaScript used to convert a JavaScript object or value into a JSON-formatted string. This method is often used when you need to send data to a server, store data in a file, or transmit data between different parts of an application.
 Here's a basic example:
+```javascript
+
 const person = {
   name: 'John',
   age: 30,
@@ -3282,11 +3400,16 @@ const person = {
 // Converting the JavaScript object to a JSON-formatted string
 const jsonString = JSON.stringify(person);
 console.log(jsonString);
+```
+
 // Output: {"name":"John","age":30,"city":"New York"}
 JSON.stringify() can take additional parameters to customize the conversion process:
 
+
 Replacer Function:
 You can provide a replacer function as the second parameter to selectively include or transform values during the stringification process.
+```javascript
+
 const person = {
   name: 'John',
   age: 30,
@@ -3304,12 +3427,16 @@ const jsonString = JSON.stringify(person, (key, value) => {
 });
 
 console.log(jsonString);
+```
+
 // Output: {"name":"John","age":30,"city":"New York"}
 
 
 
 Spaces or Indentation:
 You can provide a third parameter, which is the number of spaces to use for indentation, to make the resulting JSON string more readable.
+```javascript
+
 const person = {
   name: 'John',
   age: 30,
@@ -3320,6 +3447,9 @@ const person = {
 const jsonString = JSON.stringify(person, null, 2);
 
 console.log(jsonString);
+```
+```javascript
+
 /*
   Output:
   {
@@ -3328,9 +3458,12 @@ console.log(jsonString);
     "city": "New York"
   }
 */
+```
+
 JSON.stringify() also handles arrays, strings, numbers, booleans, null, and nested objects or arrays.
 
 Keep in mind that not all JavaScript values can be converted to JSON. Functions and properties with undefined values are excluded from the stringification process. Circular references (objects that refer to themselves) are also not supported.
+```javascript
 
 const circularObject = {};
 circularObject.circularReference = circularObject;
@@ -3341,6 +3474,8 @@ try {
 } catch (error) {
   console.error('Error stringifying JSON:', error.message);
 }
+```
+
 In this example, attempting to stringify an object with a circular reference will throw a TypeError. It's important to handle such cases appropriately in your code.
 
 
@@ -3349,11 +3484,15 @@ ________________________________________________________________________________
 In JavaScript, Infinity is a special value representing positive infinity. It is a global property and a valid number data type. The Infinity value is used to represent a mathematical concept where a quantity or value is larger than any finite number.
 
 Here's an example of using Infinity:
+```javascript
 
 console.log(1 / 0);      // Output: Infinity
 console.log(Infinity);    // Output: Infinity
 console.log(Number.POSITIVE_INFINITY); // Output: Infinity
+```
+
 You can perform various mathematical operations with Infinity, and the result will be Infinity or -Infinity depending on the operation and the signs involved:
+```javascript
 
 console.log(Infinity + 1);     
  // Output: Infinity
@@ -3362,18 +3501,29 @@ console.log(Infinity / 3);      // Output: Infinity
 
 console.log(-Infinity);         // Output: -Infinity
 console.log(1 / -0);             // Output: -Infinity
+```
 
 It's worth noting that operations involving Infinity can sometimes lead to unexpected results. For example, if you divide a finite number by Infinity, the result is 0.
+```javascript
+
 console.log(5 / Infinity);      // Output: 0
+```
+
 You can also check for Infinity using the isFinite() function, which returns false for Infinity or -Infinity:
+```javascript
 
 console.log(isFinite(1 / 0));   // Output: false
 console.log(isFinite(42));      // Output: true
+```
+
 In addition to positive infinity (Infinity), JavaScript also has a special value for negative infinity (-Infinity). It represents a value smaller than any finite number. For example:
+```javascript
 
 console.log(-1 / 0);     // Output: -Infinity
 console.log(-Infinity);   // Output: -Infinity
 console.log(Number.NEGATIVE_INFINITY); 
+```
+
 // Output: -Infinity
 Both Infinity and -Infinity are often used in mathematical calculations or to represent situations where a value is unbounded or undefined in a positive or negative direction.
 
@@ -3385,6 +3535,7 @@ In JavaScript, getters and setters are special methods that allow you to control
 
 Getters:
 A getter is a method that gets the value of a specific property. It is defined using the get keyword followed by the property name.
+```javascript
 
 const person = {
   firstName: 'John',
@@ -3397,11 +3548,15 @@ const person = {
 };
 
 console.log(person.fullName); // Output: John Doe
+```
+
 In this example, the fullName getter allows you to access the full name of the person as if it were a property, even though it's generated dynamically.
 
 
 
 Setters:A setter is a method that sets the value of a specific property. It is defined using the set keyword followed by the property name.
+```javascript
+
 const person = {
   firstName: 'John',
   lastName: 'Doe',
@@ -3423,10 +3578,13 @@ person.fullName = 'Jane Smith';
 
 console.log(person.firstName); // Output: Jane
 console.log(person.lastName);  // Output: Smith
+```
+
 In this example, the fullName setter allows you to set the full name of the person by providing a single string. The setter then splits the string into first and last names and updates the corresponding properties.
 
 Using Getters and Setters:
 Getters and setters can be used to add additional logic, validation, or computations when accessing or modifying object properties.
+```javascript
 
 const temperature = {
   _celsius: 0,
@@ -3448,6 +3606,8 @@ const temperature = {
 
 temperature.celsius = 25;
 console.log(temperature.fahrenheit); // Output: 77
+```
+
 In this example, the celsius setter ensures that the temperature cannot be set below absolute zero, and the fahrenheit getter converts the temperature from Celsius to Fahrenheit.
 
 Getters and setters provide a way to encapsulate the behavior of properties, allowing for more controlled and consistent manipulation of object data. They are commonly used in classes and object literals to create more flexible and maintainable code.
@@ -3458,6 +3618,7 @@ In JavaScript, getters and setters are special methods that allow you to control
 
 Getters:
 A getter is a method that gets the value of a specific property. It is defined using the get keyword followed by the property name.
+```javascript
 
 const person = {
   firstName: 'John',
@@ -3470,10 +3631,14 @@ const person = {
 };
 
 console.log(person.fullName); // Output: John Doe
+```
+
 In this example, the fullName getter allows you to access the full name of the person as if it were a property, even though it's generated dynamically.
+
 
 Setters:
 A setter is a method that sets the value of a specific property. It is defined using the set keyword followed by the property name.
+```javascript
 
 
 const person = {
@@ -3497,6 +3662,8 @@ person.fullName = 'Jane Smith';
 
 console.log(person.firstName); // Output: Jane
 console.log(person.lastName);  // Output: Smith
+```
+
 In this example, the fullName setter allows you to set the full name of the person by providing a single string. The setter then splits the string into first and last names and updates the corresponding properties.
 
 
@@ -3504,6 +3671,7 @@ In this example, the fullName setter allows you to set the full name of the pers
 Using Getters and Setters:
 Getters and setters can be used to add additional logic, validation, or computations when accessing or modifying object properties.
 
+```javascript
 
 const temperature = {
   _celsius: 0,
@@ -3516,10 +3684,15 @@ const temperature = {
   // Setter for temperature in Celsius
   set celsius(value) {
     if (value < -273.15) {
-      throw new Error('Temperature cannot be less than -273.15°C (absolute zero).');In JavaScript, events are interactions or occurrences in the browser that can trigger specific actions or functions. Handling events is a fundamental aspect of building interactive and dynamic web applications. Here's an overview of handling events in JavaScript:
+      throw new Error('Temperature cannot be less than -273.15°C (absolute zero).');
+```
+
+In JavaScript, events are interactions or occurrences in the browser that can trigger specific actions or functions. Handling events is a fundamental aspect of building interactive and dynamic web applications. Here's an overview of handling events in JavaScript:
+```javascript
 
 Event Listeners:
 Event listeners are functions that wait for a specific event to occur and then execute a specified function in response. You can attach event listeners to HTML elements using the addEventListener method.
+```javascript
 
 // Example: Adding a click event listener to a button
 const myButton = document.getElementById('myButton');
@@ -3527,42 +3700,53 @@ const myButton = document.getElementById('myButton');
 myButton.addEventListener('click', function() {
   console.log('Button clicked!');
 });
+```
+
 In this example, the click event listener is attached to a button with the ID myButton. When the button is clicked, the provided function is executed.
 
 Event Object:
 Event listeners receive an event object as an argument. This object contains information about the event, such as the type of the event, the target element, and more.
+```javascript
 
 const myInput = document.getElementById('myInput');
 myInput.addEventListener('input', function(event) {
   console.log('Input value:', event.target.value);
 });
+```
+
 Here, the input event listener is attached to an input element. The event object (event) provides information about the input event, including the current value of the input.
 
 Event Types:
 There are various types of events, such as click, mouseover, mouseout, keydown, input, change, and more. You can listen for specific events based on your application's needs.
 
+```javascript
 
 const myElement = document.getElementById('myElement');
 
 myElement.addEventListener('mouseover', function() {
   console.log('Mouse over the element!');
 });
+```
+
 Event Propagation:
 Events in the DOM propagate in two phases: the capturing phase and the bubbling phase. The addEventListener method can take an optional third parameter, useCapture, which determines the phase in which the event is handled.
 
-javascript
-Copy code
+```javascript
+
 const myElement = document.getElementById('myElement');
 
 // Using capturing phase
 myElement.addEventListener('click', function() {
   console.log('Event captured!', event.target.tagName);
 }, true);
+
+```
+
 Removing Event Listeners:
 You can remove an event listener using the removeEventListener method. It's important to provide the same function reference that was used when adding the listener.
 
-javascript
-Copy code
+```javascript
+
 const myButton = document.getElementById('myButton');
 const myHandler = function() {
   console.log('Button clicked!');
@@ -3572,6 +3756,8 @@ myButton.addEventListener('click', myHandler);
 
 // Remove the event listener
 myButton.removeEventListener('click', myHandler);
+```
+
 Event Delegation:
 Event delegation involves attaching a single event listener to a common ancestor of multiple elements. This can improve performance and simplify event handling, especially when dealing with dynamically added elements.
 
@@ -3582,6 +3768,7 @@ parentList.addEventListener('click', function(event) {
     console.log('List item clicked:', event.target.textContent);
   }
 });
+
 In this example, the click event is delegated to the parent list (parentList), and the specific list item clicked is identified within the event handler.
 
 Understanding and effectively using events is crucial for building interactive and responsive web applications. Different events and event handling techniques can be employed based on the requirements of your application.
@@ -3855,6 +4042,8 @@ console.log(account.getBalance());  // Output: 1000
 Polymorphism:
 Polymorphism allows objects of different types to be treated as objects of a common type.
 In JavaScript, polymorphism is achieved through method overriding and the ability of objects to dynamically change their behavior at runtime.
+```javascript
+
 class Shape {
   area() {
     return 0;
@@ -3889,6 +4078,8 @@ let rectangle = new Rectangle(4, 6);
 
 console.log(circle.area());      // Output: 78.53981633974483
 console.log(rectangle.area());   // Output: 24
+```
+
 These OOP concepts in JavaScript provide a way to structure code, promote reusability, and model real-world entities more effectively. Understanding and applying these concepts can lead to cleaner, more maintainable code.
 
 

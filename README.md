@@ -5,7 +5,7 @@
 
 
 https://github.com/Aakashdeveloper/JavaScript-Interview-Question?tab=readme-ov-file
-```javascript
+
 
 **WHAT IS JAVASCRIPT**
 
@@ -3612,8 +3612,7 @@ Spread in Arrays:
 Copying Arrays:
 
 Create a shallow copy of an array.
-javascript
-Copy code
+```javascript
 const originalArray = [1, 2, 3];
 const copyArray = [...originalArray];
 
@@ -3627,26 +3626,32 @@ const array2 = [4, 5, 6];
 const combinedArray = [...array1, ...array2];
 
 console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
+```
+
 Adding Elements:
-
 Add elements to an existing array.
-
+```javascript
 const originalArray = [1, 2, 3];
 const newArray = [...originalArray, 4, 5];
-
 console.log(newArray); // Output: [1, 2, 3, 4, 5]
-Spread and Rest:
+```
 
+Spread and Rest:
 Use spread and rest parameters together.
+```javascript
 
 const [first, ...rest] = [1, 2, 3, 4, 5];
 
 console.log(first); // Output: 1
 console.log(rest);  // Output: [2, 3, 4, 5]
+
+```
+
 Spread in Function Arguments:
 Function Arguments:
 
 Pass elements of an array as individual arguments to a function.
+```javascript
 
 const numbers = [1, 2, 3];
 
@@ -3656,9 +3661,12 @@ function addNumbers(a, b, c) {
 
 const sum = addNumbers(...numbers);
 console.log(sum); // Output: 6
-Concatenating Arrays in Function Arguments:
 
+```
+
+Concatenating Arrays in Function Arguments:
 Concatenate arrays passed as arguments.
+```javascript
 
 const array1 = [1, 2, 3];
 const array2 = [4, 5, 6];
@@ -3669,33 +3677,46 @@ function combineArrays(arr1, arr2) {
 
 const resultArray = combineArrays(array1, array2);
 console.log(resultArray); // Output: [1, 2, 3, 4, 5, 6]
+```
+
 Spread in Objects:
 Copying Objects:
 
 Create a shallow copy of an object.
+```javascript
 
 const originalObject = { a: 1, b: 2 };
 const copyObject = { ...originalObject };
 
 console.log(copyObject); 
 // Output: { a: 1, b: 2 }
+
+```
+
 Merging Objects:
 
 Combine properties from multiple objects.
+```javascript
 
 const object1 = { a: 1, b: 2 };
 const object2 = { b: 3, c: 4 };
 const mergedObject = { ...object1, ...object2 };
 
 console.log(mergedObject); // Output: { a: 1, b: 3, c: 4 }
+
+```
+
 Adding or Overriding Properties:
 
 Add or override properties in an object.
+```javascript
 
 const originalObject = { a: 1, b: 2 };
 const newObject = { ...originalObject, b: 3, c: 4 };
 
 console.log(newObject); // Output: { a: 1, b: 3, c: 4 }
+```
+
 Keep in mind that the spread operator creates shallow copies, so nested objects or arrays are still references. If you need a deep copy, you might want to use other methods like JSON.parse(JSON.stringify(obj)) for objects.
 
 The spread operator is a powerful and concise feature in JavaScript, making it easier to work with arrays, objects, and function arguments in a more expressive manner.
@@ -3736,6 +3757,8 @@ JavaScript supports object-oriented programming (OOP) concepts, and developers c
 Objects:
 JavaScript is an object-based language, and everything in JavaScript is an object or can be treated as an object.
 Objects in JavaScript are collections of key-value pairs, where keys are strings (or symbols) and values can be any data type, including other objects.
+```javascript
+
 let car = {
   make: "Toyota",
   model: "Camry",
@@ -3745,9 +3768,11 @@ let car = {
   }
 };
 Classes and Constructors:
+```
 
 JavaScript supports the concept of classes, which can be used to create objects. Classes act as blueprints for object creation.
 Constructors are special functions that get called when an object is instantiated from a class. They initialize object properties.
+```javascript
 
 class Car {
   constructor(make, model, year) {
@@ -3763,11 +3788,14 @@ class Car {
 
 let myCar = new Car("Toyota", "Camry", 2022);
 
+```
 
 Inheritance:
 
 Inheritance allows a class (subclass or child class) to inherit properties and methods from another class (superclass or parent class).
 JavaScript uses prototypal inheritance, where objects can inherit properties and methods directly from other objects.
+```javascript
+
 class Animal {
   constructor(name) {
     this.name = name;
@@ -3786,10 +3814,14 @@ class Dog extends Animal {
 
 let myDog = new Dog("Buddy");
 myDog.speak();  // Output: Buddy barks
+```
 
 Encapsulation:
 Encapsulation is the bundling of data (properties) and methods that operate on that data into a single unit (object or class).
 It helps in controlling access to certain properties and methods, allowing for better control and organization of code.
+
+```javascript
+
 class BankAccount {
   #balance = 0;  // Private property
 
@@ -3817,6 +3849,7 @@ class BankAccount {
 let account = new BankAccount("John Doe");
 account.deposit(1000);
 console.log(account.getBalance());  // Output: 1000
+```
 
 
 Polymorphism:
@@ -3891,6 +3924,7 @@ JavaScript supports object-oriented programming (OOP) concepts, and developers c
 
 Objects:JavaScript is an object-based language, and everything in JavaScript is an object or can be treated as an object.
 Objects in JavaScript are collections of key-value pairs, where keys are strings (or symbols) and values can be any data type, including other objects.
+```javascript
 
 let car = {
   make: "Toyota",
@@ -3900,10 +3934,13 @@ let car = {
     console.log("Engine started");
   }
 };
+```
 
 Classes and Constructors:
 JavaScript supports the concept of classes, which can be used to create objects. Classes act as blueprints for object creation.
 Constructors are special functions that get called when an object is instantiated from a class. They initialize object properties.
+```javascript
+
 class Car {
   constructor(make, model, year) {
     this.make = make;
@@ -3915,10 +3952,14 @@ class Car {
     console.log("Engine started");
   }
 }
+```
 
 let myCar = new Car("Toyota", "Camry", 2022);
 Inheritance:Inheritance allows a class (subclass or child class) to inherit properties and methods from another class (superclass or parent class).
 JavaScript uses prototypal inheritance, where objects can inherit properties and methods directly from other objects.
+
+```javascript
+
 class Animal {
   constructor(name) {
     this.name = name;
@@ -3939,8 +3980,12 @@ let myDog = new Dog("Buddy");
 myDog.speak();  // Output: Buddy barks
 
 ]
+```
+
 Encapsulation:Encapsulation is the bundling of data (properties) and methods that operate on that data into a single unit (object or class).
 It helps in controlling access to certain properties and methods, allowing for better control and organization of code.
+```javascript
+
 class BankAccount {
   #balance = 0;  // Private property
 
@@ -3968,9 +4013,13 @@ class BankAccount {
 let account = new BankAccount("John Doe");
 account.deposit(1000);
 console.log(account.getBalance());  // Output: 1000
+```
 
 Polymorphism:Polymorphism allows objects of different types to be treated as objects of a common type.
 In JavaScript, polymorphism is achieved through method overriding and the ability of objects to dynamically change their behavior at runtime.
+
+```javascript
+
 class Shape {
   area() {
     return 0;
@@ -4005,6 +4054,8 @@ console.log(circle.area());
  // Output: 78.53981633974483
 console.log(rectangle.area());   
 // Output: 24
+```
+
 These OOP concepts in JavaScript provide a way to structure code, promote reusability, and model real-world entities more effectively. Understanding and applying these concepts can lead to cleaner, more maintainable code.
 
 
@@ -4243,8 +4294,6 @@ try {
     console.error('Caught exception:', error.message);
 }
 ```
-
-
 
 Handling Different Types of Errors:
 
@@ -4606,5 +4655,5 @@ console.log(addTwo(3)); // Outputs: 5
 ```
 
 In this example, curriedAdd is a curried version of the add function. It takes one argument x and returns a function that takes another argument y and performs the addition. This allows for partial application, where you can pass one argument to curriedAdd to create a new function (addTwo) that adds 2 to any number passed to it.
-```
+
 

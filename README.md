@@ -31,7 +31,7 @@ JavaScript (JS) is inherently a single-threaded language, meaning it executes on
 Asynchronous programming allows certain operations, such as fetching data from a server or reading from a file, to be performed without blocking the main execution thread. Instead of waiting for the operation to complete, the program can continue with other tasks, and a callback function or a Promise resolution handles the result of the asynchronous operation when it's ready.
 So, while JavaScript has a synchronous execution model, it provides mechanisms for handling asynchronous tasks to ensure better responsiveness in web applications, especially when dealing with operations that might take time, such as network requests.
 
-________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
 
 **WHAT IS JAVASCRIPT IS SINGLE THREAD OR MULTI THREAD**
 JavaScript is inherently a single-threaded language, meaning it executes code in a single sequence or thread of execution. This single-threaded nature is due to the fact that JavaScript was originally designed to run in web browsers, where it is used to manipulate the Document Object Model (DOM), handle events, and interact with the user interface.
@@ -40,7 +40,7 @@ To address this limitation, modern JavaScript environments provide mechanisms fo
 It's important to note that while JavaScript itself is single-threaded, web browsers and server-side environments can use additional threads for certain tasks to improve overall performance and responsiveness. For example, web browsers may use separate threads for rendering, handling network requests, and executing JavaScript. This multi-threading is typically managed by the underlying runtime environment and is transparent to the JavaScript developer.
 
 
-____________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
 
 
 **primitive and non primitive data type in js**
@@ -88,7 +88,7 @@ The main difference between primitive and non-primitive types is that primitive 
 
 
 
--------------------------------------------------------------------------
+___________________________________________________________________________________________________
 **primitive and non primitive data type in js difference**
 The primary differences between primitive and non-primitive (reference) data types in JavaScript lie in their nature, behavior, and how they are stored and accessed. Here's a summary of the key distinctions:
 Primitive Data Types:
@@ -125,7 +125,7 @@ Usage:
 
 
 
-___________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
 **VAR**
 var, let, and const are all keywords used for variable declaration in JavaScript, but they have some key differences in terms of scope, hoisting, and reassignment. Here's an explanation of each:
 1.	var:
@@ -167,9 +167,9 @@ function exampleConst() {
   // const z = 40;  // Error: Identifier 'z' has already been declared
 }
 
-__________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
 
-**JavaScript Functions **
+**JavaScript Functions**
 Functions are a fundamental concept in JavaScript, and they play a crucial role in structuring and organizing code. Here's an overview of JavaScript functions:
 
 Function Declaration:
@@ -286,25 +286,8 @@ const multiply = (a, b) => {
   return a * b;
 };
 const product = multiply(5, 6);  // product is 30
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Recursion javascript
+__________________________________________________________________________________________________
+**Recursion javascript**
 Recursion is a programming concept where a function calls itself in its own definition. In JavaScript, recursion is commonly used for solving problems that can be broken down into smaller, similar subproblems. Recursive functions consist of a base case and a recursive case. Here's an example to illustrate the concept of recursion in JavaScript:
 
 // Example: Factorial Calculation using Recursion
@@ -342,17 +325,8 @@ factorial(5) returns 5 * 24 = 120
 Recursive functions can be elegant and expressive, but it's crucial to have a base case to prevent infinite recursion. Additionally, keep in mind that recursive solutions may not be the most efficient for certain problems, and there might be alternative iterative approaches.
 
 
-
-
-
-
-
-
-
-
-
-JavaScript Objects
-
+__________________________________________________________________________________________
+**JavaScript Objects**
 
 In JavaScript, an object is a complex data type that allows you to store and organize data using key-value pairs. Objects are a fundamental part of the language and are used to represent real-world entities, organize code, and facilitate data manipulation. Here's an overview of JavaScript objects:
 

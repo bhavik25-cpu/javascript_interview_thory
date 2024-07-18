@@ -4007,13 +4007,14 @@ console.log(rectangle.area());
 These OOP concepts in JavaScript provide a way to structure code, promote reusability, and model real-world entities more effectively. Understanding and applying these concepts can lead to cleaner, more maintainable code.
 
 
-________________________________________________________________________________________________________________
+__________________________________________________________________________________________
 **set in js**
 
 In JavaScript, the Set object is a built-in data structure that allows you to store unique values of any type, whether primitive values or object references. A Set in JavaScript is similar to a mathematical set and has methods for adding, deleting, and checking the existence of elements.
 
 Creating a Set:
 You can create a new Set by using the Set constructor:
+```javascript
 
 
 const mySet = new Set();
@@ -4032,13 +4033,22 @@ Deleting Elements:
 mySet.delete(1);
 
 console.log(mySet); // Output: Set { 'Hello', { key: 'value' } }
+```
+
+
 Checking for Element Existence:
 Checking Existence:
+```javascript
 
 console.log(mySet.has('Hello')); // Output: true
 console.log(mySet.has(1));       // Output: false
+```
+
+
 Iterating over Elements:
+
 You can iterate over the elements in a Set using the forEach method or using a for...of loop:
+```javascript
 
 mySet.forEach((value) => {
   console.log(value);
@@ -4049,50 +4059,70 @@ mySet.forEach((value) => {
 for (const value of mySet) {
   console.log(value);
 }
+```
+
+
 Size of a Set:
 You can get the number of elements in a Set using the size property:
+```javascript
 
 console.log(mySet.size); // Output: 2
+```
+
 Set Operations:
 Union:
+```javascript
+
 const set1 = new Set([1, 2, 3]);
 const set2 = new Set([3, 4, 5]);
 const unionSet = new Set([...set1, ...set2]);
 console.log(unionSet); // Output: Set { 1, 2, 3, 4, 5 }
+```
+
 Intersection:
+```javascript
 
 const intersectionSet = new Set([...set1].filter((value) => set2.has(value)));
 
 console.log(intersectionSet); // Output: Set { 3 }
+```
 
 
 Difference:
+
+```javascript
+
 const differenceSet = new Set([...set1].filter((value) => !set2.has(value)));
 
 console.log(differenceSet); // Output: Set { 1, 2 }
+```
 
 Use Cases:
 Removing Duplicates from an Array:
+```javascript
+
 const arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
 const uniqueValues = [...new Set(arrayWithDuplicates)];
 
 console.log(uniqueValues); // Output: [1, 2, 3, 4, 5]
+```
+
 Checking Duplicate Values:
+```javascript
+
 const values = [1, 2, 3, 4, 2, 5];
 if (new Set(values).size === values.length) {
   console.log('No duplicates!');
 } else {
   console.log('Duplicates found!');
 }
+```
+
 The Set object provides a convenient way to work with unique values, perform set operations, and eliminate duplicates in various scenarios. Keep in mind that the uniqueness of elements in a Set is based on the concept of "Set Equality" rather than strict equality (===), so objects with the same values are considered equal.
 
 
 
-
-
-
-
-_______________________________________________________________________________________________________________________
+__________________________________________________________________________________________
 
 **PASS BY VALUE / REF in js**
 In JavaScript, the concept of "pass by value" and "pass by reference" can be a bit misleading. JavaScript is generally considered to be "pass by value," but it's essential to understand how this works with different types of values.
@@ -4100,8 +4130,8 @@ In JavaScript, the concept of "pass by value" and "pass by reference" can be a b
 Primitive Types - Pass by Value:
 
 When you pass a primitive type (like numbers, strings, booleans, null, or undefined) to a function, a copy of the value is passed. Changes made to the parameter inside the function do not affect the original value outside the function.
-javascript
-Copy code
+```javascript
+
 function modifyPrimitive(value) {
     value = 10;
 }
@@ -4110,11 +4140,15 @@ let originalValue = 5;
 modifyPrimitive(originalValue);
 
 console.log(originalValue); // Output: 5 (unchanged)
+```
+
 The function modifies its own local copy of value, but it doesn't affect the original variable originalValue because primitive values are immutable.
 
 Objects and Arrays - Pass by Reference (of the Reference):
 
 When you pass an object or an array to a function, you are passing a reference to the object or array. However, it's important to note that the reference itself is passed by value.
+```javascript
+
 function modifyObject(obj) {
     obj.property = 'modified';
 }
@@ -4123,8 +4157,13 @@ let originalObject = { property: 'unchanged' };
 modifyObject(originalObject);
 
 console.log(originalObject.property); // Output: 'modified'
-The function modifies the object through the reference, so changes are visible outside the function. However, if you reassign the parameter inside the function, it won't affect the original reference:
+```
 
+The function modifies the object through the reference, so changes are visible outside the function. However, if you reassign the parameter inside the function, it won't affect 
+
+the original reference:
+
+```javascript
 function reassignObject(obj) {
     obj = { newProperty: 'new value' };
 }
@@ -4133,6 +4172,8 @@ let originalObject = { property: 'unchanged' };
 reassignObject(originalObject);
 
 console.log(originalObject.property); // Output: 'unchanged'
+```
+
 The reassignment inside the function only affects the local copy of the reference, not the original reference.
 
 In summary:
@@ -4144,7 +4185,7 @@ It's worth noting that the term "pass by reference" can be misleading in JavaScr
 
 
 
-____________________________________________________________________________________________________________________________________________________
+__________________________________________________________________________________________
 **EXCEPTION HANDLING**
 
 Exception handling in JavaScript is a mechanism for dealing with errors and unexpected situations in a program. The try, catch, finally, and throw statements are used to implement exception handling.
@@ -4152,6 +4193,8 @@ Exception handling in JavaScript is a mechanism for dealing with errors and unex
 try and catch Statements:
 
 The try block is used to enclose the code that might throw an exception. If an exception occurs within the try block, it is caught by the corresponding catch block, and the specified code within the catch block is executed.
+```javascript
+
 try {
     // Code that might throw an exception
     throw new Error('This is an exception.');
@@ -4159,9 +4202,14 @@ try {
     // Handle the exception
     console.error('Caught exception:', error.message);
 }
+```
+
+
+
 finally Block:
 
 The finally block contains code that is executed regardless of whether an exception occurs or not. It is often used for cleanup operations that must be performed regardless of the outcome.
+```javascript
 
 try {
     // Code that might throw an exception
@@ -4173,9 +4221,13 @@ try {
     // Code that will always be executed
     console.log('Finally block executed.');
 }
+```
+
 Throwing Exceptions:
 
 The throw statement is used to explicitly throw an exception. This can be done within a try block or any other part of the code.
+```javascript
+
 function divide(a, b) {
     if (b === 0) {
         throw new Error('Division by zero is not allowed.');
@@ -4189,12 +4241,15 @@ try {
 } catch (error) {
     console.error('Caught exception:', error.message);
 }
+```
+
+
+
 Handling Different Types of Errors:
 
-
-
-
 You can catch specific types of errors based on the kind of exception that occurred.
+```javascript
+
 try {
     // Code that might throw an exception
     throw new TypeError('This is a type error.');
@@ -4203,11 +4258,14 @@ try {
 } catch (otherError) {
     console.error('Caught another error:', otherError.message);
 }
+```
+
 Note: The order of catch blocks matters. The first matching block is executed.
 
 Custom Error Objects:
 
 You can create and throw custom error objects by extending the Error constructor.
+```javascript
 
 class CustomError extends Error {
     constructor(message) {
@@ -4221,6 +4279,8 @@ try {
 } catch (customError) {
     console.error('Caught custom error:', customError.message);
 }
+```
+
 Exception handling is essential for robust and reliable code, especially in scenarios where errors may occur during runtime. It helps prevent unexpected crashes and allows developers to gracefully handle exceptional conditions.
 
 _____________________________________________________________________________________________________________________________________
@@ -4236,7 +4296,7 @@ It then bundles these modules together into one or more files that can be served
 Entry and Output:In Webpack, you specify one or more entry points in your project, typically the main JavaScript file. Webpack starts its bundling process from these entry points.
 You also configure the output, specifying where the bundled files should be generated.
 Example webpack.config.js:
-
+```javascript
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -4244,13 +4304,15 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 };
+
+```
 Loaders:
 
 Webpack uses loaders to process different types of files during the bundling process. Loaders transform non-JavaScript assets into valid modules that can be included in the bundle.
 For example, you might use the babel-loader to transpile ECMAScript 6 (ES6) code to ES5.
 Example:
 
-
+```javascript
 module: {
   rules: [
     {
@@ -4263,57 +4325,66 @@ module: {
   ],
 }
 Plugins:
-
+```
 Plugins extend the functionality of Webpack by performing tasks like minification, code splitting, and environment-specific configuration.
 Popular plugins include uglifyjs-webpack-plugin for minification and HtmlWebpackPlugin for generating HTML files.
 Example:
 
-
+```javascript
 plugins: [
   new HtmlWebpackPlugin({
     template: 'index.html',
   }),
 ]
+
+```
 Code Splitting:
 
 Webpack supports code splitting, which allows you to split your code into smaller chunks that can be loaded on demand. This is useful for optimizing the loading time of your application.
 Dynamic import() statements are often used for code splitting.
 Example:
 
-
+```javascript
 import('./module').then((module) => {
   // Module is loaded on demand
 });
+```
+
 Hot Module Replacement (HMR):
 
 HMR is a feature in Webpack that allows developers to update modules in the browser without a full page reload. It's useful for improving the development experience by maintaining application state during code changes.
 Example:
 
-
+```javascript
 module.exports = {
   devServer: {
     hot: true,
   },
 };
+```
+
 Webpack Dev Server:
 
 Webpack Dev Server is a development server that provides live reloading and other development features. It serves your bundled files in-memory, allowing for a faster development workflow.
 Example:
 
-javascript
-Copy code
+```javascript
 module.exports = {
   devServer: {
     contentBase: './dist',
     hot: true,
   },
 };
+
+```
+
 Webpack has become a standard tool in modern web development for managing dependencies, optimizing assets, and providing a smooth development workflow. It simplifies the process of building and maintaining complex web applications.
 
 
-_________________________________________________________________________________________________________
+__________________________________________________________________________________________
 **Overloading in JavaScript**
 In JavaScript, function overriding is typically associated with inheritance in the context of object-oriented programming. When you have a base class and a derived class, the derived class can override a method from the base class.
+```javascript
 class Animal {
     speak() {
         console.log("Animal speaks");
@@ -4331,13 +4402,13 @@ myAnimal.speak();  // Output: Animal speaks
 
 const myDog = new Dog();
 myDog.speak();     // Output: Dog barks
+```
 
 
 
 
 
-
-______________________________________________________________________________________________________________________________________________
+__________________________________________________________________________________________
 **prototype chaining in javascript**
 
 Prototype chaining is a fundamental concept in JavaScript that allows objects to inherit properties and methods from other objects through a prototype chain. Each object in JavaScript has an associated prototype object, and when a property or method is accessed on an object, if it's not found directly on the object, JavaScript looks for it in the prototype chain.
@@ -4363,7 +4434,7 @@ Here's a simple example to illustrate prototype chaining:
 
 
 
-
+```javascript
 
 // Creating a constructor function
 function Animal(name) {
@@ -4383,23 +4454,28 @@ console.log(dog.name); // Output: Buddy
 
 // Accessing a method, which is not found directly on the object
 dog.sound(); // Output: Some generic sound
-
+```
 // The prototype chain:
 // dog -> Animal.prototype -> Object.prototype
 In this example, the dog object inherits the sound method from the Animal.prototype. If the sound method were not found in Animal.prototype, JavaScript would continue looking in the Object.prototype. This forms the prototype chain.
 
 
-____________________________________________________________________________________________________________________
+__________________________________________________________________________________________
 
 **control flow js execution**
 In JavaScript, control flow refers to the order in which statements are executed within a script. JavaScript executes code sequentially by default, meaning one statement after another. However, control flow can be altered using various control structures like conditionals and loops. Here's an overview of control flow mechanisms in JavaScript:
 
 Sequential Execution: As mentioned, JavaScript executes statements one after the other, from top to bottom, in the order they appear in the script.
+
+```javascript
 var x = 10;
 var y = 20;
 var z = x + y;
 console.log(z); // Output: 30
+```]
+
 Conditional Statements (if, else if, else): These statements allow you to execute different blocks of code based on different conditions.
+```javascript
 var hour = new Date().getHours();
 if (hour < 12) {
     console.log("Good morning!");
@@ -4408,7 +4484,10 @@ if (hour < 12) {
 } else {
     console.log("Good evening!");
 }
+```
+
 Switch Statement: Similar to if-else, but provides a cleaner way to handle multiple conditions.
+```javascript
 var day = new Date().getDay();
 switch (day) {
     case 0:
@@ -4421,7 +4500,10 @@ switch (day) {
     default:
         console.log("Weekend");
 }
+```
+
 Loops (for, while, do-while): These constructs allow you to repeat a block of code multiple times.
+```javascript
 for loop:
 
 for (var i = 0; i < 5; i++) {
@@ -4440,59 +4522,67 @@ do {
     console.log(i);
     i++;
 } while (i < 5);
+```
+
 Function Calls: JavaScript functions can be called to execute a specific block of code. Control returns to the caller after the function completes execution.
-javascript
-Copy code
+```javascript
 function greet(name) {
     console.log("Hello, " + name + "!");
 }
 
 greet("Alice"); // Output: Hello, Alice!
-
+```
 Asynchronous Execution: JavaScript also supports asynchronous execution, which allows certain operations to be performed independently of the main execution flow. This is commonly seen with events, timers, callbacks, and promises.
 Understanding and mastering control flow is essential for writing efficient and structured JavaScript code.
 
-____________________________________________________________________________________________________________________________________
+__________________________________________________________________________________________
 **Immediately Invoked Function in js**
 
 An Immediately Invoked Function Expression (IIFE) in JavaScript is a function that is executed immediately after it is defined. It's a common pattern used to create a private scope for variables, preventing them from polluting the global namespace. Here's the basic syntax:
-
+```javascript
 (function() {
     // code to be executed immediately
 })();
+```
 You define a function expression within parentheses (function() { /* code */ }), and then immediately invoke it by adding another pair of parentheses at the end ().
 
 You can also pass arguments to the function:
-
+```javascript
 (function(name) {
     console.log('Hello, ' + name + '!');
 })('World');
+```
+
 This can be useful for creating modules, encapsulating code, or avoiding naming conflicts.
 
 Immediately Invoked Function in js
 
 An Immediately Invoked Function Expression (IIFE) in JavaScript is a function that is executed immediately after it is defined. It's a common pattern used to create a private scope for variables, preventing them from polluting the global namespace. Here's the basic syntax:
 
+```javascript
 (function() {
     // code to be executed immediately
 })();
+```
 You define a function expression within parentheses (function() { /* code */ }), and then immediately invoke it by adding another pair of parentheses at the end ().
 
 You can also pass arguments to the function:
-
+```javascript
 (function(name) {
     console.log('Hello, ' + name + '!');
 })('World');
+```
+
 This can be useful for creating modules, encapsulating code, or avoiding naming conflicts.
 
 
 
-________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________
 
 **curring in js**
 
 In JavaScript, "curring" refers to the process of converting a function that takes multiple arguments into a sequence of functions that each take a single argument. This technique allows you to partially apply arguments to a function, creating a new function with fewer parameters.
-
+```javascript
 // Non-curried function
 function add(x, y) {
   return x + y;
@@ -4512,7 +4602,7 @@ console.log(curriedAdd(2)(3)); // Outputs: 5
 // Partial application
 const addTwo = curriedAdd(2);
 console.log(addTwo(3)); // Outputs: 5
-
+```
 
 In this example, curriedAdd is a curried version of the add function. It takes one argument x and returns a function that takes another argument y and performs the addition. This allows for partial application, where you can pass one argument to curriedAdd to create a new function (addTwo) that adds 2 to any number passed to it.
 

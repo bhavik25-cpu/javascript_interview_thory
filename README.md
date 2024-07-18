@@ -934,232 +934,364 @@ console.log(sentence.lastIndexOf('is'));  // Outputs: 5
 includes(substring):
 
 Checks if a string contains a specific substring.
+```javascript
 const sentence = 'This is a sentence.';
 console.log(sentence.includes('is'));  // Outputs: true
 startsWith(prefix) and endsWith(suffix):
+```
 
 Checks if a string starts/ends with a specified prefix/suffix.
+```javascript
 
 const message = 'Hello, World!';
 console.log(message.startsWith('Hello'));  // Outputs: true
 console.log(message.endsWith('!'));  // Outputs: true
 slice(start, end):
+```
 
 Extracts a portion of a string.
+
+```javascript
+
 const phrase = 'JavaScript is amazing!';
 console.log(phrase.slice(0, 10));  // Outputs: JavaScript
 substring(start, end):
+```
 
 Similar to slice, but doesn't accept negative indices.
+
+```javascript
+
 const phrase = 'JavaScript is amazing!';
 console.log(phrase.substring(0, 10));  // Outputs: JavaScript
 substr(start, length):
+```
 
 Extracts a specified number of characters from a string, starting at a specified index.
+
+```javascript
+
 const phrase = 'JavaScript is amazing!';
 console.log(phrase.substr(0, 10));  // Outputs: JavaScript
 replace(searchValue, replaceValue):
+```
+
 
 Replaces a specified value with another value in a string.
+```javascript
+
 const message = 'Hello, World!';
 console.log(message.replace('World', 'Universe'));  // Outputs: Hello, Universe!
 toUpperCase() and toLowerCase():
+```
 
 
 Converts a string to uppercase or lowercase.
+```javascript
+
 const text = 'Hello, World!';
 console.log(text.toUpperCase());  // Outputs: HELLO, WORLD!
 console.log(text.toLowerCase());  // Outputs: hello, world!
 trim():
+```
 
 Removes whitespace from both ends of a string.
+```javascript
+
 const spacedText = '   Trim me!   ';
 console.log(spacedText.trim());  // Outputs: Trim me!
 split(separator):
+```
 
 Splits a string into an array of substrings based on a specified separator.
+```javascript
+
 const sentence = 'This is a sample sentence.';
 console.log(sentence.split(' '));  // Outputs: ['This', 'is', 'a', 'sample', 'sentence.']
 match(regexp):
+```
 
 Searches a string for a specified pattern and returns the matched substrings as an array.
+```javascript
+
 const text = 'The quick brown fox';
 console.log(text.match(/e/g));  // Outputs: ['e', 'e']
 search(regexp):
+```
 
 Searches a string for a specified pattern and returns the index of the first match.
+```javascript
+
 const text = 'The quick brown fox';
 console.log(text.search(/brown/));  // Outputs: 10
-repeat(count):
+```
 
+
+repeat(count):
 Returns a new string with a specified number of copies of the original string.
+```javascript
+
 const word = 'hello';
 console.log(word.repeat(3));  // Outputs: hellohellohello
+```
+
+
+
 padStart(targetLength, padString) and padEnd(targetLength, padString):
-
-
-
-
 Pads a string with a specified character (or spaces) to reach a specified length.
+```javascript
+
 const number = '42';
 console.log(number.padStart(5, '0'));  // Outputs: 00042
+```
 
 
 String Transformation:
+```javascript
+
 String.fromCharCode(code):
-
 console.log(String.fromCharCode(65, 66, 67));  // Outputs: ABC
-normalize([form]):
+```
 
+
+normalize([form]):
 Returns the Unicode Normalization Form of a given string.
+```javascript
+
 const text = 'l\u0301lama';
 console.log(text.normalize());  // Outputs: llama
 String Inspection:
 trimStart() and trimEnd() (ES10+):
+```
 
 Removes leading or trailing whitespaces.
+```javascript
+
 const spacedText = '   Trim me!   ';
 console.log(spacedText.trimStart());  // Outputs: 'Trim me!   '
 console.log(spacedText.trimEnd());    // Outputs: '   Trim me!'
+
+```
+
+
 String Encoding/Decoding:
 encodeURI() and decodeURI():
 
 Encodes and decodes a complete URI.
+```javascript
 
 const originalURI = 'https://example.com/path?query=Hello, World!';
 const encodedURI = encodeURI(originalURI);
 console.log(encodedURI);
 console.log(decodeURI(encodedURI));
 encodeURIComponent() and decodeURIComponent():
+```
 
 Encodes and decodes a component of a URI (e.g., query parameters).
+```javascript
 
 const originalParam = 'Hello, World!';
 const encodedParam = encodeURIComponent(originalParam);
 console.log(encodedParam);
 console.log(decodeURIComponent(encodedParam));
+```
+
 String Localization:
 toLocaleLowerCase() and toLocaleUpperCase():
 
 Converts a string to lowercase or uppercase based on the current locale.
-javascript
-Copy code
+```javascript
+
 const text = 'İstanbul';
 console.log(text.toLocaleLowerCase('tr'));  // Outputs: i̇stanbul
 console.log(text.toLocaleUpperCase('tr'));  // Outputs: İSTANBUL
+
+```
+
 String Iteration:
+
 forEach(callback):
 
 Iterates over each character in a string.
+```javascript
+
 const word = 'JavaScript';
 word.split('').forEach(char => console.log(char));
+```
+
+
 String Representation:
 toString():
 
 Returns a string representing the specified object.
+```javascript
+
 const num = 42;
 console.log(num.toString());  // Outputs: '42'
-valueOf():
+```
 
+
+valueOf():
 Returns the primitive value of the specified object.
+```javascript
 const strObject = new String('Hello');
 console.log(strObject.valueOf());  // Outputs: 'Hello'
+```
+
 String Comparison:
 localeCompare():
-
 Compares two strings in the current locale.
+```javascript
+
 const str1 = 'apple';
 const str2 = 'banana';
 console.log(str1.localeCompare(str2));  // Outputs: -1 (less than)
+```
+
 These are additional string methods and operations available in JavaScript. Understanding these methods can enhance your ability to manipulate and work with strings effectively in various scenarios.
 
 
 
 String Inspection:
+```javascript
+
 startsWith(searchString [, position]):
+```
 
 Checks if a string starts with a specified substring.
+```javascript
+
 const message = 'Hello, World!';
 console.log(message.startsWith('Hello'));  // Outputs: true
-endsWith(searchString [, length]):
+```
 
+
+
+endsWith(searchString [, length]):
 Checks if a string ends with a specified substring.
+```javascript
 const message = 'Hello, World!';
 console.log(message.endsWith('World!'));  // Outputs: true
+```
+
 String Padding:
 padStart(targetLength, padString):
-
 Pads a string with a specified character (or spaces) from the start.
+```javascript
+
 const number = '42';
 console.log(number.padStart(5, '0'));  // Outputs: 00042
+
+```
+
 padEnd(targetLength, padString):
 
 Pads a string with a specified character (or spaces) from the end.
+```javascript
+
 const number = '42';
 console.log(number.padEnd(5, '0'));  // Outputs: 42000
+```
+
+
+
 String Searching:
 search(regexp):
 
-
 Searches a string for a specified pattern and returns the index of the first match.
+```javascript
+
 const text = 'The quick brown fox';
 console.log(text.search(/brown/));  // Outputs: 10
+```
+
 String Iteration:
 split(separator, limit):
-
-
-
 Splits a string into an array of substrings based on a specified separator.
+```javascript
+
 const sentence = 'This is a sample sentence.';
 console.log(sentence.split(' ', 3));  // Outputs: ['This', 'is', 'a']
 forEach(callback):
+```
 
 Iterates over each character in a string.
+
+```javascript
+
 const word = 'JavaScript';
 word.split('').forEach(char => console.log(char));
+```
+
 String Conversion:
 toString():
 
 Returns a string representing the specified object.
+```javascript
+
 const num = 42;
 console.log(num.toString());  // Outputs: '42'
+```
+
+
+
 String Comparison:
 localeCompare():
 
 Compares two strings in the current locale.
+```javascript
+
 const str1 = 'apple';
 const str2 = 'banana';
 console.log(str1.localeCompare(str2));  // Outputs: -1 (less than)
+```
+
+
 String Matching:
 match(regexp):
-
-
-
 Searches a string for a specified pattern and returns the matched substrings as an array.
+
+```javascript
+
 const text = 'The quick brown fox';
 console.log(text.match(/e/g));  // Outputs: ['e', 'e']
-matchAll(regexp):
+```
 
+
+
+matchAll(regexp):
 Returns an iterator of all matched substrings in a string.
+```javascript
+
 const text = 'The quick brown fox';
 const matches = text.matchAll(/e/g);
 for (const match of matches) {
   console.log(match);
 }
+
+```
+
 String Conversion:
 String.fromCharCode(code):
 
 Returns a string created by using the specified sequence of Unicode values.
+```javascript
+
 console.log(String.fromCharCode(65, 66, 67));  // Outputs: ABC
+```
+
 These additional methods provide more functionality for string manipulation, searching, and comparison in JavaScript. Understanding these methods can be valuable for various string-handling scenarios in your code.
 
 
 String.raw():
 Returns a raw string representation of a template literal.
+```
+
 const path = String.raw`C:\Users\node`;
 console.log(path);  // Outputs: C:\Users\node
 
 String substr()
+```
 
 The substr() method in JavaScript is used to extract a portion of a string, starting from a specified index and extending for a specified number of characters. The syntax of the substr() method is as follows:
 
@@ -1167,18 +1299,23 @@ string.substr(startIndex, length);
 startIndex: The index at which to start the extraction.
 length (optional): The number of characters to extract. If this parameter is omitted, the substr() method extracts characters to the end of the string.
 Here's an example:
+```javascript
 const originalString = "Hello, World!";
 const extractedSubstring = originalString.substr(7, 5);
-
 console.log(extractedSubstring);  // Outputs: World
+```
+
 In this example:
 
 startIndex is 7, which means the extraction starts at the 8th character ('W') in the string.
 length is 5, so the method extracts a substring of 5 characters, resulting in "World".
 If the length parameter is omitted, the substr() method extracts characters from the specified startIndex to the end of the string:
+```javascript
 
 const partialString = originalString.substr(7);
 console.log(partialString);  // Outputs: World!
+```
+
 In this case, the substring starts at index 7 ('W') and includes all characters until the end of the original string, resulting in "World!".
 
 
@@ -1208,18 +1345,28 @@ searchString: The string to search for within the calling string.
 startPosition (optional): The position within the calling string at which to begin the search. If omitted, the search starts from the beginning of the string.
 
 Here's an example:
+```javascript
+
 const sentence = "The quick brown fox jumps over the lazy dog.";
 const containsFox = sentence.includes("fox");
 console.log(containsFox);  // Outputs: true
 const containsCat = sentence.includes("cat");
 console.log(containsCat);  // Outputs: false
+
+```
+
 In this example:
 The includes() method is used to check if the string "fox" is present in the sentence. Since "fox" is present, containsFox is true.
 The method is then used to check if the string "cat" is present in the sentence. Since "cat" is not present, containsCat is false.
 The startPosition parameter allows you to specify where the search should begin:
+```javascript
+
 const phrase = "This is a simple example.";
 const containsSimple = phrase.includes("simple", 5);
 console.log(containsSimple);  // Outputs: true
+
+```
+
 In this case, the search for "simple" starts from index 5, and since "simple" is present in the string, containsSimple is true.
 
 
@@ -1229,12 +1376,18 @@ JavaScript Template Strings, introduced in ECMAScript 6 (ES6), provide a more fl
 Here's an overview of the features of JavaScript Template Strings:
 
 1. Basic Template String:
+```javascript
+
 const name = "John";
 const greeting = `Hello, ${name}!`;
 console.log(greeting);  // Outputs: Hello, John!
+```
+
 In this example, ${name} is a placeholder that gets replaced with the value of the name variable when the string is evaluated.
 
 2. Multiline Strings:
+```javascript
+
 const multilineString = `
   This is a
   multiline
@@ -1242,6 +1395,8 @@ const multilineString = `
 `;
 
 console.log(multilineString);
+```
+
 /*
 Outputs:
   This is a
@@ -1251,15 +1406,21 @@ Outputs:
 Template strings make it easy to create multiline strings without the need for concatenation or escape characters.
 
 3. Expression Interpolation:
+```javascript
+
 const a = 5;
 const b = 10;
 const result = `The sum of ${a} and ${b} is ${a + b}.`;
 
 console.log(result);  // Outputs: The sum of 5 and 10 is 15.
+```
+
+
 Expressions inside ${} are evaluated and their values are included in the resulting string.
 
 4. Tagged Template Literals:
 Tagged template literals allow you to process template literals with a function. The function (tag function) receives the template literals and evaluated expressions as arguments.
+```javascript
 
 function tagFunction(strings, ...values) {
   console.log(strings);  // Array of string literals
@@ -1270,6 +1431,9 @@ const name = "John";
 const age = 30;
 
 tagFunction`My name is ${name} and I am ${age} years old.`;
+
+```
+
 /*
 Outputs:
 [
@@ -1282,10 +1446,16 @@ Outputs:
   30
 ]
 */
+
+
 5. Escaping Characters:
 Template strings make it easier to include special characters without escaping them:
+```javascript
+
 const message = `This is a backtick (\`) inside a template string.`;
 console.log(message);
+```
+
 // Outputs: This is a backtick (`) inside a template string.
 Template strings also handle newline characters and other special characters more gracefully.
 
@@ -1303,48 +1473,69 @@ Here's a basic overview of JavaScript arrays:
 Arrays can be created using array literal syntax or the Array constructor:
 
 Array Literal Syntax:
+```javascript
 
 const fruits = ['apple', 'banana', 'orange'];
 Using the Array Constructor:
 
 const cars = new Array('Toyota', 'Honda', 'Ford');
+```
 
 2. Accessing Elements:
 Elements in an array can be accessed using zero-based index:
+```javascript
 
 console.log(fruits[0]);  // Outputs: 'apple'
 console.log(cars[2]);     // Outputs: 'Ford'
+```
 
 3. Array Length:
 The length property indicates the number of elements in an array:
 
+```javascript
 
 console.log(fruits.length);  // Outputs: 3
+```
+
 4. Adding and Removing Elements:
 Arrays are mutable, and you can add or remove elements:
 
 Adding Elements:
+```javascript
 
 fruits.push('grape');      // Adds 'grape' to the end
 fruits.unshift('kiwi');     // Adds 'kiwi' to the beginning
+```
+
+
 Removing Elements:
-javascript
-Copy code
+```javascript
+
 fruits.pop();               // Removes the last element ('grape')
 fruits.shift();             // Removes the first element ('kiwi')
+
+```
+
 5. Iterating Through Arrays:
 Arrays can be iterated using loops or array methods:
 
 Using for Loop:
+```javascript
 
 for (let i = 0; i < fruits.length; i++) {
   console.log(fruits[i]);
 }
+```
+
 Using forEach Method:
+```javascript
 
 fruits.forEach(function(fruit) {
   console.log(fruit);
 });
+
+```
+
 6. Array Methods:
 JavaScript provides a variety of built-in array methods for common operations:
 
@@ -1353,14 +1544,20 @@ filter: Creates a new array with elements that pass a test.
 reduce: Reduces the array to a single value (left-to-right).
 indexOf and lastIndexOf: Find the index of an element.
 splice: Adds or removes elements at a specific index.
+
+
 7. Multidimensional Arrays:
 Arrays can contain other arrays, creating multidimensional arrays:
+```javascript
 
 const matrix = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
 ];
+
+```
+
 JavaScript arrays are versatile and widely used for handling collections of data in web development. Understanding their properties and methods is essential for effective programming in JavaScript.
 
 
@@ -1369,73 +1566,104 @@ Certainly! Below is a list of common array methods in JavaScript along with exam
 
 1. push(element1, ..., elementN)
 Adds one or more elements to the end of an array.
+```javascript
 
 const fruits = ['apple', 'banana'];
 fruits.push('orange', 'grape');
 console.log(fruits);  // Outputs: ['apple', 'banana', 'orange', 'grape']
+```
 
 2. pop()
 Removes the last element from an array and returns that element.
+```javascript
 
 const fruits = ['apple', 'banana', 'orange'];
 const removedFruit = fruits.pop();
 console.log(removedFruit);  // Outputs: 'orange'
 console.log(fruits);        // Outputs: ['apple', 'banana']
+```
 
 3. unshift(element1, ..., elementN)
 Adds one or more elements to the beginning of an array.
+```javascript
 
 const fruits = ['apple', 'banana'];
 fruits.unshift('kiwi', 'orange');
 console.log(fruits);  // Outputs: ['kiwi', 'orange', 'apple', 'banana']
+```
 
 4. shift()
 Removes the first element from an array and returns that element.
+```javascript
 
 const fruits = ['kiwi', 'orange', 'apple', 'banana'];
 const removedFruit = fruits.shift();
 console.log(removedFruit);  // Outputs: 'kiwi'
 console.log(fruits);        // Outputs: ['orange', 'apple', 'banana']
+
+```
+
 5. splice(startIndex, deleteCount, element1, ..., elementN)
+
 Changes the contents of an array by removing or replacing existing elements and/or adding new elements.
+```javascript
 
 const fruits = ['orange', 'apple', 'banana'];
 fruits.splice(1, 1, 'grape', 'kiwi');
 console.log(fruits);  // Outputs: ['orange', 'grape', 'kiwi', 'banana']
+```
 
 6. concat(array1, array2, ..., arrayN)
 Combines two or more arrays.
+```javascript
 
 const fruits1 = ['apple', 'banana'];
 const fruits2 = ['orange', 'grape'];
 const combinedFruits = fruits1.concat(fruits2);
 console.log(combinedFruits);  // Outputs: ['apple', 'banana', 'orange', 'grape']
+```
 
 8. slice(startIndex, endIndex)
 Returns a shallow copy of a portion of an array into a new array.
+```javascript
 
 const fruits = ['apple', 'banana', 'orange', 'grape'];
 const slicedFruits = fruits.slice(1, 3);
 console.log(slicedFruits);  // Outputs: ['banana', 'orange']
+```
 
 8. indexOf(element, fromIndex)
 Returns the first index at which a given element can be found in the array.
+
+```javascript
+
 const fruits = ['apple', 'banana', 'orange', 'grape'];
 const orangeIndex = fruits.indexOf('orange');
 console.log(orangeIndex);  // Outputs: 2
+```
 
 9. lastIndexOf(element, fromIndex)
 Returns the last index at which a given element can be found in the array.
+
+```javascript
+
 const fruits = ['apple', 'banana', 'orange', 'grape', 'orange'];
 const lastOrangeIndex = fruits.lastIndexOf('orange');
 console.log(lastOrangeIndex);  // Outputs: 4
+
+```
+
 10. forEach(callback(currentValue, index, array), thisArg)
 
 - Executes a provided function once for each array element.
+```javascript
+
 const numbers = [1, 2, 3];
 numbers.forEach(function (num) {
   console.log(num * 2);
 });
+```
+
 // Outputs:
 // 2
 // 4
@@ -1447,28 +1675,39 @@ These are just a few examples of the many methods available for working with arr
 
 11. filter(callback(element, index, array), thisArg)
 Creates a new array with all elements that pass the test implemented by the provided function.
+```javascript
+
 const numbers = [1, 2, 3, 4, 5];
 const evenNumbers = numbers.filter(function(num) {
   return num % 2 === 0;
 });
 console.log(evenNumbers);  // Outputs: [2, 4]
+```
 
 
 12. map(callback(element, index, array), thisArg)
 Creates a new array with the results of calling a provided function on every element in the array.
+
+```javascript
+
 const numbers = [1, 2, 3];
 const squaredNumbers = numbers.map(function(num) {
   return num * num;
 });
 console.log(squaredNumbers);  // Outputs: [1, 4, 9]
+```
 
 13. reduce(callback(accumulator, currentValue, index, array), initialValue)
 Applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.
+
+```javascript
+
 const numbers = [1, 2, 3, 4];
 const sum = numbers.reduce(function(accumulator, current) {
   return accumulator + current;
 }, 0);
 console.log(sum);  // Outputs: 10
+```
 
 
 
@@ -1546,90 +1785,127 @@ numbers.forEach(function(num) {
 
 22. flat(depth)
 Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+```javascript
+
 const nestedArray = [1, [2, [3, [4]]]];
 const flatArray = nestedArray.flat(2);
 console.log(flatArray);  // Outputs: [1, 2, 3, [4]]
+```
 
 
 23. includes(element, fromIndex)
 Determines whether an array includes a certain element, returning true or false.
+```javascript
+
 const numbers = [1, 2, 3, 4, 5];
 const hasThree = numbers.includes(3);
 console.log(hasThree);  // Outputs: true
+```
 
 
 
 
 24. toString()
 Returns a string representing the specified array and its elements.
+```javascript
+
 const fruits = ['apple', 'banana', 'orange'];
 const fruitsString = fruits.toString();
 console.log(fruitsString);  // Outputs: 'apple,banana,orange'
+```
 
 25. indexOf(element, fromIndex)
 Returns the first index at which a given element can be found in the array.
-javascript
-Copy code
+```javascript
+
 const fruits = ['apple', 'banana', 'orange', 'banana'];
 const bananaIndex = fruits.indexOf('banana');
 console.log(bananaIndex);  // Outputs: 1
 
+```
 
 
 26. lastIndexOf(element, fromIndex)
 Returns the last index at which a given element can be found in the array.
+
+```javascript
+
 const fruits = ['apple', 'banana', 'orange', 'banana'];
 const lastBananaIndex = fruits.lastIndexOf('banana');
 console.log(lastBananaIndex);  // Outputs: 3
 
+```
 
 27. reverse()
 Reverses the elements of an array in place.
+```javascript
+
 const numbers = [1, 2, 3, 4, 5];
 numbers.reverse();
 console.log(numbers);  // Outputs: [5, 4, 3, 2, 1]
+```
 
 28. isArray(value)
 Returns true if the provided value is an array, false otherwise.
+```javascript
+
 console.log(Array.isArray([1, 2, 3]));  // Outputs: true
 console.log(Array.isArray('not an array'));  // Outputs: false
+```
 
 
 29. fill(value, start, end)
 Fills all the elements of an array with a static value from a start index to an end index.
+
+```javascript
 const numbers = [1, 2, 3, 4, 5];
 numbers.fill(0, 2, 4);
 console.log(numbers);  // Outputs: [1, 2, 0, 0, 5]
+```
 
 
 30. flatMap(callback(element, index, array), thisArg)
 Maps each element using a mapping function, then flattens the result into a new array.
+```javascript
+
 const numbers = [1, 2, 3];
 const doubledAndSquared = numbers.flatMap(num => [num * 2, num * 2 + 1]);
 console.log(doubledAndSquared);  // Outputs: [2, 3, 4, 5, 6, 7]
 
+```
 
 31. reduceRight(callback(accumulator, currentValue, index, array), initialValue)
 Applies a function against an accumulator and each element in the array (from right to left) to reduce it to a single value.
+```javascript
+
 const numbers = [1, 2, 3, 4];
 const sumRight = numbers.reduceRight((acc, current) => acc - current, 0);
 console.log(sumRight);  // Outputs: -2 (4 - (3 - (2 - (1 - 0))))
 
+```
 
 
 32. copyWithin(target, start, end)
 Copies a sequence of array elements to the specified position within the array, overwriting existing elements.
+```javascript
+
 const numbers = [1, 2, 3, 4, 5];
 numbers.copyWithin(0, 3, 5);
 console.log(numbers);  // Outputs: [4, 5, 3, 4, 5]
+```
 
 33. entries()
 Returns a new array iterator that contains key/value pairs for each index in the array.
+```javascript
+
 const fruits = ['apple', 'banana', 'orange'];
 const iterator = fruits.entries();
 for (const entry of iterator) {
   console.log(entry);
 }
+```
+
 // Outputs:
 // [0, 'apple']
 // [1, 'banana']
@@ -1637,11 +1913,16 @@ for (const entry of iterator) {
 
 34. keys()
 Returns a new array iterator that contains the keys for each index in the array.
+
+```javascript
+
 const fruits = ['apple', 'banana', 'orange'];
 const iterator = fruits.keys();
 for (const key of iterator) {
   console.log(key);
 }
+```
+
 // Outputs:
 // 0
 // 1
@@ -1650,11 +1931,15 @@ for (const key of iterator) {
 
 35. values()
 Returns a new array iterator that contains the values for each index in the array.
+```javascript
+
 const fruits = ['apple', 'banana', 'orange'];
 const iterator = fruits.values();
 for (const value of iterator) {
   console.log(value);
 }
+```
+
 // Outputs:
 // 'apple'
 // 'banana'
@@ -1662,10 +1947,14 @@ for (const value of iterator) {
 
 36. Symbol.iterator
 A property that references the function used to construct an iterator. It can be used with for...of loops.
+```javascript
+
 const fruits = ['apple', 'banana', 'orange'];
 for (const fruit of fruits[Symbol.iterator]()) {
   console.log(fruit);
 }
+```
+
 // Outputs:
 // 'apple'
 // 'banana'
@@ -1675,71 +1964,93 @@ Certainly! Here are a few more JavaScript array methods with examples:
 
 
 
-
-
-
-
 37. Array.from(iterable, mapFn, thisArg)
 Creates a new array from an iterable object, with an optional mapping function.
+```javascript
+
 const iterable = 'hello';
 const charArray = Array.from(iterable);
 console.log(charArray);  // Outputs: ['h', 'e', 'l', 'l', 'o']
+```
+
 
 38. Array.of(element1, element2, ..., elementN)
 Creates a new array with the given elements.
+```javascript
 const numbers = Array.of(1, 2, 3, 4);
 console.log(numbers);  // Outputs: [1, 2, 3, 4]
+```
 
 39. Array.isArray(value)
 Returns true if the provided value is an array, false otherwise.
+```javascript
+
 console.log(Array.isArray([1, 2, 3]));  // Outputs: true
 console.log(Array.isArray('not an array'));  // Outputs: false
+```
 
 40. Array.prototype.includes(element, fromIndex)
 Determines whether an array includes a certain element, returning true or false.
+```javascript
+
 const numbers = [1, 2, 3, 4, 5];
 const hasThree = numbers.includes(3);
 console.log(hasThree);  // Outputs: true
+```
 
 41. Array.prototype.join(separator)
 Joins all elements of an array into a string, separated by the specified separator.
+```javascript
+
 const fruits = ['apple', 'banana', 'orange'];
 const fruitsString = fruits.join(', ');
 console.log(fruitsString);  // Outputs: 'apple, banana, orange'
+```
 
 
 42. Array.prototype.filter(callback(element, index, array), thisArg)
 Creates a new array with all elements that pass the test implemented by the provided function.
+```javascript
+
 const numbers = [1, 2, 3, 4, 5];
 const evenNumbers = numbers.filter(function(num) {
   return num % 2 === 0;
 });
 console.log(evenNumbers);  // Outputs: [2, 4]
+```
 
 43. Array.prototype.map(callback(element, index, array), thisArg)
 Creates a new array with the results of calling a provided function on every element in the array.
+```javascript
+
 const numbers = [1, 2, 3];
 const squaredNumbers = numbers.map(function(num) {
   return num * num;
 });
 console.log(squaredNumbers);  // Outputs: [1, 4, 9]
+```
 
 44. Array.prototype.reduce(callback(accumulator, currentValue, index, array), initialValue)
 Applies a function against an accumulator and each element in the array to reduce it to a single value.
+```javascript
+
 const numbers = [1, 2, 3, 4];
 const sum = numbers.reduce(function(accumulator, current) {
   return accumulator + current;
 }, 0);
 console.log(sum);  // Outputs: 10
+```
+
 45. Array.prototype.some(callback(element, index, array), thisArg)
 Tests whether at least one element in the array passes the test implemented by the provided function.
-javascript
-Copy code
+```javascript
+
 const numbers = [1, 3, 5, 7];
 const hasEven = numbers.some(function(num) {
   return num % 2 === 0;
 });
 console.log(hasEven);  // Outputs: false
+```
 
 
 
@@ -1751,6 +2062,8 @@ Global Scope:
 Variables declared outside any function or block have global scope.
 They can be accessed from any part of the code, including within functions.
 Variables declared with var keyword at the top level are implicitly assigned to the global scope.
+```javascript
+
 var globalVar = "I'm global!";
 
 function exampleFunction() {
@@ -1758,11 +2071,14 @@ function exampleFunction() {
 }
 exampleFunction();
 console.log(globalVar);  // Accessible here as well
+```
 
 Local Scope (Function Scope and Block Scope):
 Variables declared inside a function or block have local scope.
 They are only accessible within the function or block where they are declared.
 Variables declared with let and const have block scope, while those declared with var have function scope.
+```javascript
+
 function exampleFunction() {
   var localVar = "I'm local!";
   let blockVar = "I'm in a block!";
@@ -1783,7 +2099,7 @@ exampleFunction();
 // console.log(constVar);   // Error: constVar is not defined here
 Note: Arrow functions (() => {}) have lexical scoping, meaning they inherit the scope of the enclosing context.
 
-
+```
 ____________________________________________________________________________________________________________________________
 
 **JavaScript Hoisting**
@@ -1794,18 +2110,25 @@ There are two main types of hoisting in JavaScript: hoisting of variable declara
 1. Hoisting of Variable Declarations:
 When you declare a variable using the var keyword, the declaration is hoisted to the top of the function or global scope, but the assignment remains in place.
 Example:
+```javascript
 console.log(x);  // Outputs: undefined
 var x = 5;
 console.log(x);  // Outputs: 5
+```
+
 In the above example, the declaration var x; is hoisted to the top, and the first console.log(x); outputs undefined. The assignment x = 5; remains in place.
 
 2. Hoisting of Function Declarations:
 Function declarations are also hoisted to the top of their scope. Unlike variables, both the function name and the function body are hoisted.
 Example:
+```javascript
+
 sayHello();  // Outputs: Hello!
 function sayHello() {
   console.log('Hello!');
 }
+```
+
 In this example, the function declaration function sayHello() { ... } is hoisted to the top, allowing the call sayHello(); to work even before the function is declared.
 
 
@@ -1815,8 +2138,12 @@ Only the declarations are hoisted, not the initializations or assignments. If yo
 let and const declarations are also hoisted, but unlike var, they are not initialized with undefined before the actual declaration. This is known as the "temporal dead zone."
 
 Example:
+```javascript
+
 console.log(y);  // Error: Cannot access 'y' before initialization
 let y = 10;
+```
+
 Understanding hoisting is essential for writing predictable and bug-free JavaScript code. While it can be a helpful feature, it's generally considered good practice to declare and initialize variables and functions before using them to avoid confusion and potential issues.
 
 
@@ -1826,31 +2153,49 @@ The "use strict" directive is used to enable a strict mode in JavaScript, which 
 To use strict mode, you simply include the following statement at the top of your JavaScript file or script:
 "use strict";
 Or, you can use it within a function to apply strict mode only to that specific function's scope:
+```javascript
+
 function myFunction() {
   "use strict";
   // Function code in strict mode
 }
+```
+
 Now, let's look at an example that illustrates how strict mode can catch potential issues:
 "use strict";
 
 // Example 1: Variable Assignment Without Declaration
+```javascript
+
 undeclaredVariable = 10;  // Throws a ReferenceError in strict mode
 console.log(undeclaredVariable);  // This line will not be executed in strict mode
+```
 
 // Example 2: Deleting Variables or Functions
+```javascript
+
 var x = 5;
 delete x;  // Throws a SyntaxError in strict mode
 console.log(x);  // Outputs: 5
+```
+
 
 // Example 3: Duplicate Parameter Names
+```javascript
+
 function sum(a, a, c) {  // Throws a SyntaxError in strict mode
   "use strict";
   return a + a + c;
 }
+```
 
 // Example 4: Octal Numeric Literals
+```javascript
+
 var octalNumber = 0123;  // Throws a SyntaxError in strict mode
 console.log(octalNumber);  // This line will not be executed in strict mode
+```
+
 In the first example, trying to assign a value to an undeclared variable results in a ReferenceError in strict mode. In non-strict mode, the variable would be implicitly declared as a global variable.
 In the second example, trying to delete a variable (delete x;) would throw a SyntaxError in strict mode. In non-strict mode, the deletion would simply be ignored.
 In the third example, having duplicate parameter names in a function declaration is not allowed in strict mode, whereas it would be silently accepted in non-strict mode.
@@ -1872,17 +2217,25 @@ If you have a larger script and want to use strict mode in some parts while avoi
 
 
 html
+```javascript
+
 <script>
   // Not using strict mode
   // Your code here
 </script>
+```
+
 Module Files:
 In ECMAScript 6 (ES6) and later versions, script files using modules (import and export statements) are automatically in strict mode. If you are working with modules, you don't need to include the "use strict" directive explicitly.
 
 // This file is automatically in strict mode
+```javascript
+
 export function myFunction() {
   // Your code here
 }
+```
+
 Use Non-strict Environments:
 If you are working in an environment or framework that doesn't enforce strict mode by default, you won't need to include the directive. However, many modern environments, including browsers and Node.js, enable strict mode by default.
 
@@ -1903,20 +2256,28 @@ Here are the main scenarios where the this keyword is used:
 Global Context:
 
 In the global scope (outside of any function or object), this refers to the global object. In a browser environment, this is often the window object.
+```javascript
 
 console.log(this);  // Outputs: Window (in a browser environment)
+```
+
 Function Context:
 
 In a regular function (not an arrow function), the value of this depends on how the function is invoked. It is determined by the calling context.
+```javascript
 
 function myFunction() {
   console.log(this);
 }
 
 myFunction();  // Outputs: Window (in a browser environment)
+
+```
+
 Method Context:
 
 When a function is called as a method of an object, this refers to the object on which the method is invoked.
+```javascript
 
 const myObject = {
   myMethod: function() {
@@ -1925,15 +2286,21 @@ const myObject = {
 };
 
 myObject.myMethod();  // Outputs: myObject
+```
+
 Event Handlers:
 
 In event handler functions, this typically refers to the element that triggered the event.
 html
 
+```javascript
 <button onclick="console.log(this)">Click me</button>
+```
+
 Constructor Functions:
 
 In a constructor function (a function invoked with the new keyword), this refers to the newly created instance of the object.
+```javascript
 
 function Person(name) {
   this.name = name;
@@ -1941,9 +2308,13 @@ function Person(name) {
 
 const person = new Person('John');
 console.log(person.name);  // Outputs: John
+
+```
+
 Explicit Binding:
 
 You can explicitly set the value of this using methods like call(), apply(), or bind().
+```javascript
 
 function greet() {
   console.log(`Hello, ${this.name}!`);
@@ -1952,9 +2323,13 @@ function greet() {
 const person = { name: 'John' };
 
 greet.call(person);  // Outputs: Hello, John!
+
+```
+
 Arrow Functions:
 
 Arrow functions do not have their own this context. They inherit the this value from the surrounding scope.
+```javascript
 
 const myObject = {
   myMethod: function() {
@@ -1965,6 +2340,7 @@ const myObject = {
 };
 
 myObject.myMethod();  // Outputs: myObject
+```
 
 
 _______________________________________________________________________________________________
@@ -1974,6 +2350,7 @@ No prototype object for Arrow Functions
 We cannot invoke the arrow function with the new keyword,
 1. Function Declarations (Regular Functions):
 With regular function declarations, the entire function is hoisted, meaning both the function name and its implementation are moved to the top of the scope.
+```javascript
 
 // Function declaration
 function regularFunction() {
@@ -1981,9 +2358,11 @@ function regularFunction() {
 }
 // Function call
 regularFunction();  // Outputs: Regular function
+```
 
 2. Function Expressions (Arrow Functions):
 Arrow functions, being a type of function expression, behave slightly differently in terms of hoisting. The variable declaration is hoisted, but the assignment (implementation) is not.
+```javascript
 
 // Function expression (arrow function)
 const arrowFunction = () => {
@@ -1992,6 +2371,7 @@ const arrowFunction = () => {
 
 // Function call
 arrowFunction();  // Outputs: Arrow function
+```
 So, in the case of arrow functions, the variable arrowFunction is hoisted to the top of the scope, but the function's implementation remains in place.
 ___________________________________________________________________________________________________________________
 **What is ternary operator JavaScript? with example**
@@ -2002,23 +2382,32 @@ If the condition is true, the expression before the : (colon) is evaluated.
 If the condition is false, the expression after the : (colon) is evaluated.
 Here's an example to illustrate the use of the ternary operator:
 // Using the ternary operator
+```javascript
 const age = 20;
 const isAdult = age >= 18 ? 'Yes' : 'No';
 
 console.log(isAdult);  // Outputs: 'Yes' (because age is 20, which is greater than or equal to 18)
+```
 In this example, the condition age >= 18 is evaluated. Since the condition is true (age is 20), the expression before the colon ('Yes') is assigned to the variable isAdult.
 
 You can also use the ternary operator within expressions or assignments:
 
 // Using the ternary operator within an assignment
+```javascript
+
 const result = (age >= 18) ? 'Allowed' : 'Not Allowed';
 
 console.log(result);  // Outputs: 'Allowed'
+```
 
 // Using the ternary operator within an expression
+```javascript
+
 const message = `You are ${age >= 18 ? 'allowed' : 'not allowed'} to enter.`;
 
 console.log(message);  // Outputs: 'You are allowed to enter.' (because age is 20)
+```
+
 The ternary operator is handy when you need to make a quick decision based on a simple condition, and it can help write more concise and readable code. However, it's essential to use it judiciously, as overly complex expressions within the ternary operator might reduce code clarity.
 
 ______________________________________________________________________________________________________________________
@@ -2030,6 +2419,8 @@ Here's an example to illustrate the concept of a higher-order function:
 Example: Higher-Order Function that Accepts a Function as an Argument
 
 // Higher-order function that takes a function as an argument
+```javascript
+
 function multiplyBy(factor) {
   // The returned function is a closure that "closes over" the factor parameter
   return function (number) {
@@ -2044,9 +2435,13 @@ const multiplyByFive = multiplyBy(5);
 // Calling the functions returned by the higher-order function
 console.log(multiplyByTwo(4));  // Outputs: 8 (2 * 4)
 console.log(multiplyByFive(3)); // Outputs: 15 (5 * 3)
+
+```
+
 In this example, multiplyBy is a higher-order function because it takes a factor as an argument and returns a new function. The returned function, in turn, is a closure that "closes over" the factor parameter, allowing it to remember the value of factor even after the outer function has completed execution.
 
 Example: Higher-Order Function that Returns a Function
+```javascript
 
 // Higher-order function that returns a function
 function createAdder(base) {
@@ -2062,14 +2457,19 @@ const addFive = createAdder(5);
 // Calling the functions returned by the higher-order function
 console.log(addTen(7));   // Outputs: 17 (10 + 7)
 console.log(addFive(3));  // Outputs: 8 (5 + 3)
+```
+
 In this example, createAdder is a higher-order function because it returns a new function. The returned function acts as an "adder" that adds the base value to a given number.
 
 Higher-order functions are powerful and provide a flexible way to create reusable and modular code. They are commonly used in functional programming paradigms and are foundational to many JavaScript libraries and frameworks.
 What is destructuring in JavaScript?example
 Destructuring in JavaScript is a way to extract values from objects or arrays and assign them to variables in a concise and expressive manner. It provides a more convenient syntax for extracting specific values and properties, making code shorter and more readable.
 
+
+
 Destructuring Arrays:
 Example 1: Basic Array Destructuring
+```javascript
 
 const numbers = [1, 2, 3, 4, 5];
 
@@ -2079,7 +2479,10 @@ const [first, second, , fourth] = numbers;
 console.log(first);  // Outputs: 1
 console.log(second); // Outputs: 2
 console.log(fourth); // Outputs: 4
+```
+
 In this example, array destructuring is used to extract values from the numbers array and assign them to individual variables (first, second, and fourth).
+```javascript
 
 Example 2: Swapping Values
 
@@ -2091,10 +2494,13 @@ let b = 2;
 
 console.log(a); // Outputs: 2
 console.log(b); // Outputs: 1
+```
+
 This example demonstrates how destructuring can be used to swap the values of two variables without using a temporary variable.
 
 Destructuring Objects:
 Example 3: Basic Object Destructuring
+```javascript
 
 const person = { firstName: 'John', lastName: 'Doe', age: 30 };
 
@@ -2104,9 +2510,12 @@ const { firstName, lastName, age } = person;
 console.log(firstName); // Outputs: 'John'
 console.log(lastName);  // Outputs: 'Doe'
 console.log(age);       // Outputs: 30
+```
+
 Object destructuring allows you to extract values from an object based on their property names.
 
 Example 4: Renaming Variables
+```javascript
 
 const car = { make: 'Toyota', model: 'Camry', year: 2022 };
 
@@ -2116,19 +2525,25 @@ const { make: brand, model, year } = car;
 console.log(brand); // Outputs: 'Toyota'
 console.log(model); // Outputs: 'Camry'
 console.log(year);  // Outputs: 2022
+```
+
 In this example, the variable make is renamed to brand during the destructuring assignment.
 
 Destructuring Function Parameters:
 Example 5: Destructuring Function Parameters
+```javascript
 
 function printPersonInfo({ firstName, lastName, age }) {
   console.log(`Name: ${firstName} ${lastName}, Age: ${age}`);
 }
 
 const personData = { firstName: 'Alice', lastName: 'Johnson', age: 25 };
+```
 
 // Calling the function with destructuring
 printPersonInfo(personData);
+```javascript
+
 // Outputs: 'Name: Alice Johnson, Age: 25'
 You can use destructuring in function parameters to extract values directly from an object passed as an argument.
 
@@ -2142,6 +2557,7 @@ In JavaScript, the call, apply, and bind methods are used to manipulate the this
 The call() method is used to invoke a function with a specified this value and individual arguments.
 
 Example:
+```javascript
 
 function greet(name) {
   console.log(`Hello, ${name}! My name is ${this.name}.`);
@@ -2151,13 +2567,19 @@ const person = { name: 'John' };
 
 // Using call to invoke the greet function with a specific context
 greet.call(person, 'Alice');
+
+```
+
 // Outputs: 'Hello, Alice! My name is John.'
 In this example, call() is used to invoke the greet function with the person object as the this context and 'Alice' as an argument.
+
+
 
 2. apply() Method:
 The apply() method is similar to call(), but it takes an array or an array-like object as the second argument for passing multiple arguments.
 
 Example:
+```javascript
 
 function introduce(age, gender) {
   console.log(`I am ${this.name}, ${age} years old, and ${gender}.`);
@@ -2167,13 +2589,19 @@ const person = { name: 'Alice' };
 
 // Using apply to invoke the introduce function with a specific context and multiple arguments
 introduce.apply(person, [30, 'female']);
+
+```
+
 // Outputs: 'I am Alice, 30 years old, and female.'
 Here, apply() is used to invoke the introduce function with the person object as the this context and an array [30, 'female'] as multiple arguments.
+
+
 
 3. bind() Method:
 The bind() method creates a new function with the same body as the original function but with a fixed this value.
 
 Example:
+```javascript
 
 function saySomething(message) {
   console.log(`${this.name} says: ${message}`);
@@ -2186,6 +2614,8 @@ const saySomethingAsBob = saySomething.bind(person);
 
 // Invoking the new function
 saySomethingAsBob('Hello!');
+```
+
 // Outputs: 'Bob says: Hello!'
 In this example, bind() is used to create a new function (saySomethingAsBob) with the person object as the fixed this context. The new function can be invoked separately.
 
@@ -2204,13 +2634,17 @@ In JavaScript, functions are first-class citizens, which means that functions ar
 Assigned to Variables:
 Functions can be assigned to variables just like any other value.
 
+```javascript
 
 const greet = function(name) {
   return `Hello, ${name}!`;
 };
+```
+
 Passed as Arguments:
 Functions can be passed as arguments to other functions.
 
+```javascript
 
 function applyOperation(num, operation) {
   return operation(num);
@@ -2221,9 +2655,14 @@ const square = function(x) {
 };
 
 console.log(applyOperation(5, square)); // Outputs: 25
+```
+
+
+
 Returned from Functions:
 Functions can be returned as values from other functions.
 
+```javascript
 
 function createMultiplier(factor) {
   return function(x) {
@@ -2233,9 +2672,13 @@ function createMultiplier(factor) {
 
 const double = createMultiplier(2);
 console.log(double(3)); // Outputs: 6
+
+```
+
 Stored in Data Structures:
 Functions can be stored in data structures like arrays or objects.
 
+```javascript
 
 const functionArray = [
   function(x) { return x + 1; },
@@ -2244,6 +2687,9 @@ const functionArray = [
 ];
 
 console.log(functionArray[0](5)); // Outputs: 6
+
+```
+
 The term "first-class function" implies that functions in JavaScript are treated on par with other data types, such as strings, numbers, or objects. This property allows for a high degree of flexibility and enables powerful programming paradigms like functional programming.
 
 Being able to work with functions as first-class citizens allows for the creation of higher-order functions, passing functions as arguments, and returning functions from other functions. This flexibility is a key feature of JavaScript that contributes to its versatility and the ability to express complex ideas concisely.
@@ -2256,6 +2702,7 @@ Shallow Copy:
 A shallow copy creates a new object or array, but it only copies the references to the original nested objects or arrays, rather than creating copies of the nested objects themselves.
 
 Example of Shallow Copy:
+```javascript
 
 const originalArray = [1, 2, [3, 4]];
 
@@ -2267,12 +2714,16 @@ shallowCopy[2][0] = 99;
 
 console.log(originalArray);  // Outputs: [1, 2, [99, 4]]
 console.log(shallowCopy);    // Outputs: [1, 2, [99, 4]]
+
+```
+
 In this example, modifying the nested array within the shallowCopy also affects the nested array in the originalArray.
 
 Deep Copy:
 A deep copy creates a completely independent duplicate of the original object or array, including all nested objects or arrays.
 
 Example of Deep Copy:
+```javascript
 
 const originalArray = [1, 2, [3, 4]];
 
@@ -2284,6 +2735,9 @@ deepCopy[2][0] = 99;
 
 console.log(originalArray);  // Outputs: [1, 2, [3, 4]]
 console.log(deepCopy);       // Outputs: [1, 2, [99, 4]]
+
+```
+
 In this example, modifying the nested array within the deepCopy does not affect the nested array in the originalArray.
 
 Considerations:
@@ -2315,39 +2769,53 @@ map Function:
 The map function creates a new array by applying a provided function to each element in the original array. It doesn't modify the original array but returns a new one.
 
 Example:
+```javascript
 
 const numbers = [1, 2, 3, 4, 5];
 
 const squaredNumbers = numbers.map(x => x * x);
 
 console.log(squaredNumbers); // Outputs: [1, 4, 9, 16, 25]
+
+```
+
 filter Function:
 The filter function creates a new array containing only the elements from the original array that satisfy a provided condition.
 
 Example:
+```javascript
 
 const numbers = [1, 2, 3, 4, 5];
 
 const evenNumbers = numbers.filter(x => x % 2 === 0);
 
 console.log(evenNumbers); // Outputs: [2, 4]
+```
+
 reduce Function:
 The reduce function reduces an array to a single value by applying a provided function to each element, accumulating the result. It can be used for tasks like summing up elements or transforming an array into a different type of value.
 
 Example:
+```javascript
 
 const numbers = [1, 2, 3, 4, 5];
 
 const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
 console.log(sum); // Outputs: 15
+
+```
+
 forEach Function:
 The forEach function executes a provided function once for each array element. It doesn't create a new array; instead, it's used for side effects or operations that don't involve creating a new array.
 
 Example:
+```javascript
+
 const numbers = [1, 2, 3, 4, 5];
 
 numbers.forEach(x => console.log(x * 2));
+```
 
 // Outputs:
 // 2
@@ -2382,6 +2850,7 @@ ________________________________________________________________________________
 In JavaScript, a closure is a combination of a function and the lexical environment within which that function was declared. This lexical environment consists of the variables that were in scope at the time the closure was created. Closures allow functions to retain access to variables from an outer (enclosing) scope even after the outer function has finished executing.
 
 Example of a Closure:
+```javascript
 
 function outerFunction() {
   const outerVariable = 'I am from the outer function';
@@ -2397,15 +2866,20 @@ const closure = outerFunction();
 
 // When the closure is invoked, it still has access to the outerVariable
 closure(); // Outputs: 'I am from the outer function'
+```
+
 In this example, outerFunction contains the variable outerVariable, and innerFunction is defined inside it. The innerFunction is then returned from outerFunction. When outerFunction is invoked and assigns its result to closure, closure becomes a closure. Even though outerFunction has finished executing, the innerFunction retained access to the outerVariable in its lexical scope.
 
 Use Cases for Closures:
 Data Encapsulation:
 
 Closures can be used to encapsulate and protect data. Variables within the outer function are not directly accessible from outside, but the inner function has access to them.
+
+
 Factory Functions:
 
 Closures are commonly used in the creation of factory functions, where you create and return a function with specific behavior based on its surrounding context.
+```javascript
 
 function createCounter() {
   let count = 0;
@@ -2418,9 +2892,15 @@ function createCounter() {
 const counter = createCounter();
 console.log(counter()); // Outputs: 1
 console.log(counter()); // Outputs: 2
+
+```
+
+
+
 Callback Functions:
 
 Closures are frequently used in callback functions to maintain access to variables from the outer scope.
+```javascript
 
 function doSomethingAsync(callback) {
   const data = 'Async operation completed';
@@ -2432,9 +2912,15 @@ function doSomethingAsync(callback) {
 doSomethingAsync(function(result) {
   console.log(result); // Outputs: 'Async operation completed'
 });
+
+```
+
+
+
 Event Handlers:
 
 Event handlers in web development often involve closures. The function that handles the event retains access to variables from the surrounding context.
+```javascript
 
 function createButton() {
   const buttonText = 'Click me';
@@ -2450,6 +2936,10 @@ function createButton() {
 
 const myButton = createButton();
 document.body.appendChild(myButton);
+
+
+```
+
 Benefits of Closures:
 Encapsulation: Closures help in encapsulating and hiding the implementation details, promoting information hiding.
 
@@ -2467,6 +2957,7 @@ ________________________________________________________________________________
 In JavaScript, a callback is a function that is passed as an argument to another function and is executed after the completion of a certain task. Callbacks are a fundamental concept in asynchronous programming and are widely used in JavaScript, especially with functions that involve tasks such as handling events, making API calls, or performing other asynchronous operations.
 
 Basic Example:
+```javascript
 
 function fetchData(callback) {
   // Simulating an asynchronous operation (e.g., fetching data from an API)
@@ -2482,9 +2973,15 @@ function processFetchedData(data) {
 
 // Using fetchData with a callback
 fetchData(processFetchedData);
+
+```
+
 In this example, fetchData is a function that simulates an asynchronous operation and takes a callback function (processFetchedData). The processFetchedData function is executed after the data has been fetched.
 
+
+
 Asynchronous Example with Callbacks:
+```javascript
 
 function doAsyncTask(callback) {
   console.log('Start of task');
@@ -2501,10 +2998,16 @@ function onTaskComplete() {
 // Using doAsyncTask with a callback
 doAsyncTask(onTaskComplete);
 console.log('After calling doAsyncTask');
+
+```
+
 In this example, doAsyncTask represents an asynchronous operation, and onTaskComplete is a callback function. The doAsyncTask function is non-blocking, so the "After calling doAsyncTask" message is logged before the task completes and the callback is executed.
 
 Handling Errors with Callbacks:
 Callbacks are also used to handle errors in asynchronous operations. Conventionally, the first argument passed to the callback is reserved for an error object.
+
+```javascript
+
 function fetchDataWithCallback(callback) {
   // Simulating an asynchronous operation with a chance of error
   const isError = Math.random() < 0.5;
@@ -2530,20 +3033,27 @@ function handleFetchResult(error, data) {
 
 // Using fetchDataWithCallback with error handling
 fetchDataWithCallback(handleFetchResult);
+
+```
+
 In this example, the fetchDataWithCallback function can either succeed or fail randomly. The handleFetchResult callback is designed to handle both success and error cases.
+
+
 
 Advantages of Callbacks:
 Asynchronous Programming:
-
 Callbacks are essential for handling asynchronous operations, allowing non-blocking execution.
+
+
 Modularity:
-
 Callbacks promote modularity by allowing you to define separate functions for different tasks and compose them as needed.
+
+
 Error Handling:
-
 Callbacks can be used to handle errors in asynchronous operations by conventionally passing an error object as the first argument.
-Event Handling:
 
+
+Event Handling:
 Callbacks are commonly used in event-driven programming to handle events like user interactions, timers, and AJAX requests.
 While callbacks are powerful, they can lead to "callback hell" or "pyramid of doom" in deeply nested structures. To mitigate this, alternative approaches such as Promises and async/await have been introduced in modern JavaScript. These alternatives provide more readable and maintainable code for handling asynchronous operations.
 
@@ -2558,6 +3068,7 @@ ________________________________________________________________________________
 Callback hell, also known as the pyramid of doom, is a term used to describe the situation where multiple nested callbacks make the code difficult to read and maintain. This often occurs in asynchronous JavaScript programming when dealing with deeply nested callbacks within callbacks. The indentation levels increase, making the code less readable and more challenging to manage.
 
 Here's an example of callback hell:
+```javascript
 
 getUser(userId, function(user) {
   getOrders(user.id, function(orders) {
@@ -2568,6 +3079,9 @@ getUser(userId, function(user) {
     });
   });
 });
+
+```
+
 In this example, we have multiple asynchronous functions (getUser, getOrders, getProducts, and displayProducts), and each function is nested within the callback of the previous one. This structure can make the code difficult to follow and lead to maintenance issues.
 
 Solutions to Callback Hell:
@@ -2575,6 +3089,7 @@ Named Functions:
 
 Instead of using anonymous functions, define named functions and pass them as callbacks. This improves readability and allows you to reuse functions.
 
+```javascript
 
 function handleUser(user) {
   getOrders(user.id, handleOrders);
@@ -2591,9 +3106,16 @@ function handleProducts(products) {
 }
 
 getUser(userId, handleUser);
+
+
+```
+
+
+
 Modularization:
 
 Break down the code into smaller, modular functions. Each function should have a specific responsibility, making the code more organized.
+```javascript
 
 function getUserAndOrders(userId) {
   getUser(userId, function(user) {
@@ -2612,6 +3134,11 @@ function handleOrders(orders) {
 }
 
 getUserAndOrders(userId);
+
+```
+
+
+
 Promises:
 
 Use Promises to handle asynchronous code in a more readable and linear fashion. Promises allow you to chain asynchronous operations without nesting.

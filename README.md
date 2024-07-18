@@ -5,6 +5,7 @@
 
 
 https://github.com/Aakashdeveloper/JavaScript-Interview-Question?tab=readme-ov-file
+```javascript
 
 **WHAT IS JAVASCRIPT**
 
@@ -4605,4 +4606,5 @@ console.log(addTwo(3)); // Outputs: 5
 ```
 
 In this example, curriedAdd is a curried version of the add function. It takes one argument x and returns a function that takes another argument y and performs the addition. This allows for partial application, where you can pass one argument to curriedAdd to create a new function (addTwo) that adds 2 to any number passed to it.
+```
 

@@ -130,7 +130,7 @@ var, let, and const are all keywords used for variable declaration in JavaScript
 •	Variables declared with var are function-scoped, meaning their scope is limited to the function in which they are declared.
 •	var variables are hoisted, which means they are moved to the top of their scope during the compilation phase.
 •	var allows redeclaration and reassignment.
-
+```javascript
 function exampleVar() {
   if (true) {
     var x = 10;
@@ -138,7 +138,7 @@ function exampleVar() {
   }
   console.log(x);  // Outputs 10
 }
-
+```
 **let:**
 •	Variables declared with let have block scope, meaning their scope is limited to the block (statements enclosed in {}) in which they are declared.
 •	let variables are also hoisted, but they are not initialized until the actual declaration is encountered during runtime.
@@ -158,13 +158,13 @@ function exampleLet() {
 •	const variables must be assigned a value during declaration, and once assigned, their value cannot be changed or reassigned.
 •	const does not allow redeclaration or reassignment.
 
-
+```javascript
 function exampleConst() {
   const z = 30;
   // z = 40;  // Error: Assignment to a constant variable
   // const z = 40;  // Error: Identifier 'z' has already been declared
 }
-
+```
 _____________________________________________________________________________________________________________________
 
 **JavaScript Functions**
@@ -172,6 +172,7 @@ Functions are a fundamental concept in JavaScript, and they play a crucial role 
 
 Function Declaration:
 You can declare a function using the function keyword:
+```javascript
 function greet(name) {
   console.log("Hello, " + name + "!");
 }
@@ -209,7 +210,7 @@ function greet(name = "Guest") {
 }
 greet();  // Outputs: Hello, Guest!
 
-
+```
 Rest Parameters (ES6+):
 Capture multiple arguments as an array:
 function sum(...numbers) {
@@ -219,14 +220,16 @@ const result = sum(1, 2, 3, 4);  // result is 10
 
 Function Scope:
 Variables declared inside a function are local to that function:
+```javascript
 function example() {
   const localVar = "I am local";
   console.log(localVar);
 }
 // console.log(localVar);  // Error: localVar is not defined
-
+```
 Closures:
 Functions can create closures, allowing access to variables from their containing (enclosing) scope:
+```javascript
 function outer() {
   const outerVar = "I am outer";
   function inner() {
@@ -236,7 +239,7 @@ function outer() {
 }
 const closureFn = outer();
 closureFn();  // Outputs: I am outer
-
+```
 
 Callback Functions:
 Functions can be passed as arguments to other functions:
@@ -4304,4 +4307,68 @@ greet("Alice"); // Output: Hello, Alice!
 
 Asynchronous Execution: JavaScript also supports asynchronous execution, which allows certain operations to be performed independently of the main execution flow. This is commonly seen with events, timers, callbacks, and promises.
 Understanding and mastering control flow is essential for writing efficient and structured JavaScript code.
+
+____________________________________________________________________________________________________________________________________
+**Immediately Invoked Function in js**
+
+An Immediately Invoked Function Expression (IIFE) in JavaScript is a function that is executed immediately after it is defined. It's a common pattern used to create a private scope for variables, preventing them from polluting the global namespace. Here's the basic syntax:
+
+(function() {
+    // code to be executed immediately
+})();
+You define a function expression within parentheses (function() { /* code */ }), and then immediately invoke it by adding another pair of parentheses at the end ().
+
+You can also pass arguments to the function:
+
+(function(name) {
+    console.log('Hello, ' + name + '!');
+})('World');
+This can be useful for creating modules, encapsulating code, or avoiding naming conflicts.
+
+Immediately Invoked Function in js
+
+An Immediately Invoked Function Expression (IIFE) in JavaScript is a function that is executed immediately after it is defined. It's a common pattern used to create a private scope for variables, preventing them from polluting the global namespace. Here's the basic syntax:
+
+(function() {
+    // code to be executed immediately
+})();
+You define a function expression within parentheses (function() { /* code */ }), and then immediately invoke it by adding another pair of parentheses at the end ().
+
+You can also pass arguments to the function:
+
+(function(name) {
+    console.log('Hello, ' + name + '!');
+})('World');
+This can be useful for creating modules, encapsulating code, or avoiding naming conflicts.
+
+
+
+________________________________________________________________________________________________________________________________________
+
+**curring in js**
+
+In JavaScript, "curring" refers to the process of converting a function that takes multiple arguments into a sequence of functions that each take a single argument. This technique allows you to partially apply arguments to a function, creating a new function with fewer parameters.
+
+// Non-curried function
+function add(x, y) {
+  return x + y;
+}
+
+// Curried version of add function
+function curriedAdd(x) {
+  return function(y) {
+    return x + y;
+  };
+}
+
+// Usage
+console.log(add(2, 3)); // Outputs: 5
+console.log(curriedAdd(2)(3)); // Outputs: 5
+
+// Partial application
+const addTwo = curriedAdd(2);
+console.log(addTwo(3)); // Outputs: 5
+
+
+In this example, curriedAdd is a curried version of the add function. It takes one argument x and returns a function that takes another argument y and performs the addition. This allows for partial application, where you can pass one argument to curriedAdd to create a new function (addTwo) that adds 2 to any number passed to it.
 

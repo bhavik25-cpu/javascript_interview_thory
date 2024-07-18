@@ -243,6 +243,8 @@ closureFn();  // Outputs: I am outer
 
 Callback Functions:
 Functions can be passed as arguments to other functions:
+```javascript
+
 function doSomething(callback) {
   // ... do something ...
   callback();
@@ -251,6 +253,7 @@ function doSomething(callback) {
 doSomething(function() {
   console.log("Callback executed!");
 });
+```
 
 
 
@@ -258,12 +261,16 @@ doSomething(function() {
 
 Higher-Order Functions:
 Functions that operate on other functions, either by taking them as arguments or returning them:
+```javascript
+
 function multiplier(factor) {
   return function(x) {
     return x * factor;
   };
 const double = multiplier(2);
-console.log(double(5));  
+console.log(double(5));
+```
+ 
 // Outputs: 10
 These are some of the fundamental concepts related to JavaScript functions. Understanding functions is essential for writing modular, reusable, and maintainable code.
 
@@ -273,25 +280,31 @@ Anonymous Function
 An anonymous function in JavaScript is a function that is declared without a name. It can be defined using a function expression or an arrow function. Anonymous functions are often used when a function is needed temporarily or as an argument to other functions. Here are examples of both types of anonymous functions:
 
 Anonymous Function using Function Expression:
+```javascript
+
 const add = function(x, y) {
   return x + y;
 };
 const result = add(3, 4);  // result is 7
+```
+
 In this example, add is an anonymous function created using a function expression. It takes two parameters (x and y) and returns their sum.
 
-
-
-
 Anonymous Function using Arrow Function:
+```javascript
+
 const multiply = (a, b) => {
   return a * b;
 };
 const product = multiply(5, 6);  // product is 30
+```
+
 __________________________________________________________________________________________________
 **Recursion javascript**
 Recursion is a programming concept where a function calls itself in its own definition. In JavaScript, recursion is commonly used for solving problems that can be broken down into smaller, similar subproblems. Recursive functions consist of a base case and a recursive case. Here's an example to illustrate the concept of recursion in JavaScript:
 
 // Example: Factorial Calculation using Recursion
+```javascript
 
 function factorial(n) {
   // Base case: factorial of 0 is 1
@@ -303,17 +316,23 @@ function factorial(n) {
 }
 // Test the recursive factorial function
 console.log(factorial(5));  // Outputs: 120
+```
 
 In this example, the factorial function calculates the factorial of a number n. It has a base case where if n is 0 or 1, it returns 1. Otherwise, it calls itself with a smaller argument (n - 1) until the base case is reached.
 
 Here's a breakdown of how the recursive calls work for factorial(5):
+```javascript
+
 factorial(5) calls factorial(4)
 factorial(4) calls factorial(3)
 factorial(3) calls factorial(2)
 factorial(2) calls factorial(1)
 factorial(1) returns 1 (base case)
+```
 
 The calculations are then propagated back up:
+```javascript
+
 
 factorial(2) returns 2 * 1 = 2
 
@@ -322,6 +341,7 @@ factorial(3) returns 3 * 2 = 6
 factorial(4) returns 4 * 6 = 24
 
 factorial(5) returns 5 * 24 = 120
+```
 
 Recursive functions can be elegant and expressive, but it's crucial to have a base case to prevent infinite recursion. Additionally, keep in mind that recursive solutions may not be the most efficient for certain problems, and there might be alternative iterative approaches.
 
@@ -333,6 +353,8 @@ In JavaScript, an object is a complex data type that allows you to store and org
 
 Object Creation:
 You can create an object using object literal notation:
+```javascript
+
 const person = {
   firstName: "John",
   lastName: "Doe",
@@ -342,20 +364,31 @@ const person = {
     console.log("Hello!");
   },
 };
+```
+
 Accessing Object Properties:
 You can access object properties using dot notation or square brackets:
+```javascript
+
 console.log(person.firstName);  // Outputs: John
 console.log(person["lastName"]); // Outputs: Doe
+```
+
 Adding and Modifying Properties:
 You can add new properties or modify existing ones:
+```javascript
+
 person.email = "john.doe@example.com";
 person["age"] = 31;
+```
 
 
 
 
 Methods:
 Methods are functions stored as object properties:
+```javascript
+
 const person = {
   firstName: "John",
   lastName: "Doe",
@@ -365,17 +398,24 @@ const person = {
 };
 
 person.greet();  // Outputs: Hello, John!
+```
 
 Object Constructor:
 You can create objects using a constructor function:
+```javascript
+
 function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
 }
 const myCar = new Car("Toyota", "Camry", 2022);
+```
+
 Object Destructuring:
 Extract values from objects and assign them to variables:
+```javascript
+
 const { firstName, lastName } = person;
 console.log(firstName, lastName);  // Outputs: John Doe
 Object Methods:
@@ -388,9 +428,12 @@ JSON is a text format for representing objects and is widely used for data excha
 const jsonString = '{"name": "Alice", "age": 25}';
 const parsedObject = JSON.parse(jsonString);
 console.log(parsedObject.name);  // Outputs: Alice
+```
 
 Prototypes and Inheritance:
 JavaScript is a prototype-based language, and objects can inherit properties and methods from other objects through their prototypes.
+```javascript
+
 function Animal(name) {
   this.name = name;
 }
@@ -401,6 +444,8 @@ Animal.prototype.sayHello = function() {
 
 const cat = new Animal("Fluffy");
 cat.sayHello();  // Outputs: Hello, my name is Fluffy
+```
+
 JavaScript objects are versatile and form the basis of the language's flexible and dynamic nature. They play a central role in web development, where they are extensively used to represent and manipulate data.
 
 
@@ -416,26 +461,37 @@ Object.prototype:
 All objects in JavaScript inherit properties and methods from 
 Object.prototype.
 Example:
+```javascript
+
 const myObject = {};
 console.log(myObject.toString());  // Outputs: [object Object]
+```
 
 
 Constructor and Prototype Chain:
 constructor Property:
 The constructor property points back to the constructor function that created the instance.
+```javascript
+
 function Person(name) {
   this.name = name;
 }
+
 const person = new Person("John");
 console.log(person.constructor);  // Outputs: [Function: Person]
+```
 
 hasOwnProperty:
 Checks if a property belongs directly to the object and not to its prototype chain.
 Example:
+```javascript
+
 const myObject = { key: "value" };
 console.log(myObject.hasOwnProperty("key"));  // Outputs: true
+```
 
 Object Manipulation:
+
 Object.create:
 Creates a new object with the specified prototype object.
 
@@ -443,43 +499,54 @@ Creates a new object with the specified prototype object.
 
 
 Example:
+```javascript
+
 const animal = { sound: "Make a sound" };
 const cat = Object.create(animal);
 console.log(cat.sound);  // Outputs: Make a sound
+```
 
 Array Manipulation:
 Array.prototype:
 Arrays inherit methods from Array.prototype.
 Example:
+```javascript
+
 const myArray = [1, 2, 3];
 console.log(myArray.map(x => x * 2));  // Outputs: [2, 4, 6]
+```
 
 Array.isArray:
 Checks if a value is an array.
 Example:
+```javascript
+
 const myArray = [1, 2, 3];
 console.log(Array.isArray(myArray));  // Outputs: true
-
-
-
+```
 
 String Manipulation:
 String.prototype:
 Strings inherit methods from String.prototype.
 Example:
+```javascript
+
 const myString = "Hello, World!";
 console.log(myString.toUpperCase());  // Outputs: HELLO, WORLD!
+```
 
 charAt, indexOf, substring:
 String manipulation methods.
 Example:
+```javascript
+
 const myString = "Hello, World!";
 console.log(myString.charAt(0));     // Outputs: H
 console.log(myString.indexOf("o"));  // Outputs: 4
 console.log(myString.substring(0, 5));  // Outputs: Hello
+```
+
 These are just a few examples of the built-in methods and properties related to prototypes in JavaScript. Understanding prototypes is crucial for effective object-oriented programming in JavaScript.
-
-
 
 ________________________________________________________________________________________________________
 **object method in javascript**
@@ -487,6 +554,8 @@ ________________________________________________________________________________
 JavaScript objects come with several built-in methods that can be used to manipulate and perform operations on objects. Here are some commonly used object methods:
 1. Object.keys():
 Returns an array of a given object's own enumerable property names.
+```javascript
+
 const myObject = {
   name: "John",
   age: 30,
@@ -494,9 +563,12 @@ const myObject = {
 };
 const keys = Object.keys(myObject);
 console.log(keys);  // Outputs: ['name', 'age', 'city']
+```
 
 2. Object.values():
 Returns an array of a given object's own enumerable property values.
+```javascript
+
 const myObject = {
   name: "John",
   age: 30,
@@ -506,11 +578,13 @@ const myObject = {
 const values = Object.values(myObject);
 console.log(values);  // Outputs: ['John', 30, 'New York']
 
-
+```
 
 
 3. Object.entries():
 Returns an array of a given object's own enumerable property [key, value] pairs.
+```javascript
+
 const myObject = {
   name: "John",
   age: 30,
@@ -519,15 +593,22 @@ const myObject = {
 const entries = Object.entries(myObject);
 console.log(entries);  
 // Outputs: [['name', 'John'], ['age', 30], ['city', 'New York']]
+```
 
 4. Object.assign():
 Copies the values of all enumerable own properties from one or more source objects to a target object.
+```javascript
+
 const target = { a: 1, b: 2 };
 const source = { b: 3, c: 4 };
 const result = Object.assign(target, source);
 console.log(result);  // Outputs: { a: 1, b: 3, c: 4 }
+```
+
 5. Object.freeze():
 Freezes an object, preventing new properties from being added and existing properties from being removed or modified.
+```javascript
+
 const myObject = {
   name: "John",
   age: 30
@@ -536,9 +617,12 @@ Object.freeze(myObject);
 // Trying to add a new property
 myObject.city = "New York";  
 console.log(myObject.city);  // Outputs: undefined
+```
 
 6. Object.seal():
 Seals an object, preventing new properties from being added and marking all existing properties as non-configurable.
+```javascript
+
 const myObject = {
   name: "John",
   age: 30
@@ -548,15 +632,18 @@ Object.seal(myObject);
 // Trying to add a new property
 myObject.city = "New York";  
 console.log(myObject.city);  // Outputs: undefined
+```
+
 7. Object.getOwnPropertyNames():
 Returns an array of all properties (enumerable or not) found directly upon a given object.
 
-javascript
-Copy code
+```javascript
+
 const myObject = {
   name: "John",
   age: 30
 };
+```
 
 const properties = Object.getOwnPropertyNames(myObject);
 console.log(properties);  // Outputs: ['name', 'age']
@@ -565,19 +652,21 @@ console.log(properties);  // Outputs: ['name', 'age']
 8. Object.create():
 Creates a new object with the specified prototype object and properties.
 
-javascript
-Copy code
+```javascript
+
 const animal = {
   sound: "Make a sound"
 };
 
 const cat = Object.create(animal);
 console.log(cat.sound);  // Outputs: Make a sound
+```
+
 9. Object.defineProperty() and Object.defineProperties():
 Defines new or modifies existing properties directly on an object, or modifies attributes of existing properties.
 
-javascript
-Copy code
+```javascript
+
 const person = {};
 
 Object.defineProperty(person, 'name', {
@@ -588,41 +677,47 @@ Object.defineProperty(person, 'name', {
 });
 
 console.log(person.name);  // Outputs: John
+```
+
 10. Object.getOwnPropertyDescriptor():
 Returns an object describing the configuration of a specific property.
+```javascript
 
-javascript
-Copy code
 const person = {
   name: 'John'
 };
 
 const propertyDescriptor = Object.getOwnPropertyDescriptor(person, 'name');
 console.log(propertyDescriptor);
+```
+
 // Outputs: { value: 'John', writable: true, enumerable: true, configurable: true }
 11. Object.getPrototypeOf():
 Returns the prototype of the specified object.
 
-javascript
-Copy code
+```javascript
+
 const animal = {
   sound: "Make a sound"
 };
 
 const cat = Object.create(animal);
 console.log(Object.getPrototypeOf(cat) === animal);  // Outputs: true
+```
+
 12. Object.is():
 Compares two values for equality, similar to the === operator.
+```javascript
 
-javascript
-Copy code
 console.log(Object.is(5, '5'));  // Outputs: false
 console.log(Object.is(NaN, NaN));  // Outputs: true
+```
+
 13. Object.keys() and Object.values():
 These methods were mentioned earlier, but it's worth emphasizing their usefulness:
 
-javascript
-Copy code
+```javascript
+
 const myObject = {
   name: "John",
   age: 30
@@ -633,11 +728,13 @@ console.log(keys);  // Outputs: ['name', 'age']
 
 const values = Object.values(myObject);
 console.log(values);  // Outputs: ['John', 30]
+```
+
 14. Object.preventExtensions():
 Prevents new properties from being added to an object.
 
-javascript
-Copy code
+```javascript
+
 const myObject = {
   name: "John",
   age: 30
@@ -646,11 +743,13 @@ const myObject = {
 Object.preventExtensions(myObject);
 myObject.city = "New York";
 console.log(myObject.city);  // Outputs: undefined
+```
+
 15. Object.getOwnPropertySymbols():
 Returns an array of all symbol properties found directly upon a given object.
 
-javascript
-Copy code
+```javascript
+
 const myObject = {
   [Symbol('one')]: 'value1',
   [Symbol('two')]: 'value2'
@@ -658,6 +757,7 @@ const myObject = {
 const symbols = Object.getOwnPropertySymbols(myObject);
 console.log(symbols);  // Outputs: [Symbol(one), Symbol(two)]
 
+```
 
 
 ___________________________________________________________________________
@@ -667,89 +767,121 @@ Strings in JavaScript represent sequences of characters and are a fundamental da
 
 Creating Strings:
 Single or Double Quotes:
+```javascript
+
 let singleQuoted = 'Hello, World!';
 let doubleQuoted = "Hello, World!";
+```
 
 Template Literals (ES6+):
+```javascript
+
 let name = 'John';
 let greeting = `Hello, ${name}!`;
+```
+
 String Properties and Methods:
 
 length:
 Returns the length of the string.
+```javascript
+
 let greeting = 'Hello, World!';
 console.log(greeting.length);  // Outputs: 13
+```
+
 charAt(index):
 
 Returns the character at the specified index.
+```javascript
 let message = 'JavaScript';
 console.log(message.charAt(4));  // Outputs: S
 concat(str1, str2, ...):
+```
 
 Concatenates two or more strings.
+```javascript
 
 let str1 = 'Hello';
 let str2 = 'World';
 console.log(str1.concat(', ', str2, '!'));  // Outputs: Hello, World!
+```
 toUpperCase() and toLowerCase():
 
 
 Converts a string to uppercase or lowercase.
+```javascript
+
 let text = 'Hello, World!';
 console.log(text.toUpperCase());  // Outputs: HELLO, WORLD!
 console.log(text.toLowerCase());  // Outputs: hello, world!
+```
+
 String Searching and Extraction:
 indexOf(substring) and lastIndexOf(substring):
 
 Returns the index of the first/last occurrence of a substring.
+```javascript
 let sentence = 'This is a sentence.';
 console.log(sentence.indexOf('is'));  // Outputs: 2
 console.log(sentence.lastIndexOf('is'));  // Outputs: 5
 slice(start, end):
+```
 
 Extracts a portion of a string.
+```javascript
 let phrase = 'JavaScript is amazing!';
 console.log(phrase.slice(0, 10));  // Outputs: JavaScript
 String Modification:
 replace(searchValue, replaceValue):
+```
 
 Replaces a specified value with another value in a string.
+```javascript
 let message = 'Hello, World!';
 console.log(message.replace('World', 'Universe'));  // Outputs: Hello, Universe!
 trim():
-
+```
 Removes whitespace from both ends of a string.
+```javascript
 let spacedText = '   Trim me!   ';
 console.log(spacedText.trim());  // Outputs: Trim me!
+```
+
 String Conversion:
 toString():
 
-
-
-
-
 Converts a value to a string.
+```javascript
 let number = 42;
 let strNumber = number.toString();
 console.log(typeof strNumber);  // Outputs: string
 String.fromCharCode(code):
+```
 
 Returns a string created by using the specified sequence of Unicode values.
+```javascript
 console.log(String.fromCharCode(65, 66, 67));  // Outputs: ABC
+```
+
+
 String Splitting and Joining:
+
 split(separator):
 
 Splits a string into an array of substrings based on a specified separator.
+```javascript
 let sentence = 'This is a sample sentence.';
 console.log(sentence.split(' '));  // Outputs: ['This', 'is', 'a', 'sample', 'sentence.']
+```
 join(separator):
-
-Joins the elements of an array into a string using a specified separator.
+Joins the elements of an array into a string using a specified separator
+```javascript.
 let words = ['This', 'is', 'a', 'sample', 'sentence.'];
 console.log(words.join(' '));  // Outputs: This is a sample sentence. 
+```
 
-
-______________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________
 **Methods strings**
 Certainly! Here's a comprehensive list of common string methods in JavaScript:
 
@@ -757,36 +889,48 @@ String Properties:
 length:
 
 Returns the length of the string.
-javascript
-Copy code
+```javascript
 const greeting = 'Hello, World!';
 console.log(greeting.length);  // Outputs: 13
+```
+
+
 String Methods:
 charAt(index):
 
 Returns the character at the specified index.
+```javascript
 const message = 'JavaScript';
 console.log(message.charAt(4));  // Outputs: S
+```
+
+
 charCodeAt(index):
 
 Returns the Unicode value of the character at the specified index.
-
+```javascript
 const message = 'JavaScript';
 console.log(message.charCodeAt(4));  // Outputs: 83
 concat(str1, str2, ...):
+```
 
 Concatenates two or more strings.
+```javascript
 const str1 = 'Hello';
 const str2 = 'World';
 console.log(str1.concat(', ', str2, '!'));  // Outputs: Hello, World!
 indexOf(substring) and lastIndexOf(substring):
+```
 
 Returns the index of the first/last occurrence of a substring.
+```javascript
 const sentence = 'This is a sentence.';
 console.log(sentence.indexOf('is'));  // Outputs: 2
 console.log(sentence.lastIndexOf('is'));  // Outputs: 5
-includes(substring):
 
+```
+
+includes(substring):
 
 Checks if a string contains a specific substring.
 const sentence = 'This is a sentence.';

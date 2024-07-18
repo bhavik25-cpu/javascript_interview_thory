@@ -1714,69 +1714,97 @@ console.log(sum);  // Outputs: 10
 
 14. every(callback(element, index, array), thisArg)
 Tests whether all elements in the array pass the test implemented by the provided function.
+```javascript
+
 const numbers = [2, 4, 6, 8];
 const allEven = numbers.every(function(num) {
   return num % 2 === 0;
 });
 console.log(allEven);  // Outputs: true
+```
 
 
 15. some(callback(element, index, array), thisArg)
 Tests whether at least one element in the array passes the test implemented by the provided function.
+```javascript
+
 const numbers = [1, 3, 5, 7];
 const hasEven = numbers.some(function(num) {
   return num % 2 === 0;
 });
 console.log(hasEven);  // Outputs: false
+```
 
 
 16. find(callback(element, index, array), thisArg)
 Returns the first element in the array that satisfies the provided testing function.
+
+```javascript
+
 const numbers = [1, 2, 3, 4, 5];
 const evenNumber = numbers.find(function(num) {
   return num % 2 === 0;
 });
 console.log(evenNumber);  // Outputs: 2
 
+```
 
 
 
 17. findIndex(callback(element, index, array), thisArg)
 Returns the index of the first element in the array that satisfies the provided testing function.
+
+```javascript
 const numbers = [1, 2, 3, 4, 5];
 const evenIndex = numbers.findIndex(function(num) {
   return num % 2 === 0;
 });
 console.log(evenIndex);  // Outputs: 1
+```
 
 
 18. reverse()
 Reverses the elements of an array in place.
+```javascript
+
 const fruits = ['apple', 'banana', 'orange'];
 fruits.reverse();
 console.log(fruits);  // Outputs: ['orange', 'banana', 'apple']
+```
 
 
 19. sort(compareFunction)
 Sorts the elements of an array in place.
+```javascript
+
 const fruits = ['banana', 'orange', 'apple'];
 fruits.sort();
 console.log(fruits);  // Outputs: ['apple', 'banana', 'orange']
+```
 
 
 20. join(separator)
 Joins all elements of an array into a string, separated by the specified separator.
+```javascript
+
 const fruits = ['apple', 'banana', 'orange'];
 const result = fruits.join(', ');
 console.log(result);  // Outputs: 'apple, banana, orange'
+
+``
+
 Certainly! Here are a few more JavaScript array methods with examples:
 
 21. forEach(callback(element, index, array), thisArg)
 Executes a provided function once for each array element.
+```javascript
+
 const numbers = [1, 2, 3];
 numbers.forEach(function(num) {
   console.log(num * 2);
 });
+```
+
 // Outputs:
 // 2
 // 4

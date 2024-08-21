@@ -28,6 +28,7 @@ JavaScript is commonly used for building dynamic web applications, where it can 
 _____________________________________________________________________________________________________________________
 
 **js is synchronous or asynchronous**
+
 JavaScript (JS) is inherently a single-threaded language, meaning it executes one operation at a time in a single sequence. However, JavaScript also supports asynchronous programming through features like callbacks, Promises, and async/await.
 Asynchronous programming allows certain operations, such as fetching data from a server or reading from a file, to be performed without blocking the main execution thread. Instead of waiting for the operation to complete, the program can continue with other tasks, and a callback function or a Promise resolution handles the result of the asynchronous operation when it's ready.
 So, while JavaScript has a synchronous execution model, it provides mechanisms for handling asynchronous tasks to ensure better responsiveness in web applications, especially when dealing with operations that might take time, such as network requests.
@@ -35,6 +36,7 @@ So, while JavaScript has a synchronous execution model, it provides mechanisms f
 _____________________________________________________________________________________________________________________
 
 **WHAT IS JAVASCRIPT IS SINGLE THREAD OR MULTI THREAD**
+
 JavaScript is inherently a single-threaded language, meaning it executes code in a single sequence or thread of execution. This single-threaded nature is due to the fact that JavaScript was originally designed to run in web browsers, where it is used to manipulate the Document Object Model (DOM), handle events, and interact with the user interface.
 The single-threaded model ensures that JavaScript code does not create conflicts or race conditions when modifying the DOM. However, this can sometimes lead to performance issues, especially when dealing with tasks that may take a significant amount of time, such as network requests or complex computations. Long-running tasks can cause the user interface to become unresponsbive.
 To address this limitation, modern JavaScript environments provide mechanisms for asynchronous programming. Callbacks, Promises, and the async/await syntax are examples of features introduced to handle asynchronous operations effectively. These mechanisms allow JavaScript to delegate time-consuming tasks to other threads (e.g., web workers in the browser or worker threads in Node.js) while keeping the main thread available for handling user interactions and maintaining a responsive user interface.
@@ -42,8 +44,10 @@ It's important to note that while JavaScript itself is single-threaded, web brow
 
 
 _____________________________________________________________________________________________________________________
+https://www.youtube.com/watch?v=Gm4v6cbHxpk
 
 **primitive and non primitive data type in js**
+
 In JavaScript, data types can be broadly categorized into two main groups: primitive types and non-primitive types (also known as reference types). Here's an explanation of each:
 Primitive Types:
 1.	String:

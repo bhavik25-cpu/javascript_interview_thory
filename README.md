@@ -195,16 +195,18 @@ function exampleVar() {
 •	Variables declared with let have block scope, meaning their scope is limited to the block (statements enclosed in {}) in which they are declared.
 •	let variables are also hoisted, but they are not initialized until the actual declaration is encountered during runtime.
 •	let allows reassignment, but not redeclaration in the same scope.
+```javascript
 
 function exampleLet() {
-•	  if (true) {
-•	    let y = 20;
-•	    console.log(y);  // Outputs 20
-•	  }
+  if (true) {
+    let y = 20;
+    console.log(y);  // Outputs 20
+  }
   // console.log(y);  // Error: y is not defined (out of scope)
-•	}
+	}
 
- 
+ ```
+
 **const:**
 
 •	Variables declared with const are block-scoped like 
@@ -231,40 +233,59 @@ You can declare a function using the function keyword:
 function greet(name) {
   console.log("Hello, " + name + "!");
 }
+```
 
 Function Expression:
 
 You can also create a function using a function expression:
+```javascript
+
 const greet = function(name) {
   console.log("Hello, " + name + "!");
 };
+```
+
 Arrow Function (ES6+):
 
 Arrow functions provide a more concise syntax:
+```javascript
+
 const greet = (name) => {
   console.log("Hello, " + name + "!");
 };
 
+```
 
 Function Parameters:
 
 Functions can take parameters:
+```javascript
+
 function add(x, y) {
   return x + y;
 }
 const result = add(3, 4);  // result is 7
+```
+
 
 
 Return Statement:
 
 Functions can return values using the return statement:
+
+```javascript
+
 function multiply(x, y) {
   return x * y;
 }
 const product = multiply(5, 6);  // product is 30
+```
 
 Default Parameters (ES6+):
+
 You can set default values for parameters:
+```javascript
+
 function greet(name = "Guest") {
   console.log("Hello, " + name + "!");
 }
@@ -274,12 +295,16 @@ greet();  // Outputs: Hello, Guest!
 Rest Parameters (ES6+):
 
 Capture multiple arguments as an array:
+```javascript
+
 function sum(...numbers) {
   return numbers.reduce((total, num) => total + num, 0);
 }
 const result = sum(1, 2, 3, 4);  // result is 10
+```
 
 Function Scope:
+
 Variables declared inside a function are local to that function:
 ```javascript
 function example() {

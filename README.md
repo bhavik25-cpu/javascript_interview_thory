@@ -89,23 +89,41 @@ Primitive Types:
 •	Example: let sym = Symbol("description");
 
 Non-Primitive Types (Reference Types):
+
 1.	Object:
+   
 •	Represents a collection of key-value pairs.
+
 •	Examples: let person = { name: "John", age: 30 };
-2.	Array:
+
+3.	Array:
+   
 •	Represents an ordered list of values.
+
 •	Example: let numbers = [1, 2, 3, 4, 5];
-3.	Function:
+
+5.	Function:
+   
 •	Represents a reusable block of code.
+
 •	Example: function add(a, b) { return a + b; }
-4.	Date:
+
+7.	Date:
+   
 •	Represents a specific point in time.
+
 •	Example: let currentDate = new Date();
-5.	RegExp (Regular Expression):
+
+9.	RegExp (Regular Expression):
+    
 •	Represents a pattern of characters.
+
 •	Example: let regex = /pattern/;
-6.	Non-Primitive Wrapper Objects:
+
+11.	Non-Primitive Wrapper Objects:
+    
 •	JavaScript provides wrapper objects for primitive types when you try to access properties or call methods on primitive values. These include String, Number, Boolean, etc.
+
 •	Example: let str = "Hello"; let strObject = new String(str);
 The main difference between primitive and non-primitive types is that primitive types are immutable (cannot be changed) and passed by value, while non-primitive types are mutable (can be changed) and passed by reference. Understanding these distinctions is crucial for effective JavaScript programming.
 
@@ -113,6 +131,7 @@ The main difference between primitive and non-primitive types is that primitive 
 
 ___________________________________________________________________________________________________
 **primitive and non primitive data type in js difference**
+
 The primary differences between primitive and non-primitive (reference) data types in JavaScript lie in their nature, behavior, and how they are stored and accessed. Here's a summary of the key distinctions:
 Primitive Data Types:
 1.	Immutability:

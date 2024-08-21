@@ -191,6 +191,7 @@ function exampleVar() {
 }
 ```
 **let:**
+
 •	Variables declared with let have block scope, meaning their scope is limited to the block (statements enclosed in {}) in which they are declared.
 •	let variables are also hoisted, but they are not initialized until the actual declaration is encountered during runtime.
 •	let allows reassignment, but not redeclaration in the same scope.
@@ -205,6 +206,7 @@ function exampleLet() {
 
  
 **const:**
+
 •	Variables declared with const are block-scoped like 
 •	const variables must be assigned a value during declaration, and once assigned, their value cannot be changed or reassigned.
 •	const does not allow redeclaration or reassignment.
@@ -219,20 +221,25 @@ function exampleConst() {
 _____________________________________________________________________________________________________________________
 
 **JavaScript Functions**
+
 Functions are a fundamental concept in JavaScript, and they play a crucial role in structuring and organizing code. Here's an overview of JavaScript functions:
 
 Function Declaration:
+
 You can declare a function using the function keyword:
 ```javascript
 function greet(name) {
   console.log("Hello, " + name + "!");
 }
+
 Function Expression:
+
 You can also create a function using a function expression:
 const greet = function(name) {
   console.log("Hello, " + name + "!");
 };
 Arrow Function (ES6+):
+
 Arrow functions provide a more concise syntax:
 const greet = (name) => {
   console.log("Hello, " + name + "!");
@@ -240,6 +247,7 @@ const greet = (name) => {
 
 
 Function Parameters:
+
 Functions can take parameters:
 function add(x, y) {
   return x + y;
@@ -248,6 +256,7 @@ const result = add(3, 4);  // result is 7
 
 
 Return Statement:
+
 Functions can return values using the return statement:
 function multiply(x, y) {
   return x * y;
@@ -263,6 +272,7 @@ greet();  // Outputs: Hello, Guest!
 
 ```
 Rest Parameters (ES6+):
+
 Capture multiple arguments as an array:
 function sum(...numbers) {
   return numbers.reduce((total, num) => total + num, 0);
@@ -278,7 +288,9 @@ function example() {
 }
 // console.log(localVar);  // Error: localVar is not defined
 ```
+
 Closures:
+
 Functions can create closures, allowing access to variables from their containing (enclosing) scope:
 ```javascript
 function outer() {
@@ -306,11 +318,8 @@ doSomething(function() {
 });
 ```
 
-
-
-
-
 Higher-Order Functions:
+
 Functions that operate on other functions, either by taking them as arguments or returning them:
 ```javascript
 
@@ -2927,6 +2936,9 @@ Use forEach when you want to perform an operation for each element but don't nee
 These functions are powerful tools in functional programming and are commonly used to work with arrays in a concise and expressive way. Choosing the right function depends on the specific task you want to accomplish.
 
 ________________________________________________________________________________________________________________
+
+https://www.youtube.com/watch?v=8tcxqkZMiZs&list=PLp18NAIKHWnsuszuBZoOye5SpSTgtDTl5&index=6
+
 **Closures in js**
 
 In JavaScript, a closure is a combination of a function and the lexical environment within which that function was declared. This lexical environment consists of the variables that were in scope at the time the closure was created. Closures allow functions to retain access to variables from an outer (enclosing) scope even after the outer function has finished executing.

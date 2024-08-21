@@ -181,7 +181,9 @@ var, let, and const are all keywords used for variable declaration in JavaScript
 •	Variables declared with var are function-scoped, meaning their scope is limited to the function in which they are declared.
 •	var variables are hoisted, which means they are moved to the top of their scope during the compilation phase.
 •	var allows redeclaration and reassignment.
-```javascript
+
+
+
 function exampleVar() {
   if (true) {
     var x = 10;
@@ -190,11 +192,15 @@ function exampleVar() {
   console.log(x);  // Outputs 10
 }
 ```
+
 **let:**
 
 •	Variables declared with let have block scope, meaning their scope is limited to the block (statements enclosed in {}) in which they are declared.
+
 •	let variables are also hoisted, but they are not initialized until the actual declaration is encountered during runtime.
+
 •	let allows reassignment, but not redeclaration in the same scope.
+
 ```javascript
 
 function exampleLet() {

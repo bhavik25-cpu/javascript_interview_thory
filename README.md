@@ -183,6 +183,7 @@ var, let, and const are all keywords used for variable declaration in JavaScript
 •	var allows redeclaration and reassignment.
 
 
+```javascript
 
 function exampleVar() {
   if (true) {

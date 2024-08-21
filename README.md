@@ -2133,7 +2133,11 @@ Note: Arrow functions (() => {}) have lexical scoping, meaning they inherit the 
 ```
 ____________________________________________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=Gm4v6cbHxpk
+
 **JavaScript Hoisting**
+
+
 JavaScript hoisting is a behavior in which variable and function declarations are moved to the top of their containing scope during the compilation phase. This allows you to use variables and functions before they are declared in the code. However, it's essential to understand how hoisting works to avoid unexpected behavior.
 
 There are two main types of hoisting in JavaScript: hoisting of variable declarations and hoisting of function declarations.

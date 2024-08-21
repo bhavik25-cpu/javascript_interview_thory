@@ -184,7 +184,6 @@ var, let, and const are all keywords used for variable declaration in JavaScript
 
 
 ```javascript
-
 function exampleVar() {
   if (true) {
     var x = 10;
@@ -201,6 +200,7 @@ function exampleVar() {
 •	let variables are also hoisted, but they are not initialized until the actual declaration is encountered during runtime.
 
 •	let allows reassignment, but not redeclaration in the same scope.
+
 
 ```javascript
 
@@ -220,7 +220,9 @@ function exampleLet() {
 •	const variables must be assigned a value during declaration, and once assigned, their value cannot be changed or reassigned.
 •	const does not allow redeclaration or reassignment.
 
+
 ```javascript
+
 function exampleConst() {
   const z = 30;
   // z = 40;  // Error: Assignment to a constant variable
@@ -236,25 +238,31 @@ Functions are a fundamental concept in JavaScript, and they play a crucial role 
 Function Declaration:
 
 You can declare a function using the function keyword:
+
 ```javascript
+
 function greet(name) {
   console.log("Hello, " + name + "!");
 }
+
 ```
 
 Function Expression:
 
 You can also create a function using a function expression:
+
 ```javascript
 
 const greet = function(name) {
   console.log("Hello, " + name + "!");
 };
+
 ```
 
 Arrow Function (ES6+):
 
 Arrow functions provide a more concise syntax:
+
 ```javascript
 
 const greet = (name) => {

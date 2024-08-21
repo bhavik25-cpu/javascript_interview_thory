@@ -125,7 +125,10 @@ Usage:
 
 
 _____________________________________________________________________________________________________________________
+https://www.youtube.com/watch?v=EbsJHZ1C9C0
+
 **VAR**
+
 var, let, and const are all keywords used for variable declaration in JavaScript, but they have some key differences in terms of scope, hoisting, and reassignment. Here's an explanation of each:
 1.	var:
 •	Variables declared with var are function-scoped, meaning their scope is limited to the function in which they are declared.

@@ -1419,28 +1419,46 @@ In this case, the substring starts at index 7 ('W') and includes all characters 
 
 
 String slice()
+
 The slice() method in JavaScript is used to extract a portion of a string and returns a new string without modifying the original string. The syntax of the slice() method is as follows:
 string.slice(startIndex, endIndex);
+
 startIndex: The index at which to begin the extraction. If negative, it represents an offset from the end of the string.
+
 endIndex (optional): The index at which to end the extraction. The slice() method extracts up to, but not including, the specified end index. If omitted, it extracts characters up to the end of the string.
+
 Here's an example:
+```javascript
+
 const originalString = "Hello, World!";
 const slicedSubstring = originalString.slice(7, 12);
 console.log(slicedSubstring);  // Outputs: World
+```
+
 In this example:
+
 startIndex is 7, indicating the extraction starts at the 8th character ('W') in the string.
+
 endIndex is 12, so the method extracts characters up to, but not including, the 12th character. As a result, the substring "World" is extracted.
 If the endIndex parameter is omitted, the slice() method extracts characters from the specified startIndex to the end of the string:
+```javascript
+
 const partialString = originalString.slice(7);
 console.log(partialString);  // Outputs: World!
+
+```
+
 In this case, the substring starts at index 7 ('W') and includes all characters until the end of the original string, resulting in "World!".
 
 
 String includes()
+
 The includes() method in JavaScript is used to determine whether one string contains another string. It returns a boolean value (true or false). The syntax of the includes() method is as follows:
 
 string.includes(searchString, startPosition);
+
 searchString: The string to search for within the calling string.
+
 startPosition (optional): The position within the calling string at which to begin the search. If omitted, the search starts from the beginning of the string.
 
 Here's an example:
@@ -1455,9 +1473,13 @@ console.log(containsCat);  // Outputs: false
 ```
 
 In this example:
+
 The includes() method is used to check if the string "fox" is present in the sentence. Since "fox" is present, containsFox is true.
+
 The method is then used to check if the string "cat" is present in the sentence. Since "cat" is not present, containsCat is false.
+
 The startPosition parameter allows you to specify where the search should begin:
+
 ```javascript
 
 const phrase = "This is a simple example.";

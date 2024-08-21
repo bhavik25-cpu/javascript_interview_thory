@@ -51,24 +51,43 @@ https://www.youtube.com/watch?v=Gm4v6cbHxpk
 In JavaScript, data types can be broadly categorized into two main groups: primitive types and non-primitive types (also known as reference types). Here's an explanation of each:
 Primitive Types:
 1.	String:
+   
 •	Represents textual data.
+
 •	Example: "Hello, World!"
-2.	Number:
+
+3.	Number:
+   
 •	Represents numeric data, both integers and floating-point numbers.
+
 •	Example: 42 or 3.14
-3.	Boolean:
+
+5.	Boolean:
+   
 •	Represents true or false values.
+
 •	Example: true or false
-4.	Undefined:
+
+7.	Undefined:
+   
 •	Represents an uninitialized or undefined value.
+
 •	Example: undefined
-5.	Null:
+
+9.	Null:
+    
 •	Represents the absence of a value or a null object reference.
+
 •	Example: null
-6.	Symbol:
+
+11.	Symbol:
+    
 •	Introduced in ECMAScript 6 (ES6).
+
 •	Represents a unique and immutable identifier.
+
 •	Example: let sym = Symbol("description");
+
 Non-Primitive Types (Reference Types):
 1.	Object:
 •	Represents a collection of key-value pairs.

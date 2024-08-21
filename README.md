@@ -124,7 +124,12 @@ Non-Primitive Types (Reference Types):
     
 •	JavaScript provides wrapper objects for primitive types when you try to access properties or call methods on primitive values. These include String, Number, Boolean, etc.
 
-•	Example: let str = "Hello"; let strObject = new String(str);
+•	Example: 
+
+let str = "Hello";
+
+let strObject = new String(str);
+
 The main difference between primitive and non-primitive types is that primitive types are immutable (cannot be changed) and passed by value, while non-primitive types are mutable (can be changed) and passed by reference. Understanding these distinctions is crucial for effective JavaScript programming.
 
 

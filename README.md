@@ -2361,10 +2361,13 @@ Understanding hoisting is essential for writing predictable and bug-free JavaScr
 
 ____________________________________________________________________________________________________________________________________
 **JavaScript Use Strict with code example**
+
 The "use strict" directive is used to enable a strict mode in JavaScript, which helps catch common coding mistakes and prevents the use of certain error-prone features. When strict mode is enabled, the JavaScript interpreter enforces stricter parsing and error handling rules.
 To use strict mode, you simply include the following statement at the top of your JavaScript file or script:
 "use strict";
+
 Or, you can use it within a function to apply strict mode only to that specific function's scope:
+
 ```javascript
 
 function myFunction() {
@@ -2762,10 +2765,15 @@ You can use destructuring in function parameters to extract values directly from
 Destructuring is a powerful feature that enhances the readability and expressiveness of JavaScript code. It is widely used in modern JavaScript applications, especially in frameworks like React and libraries like Redux.
 
 __________________________________________________________________________________________________
+https://www.youtube.com/watch?v=rRAvhzux-7Y&list=PLp18NAIKHWnsuszuBZoOye5SpSTgtDTl5&index=8
+
 **Call Apply and Bind Method in JavaScript**
+
+
 In JavaScript, the call, apply, and bind methods are used to manipulate the this value and invoke functions in different ways. These methods are typically used in situations where you want to control the context in which a function is executed.
 
 1. call() Method:
+
 The call() method is used to invoke a function with a specified this value and individual arguments.
 
 Example:

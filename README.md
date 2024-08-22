@@ -236,7 +236,7 @@ function exampleVar() {
 
 ```
 
-**let:**
+**let**
 
 •	Variables declared with let have block scope, meaning their scope is limited to the block (statements enclosed in {}) in which they are declared.
 

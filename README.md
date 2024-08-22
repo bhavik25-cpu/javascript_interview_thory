@@ -225,6 +225,7 @@ var, let, and const are all keywords used for variable declaration in JavaScript
 
 
 ```javascript
+
 function exampleVar() {
   if (true) {
     var x = 10;
@@ -232,6 +233,7 @@ function exampleVar() {
   }
   console.log(x);  // Outputs 10
 }
+
 ```
 
 **let:**

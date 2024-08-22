@@ -11,26 +11,37 @@ https://github.com/Aakashdeveloper/JavaScript-Interview-Question?tab=readme-ov-f
 
 JavaScript is a high-level, interpreted programming language primarily used for creating interactive and dynamic content on websites. It is a core technology for web development and is supported by all major web browsers, making it a crucial part of front-end development. JavaScript allows developers to add functionality, interactivity, and dynamic behavior to web pages.
 Here are some key characteristics and uses of JavaScript:
+
 1.	Client-Side Scripting: JavaScript is primarily used on the client side (in the web browser) to enhance the user experience by providing dynamic content, form validation, and interactivity.
-2.	Object-Oriented: JavaScript is an object-oriented programming language. It uses objects to represent and manipulate data, allowing developers to create modular and reusable code.
-3.	Event-Driven Programming: JavaScript is event-driven, meaning it can respond to user actions such as mouse clicks, keyboard inputs, and other events. This feature is crucial for creating interactive and responsive user interfaces.
-4.	Asynchronous Programming: JavaScript supports asynchronous programming, allowing tasks to be executed independently without blocking the main program flow. This is essential for handling events, making network requests, and performing other non-blocking operations.
-5.	Cross-Browser Compatibility: JavaScript is supported by all major web browsers (such as Chrome, Firefox, Safari, and Edge), making it a universal language for web development.
-6.	Integration with HTML and CSS: JavaScript seamlessly integrates with HTML and CSS to manipulate the structure and style of web pages dynamically.
-7.	Node.js: While JavaScript is traditionally associated with front-end development, Node.js allows developers to use JavaScript on the server side as well. This enables full-stack JavaScript development, making it possible to use a single programming language for both the client and server.JavaScript is an essential skill for web developers, and it has
+   
+3.	Object-Oriented: JavaScript is an object-oriented programming language. It uses objects to represent and manipulate data, allowing developers to create modular and reusable code.
+
+5.	Event-Driven Programming: JavaScript is event-driven, meaning it can respond to user actions such as mouse clicks, keyboard inputs, and other events. This feature is crucial for creating interactive and responsive user interfaces.
+   
+7.	Asynchronous Programming: JavaScript supports asynchronous programming, allowing tasks to be executed independently without blocking the main program flow. This is essential for handling events, making network requests, and performing other non-blocking operations.
+   
+9.	Cross-Browser Compatibility: JavaScript is supported by all major web browsers (such as Chrome, Firefox, Safari, and Edge), making it a universal language for web development.
+    
+11.	Integration with HTML and CSS: JavaScript seamlessly integrates with HTML and CSS to manipulate the structure and style of web pages dynamically.
+    
+13.	Node.js: While JavaScript is traditionally associated with front-end development, Node.js allows developers to use JavaScript on the server side as well. This enables full-stack JavaScript development, making it possible to use a single programming language for both the client and server.JavaScript is an essential skill for web developers, and it has
 _____________________________________________________________________________________________________________________
 
 **js is static or dynamic**
 
 JavaScript (JS) is a dynamic programming language. It is often referred to as a "dynamic" language because it allows for runtime changes, such as modifying the structure of objects or adding and removing properties.
+
 In contrast, static languages, like C or Java, require variable types to be declared and checked at compile-time, and their structure is more rigid once the code is compiled.
+
 JavaScript is commonly used for building dynamic web applications, where it can be executed in web browsers to create interactive and responsive user interfaces. Its dynamic nature allows developers to write flexible and adaptable code during runtime.
 _____________________________________________________________________________________________________________________
 
 **js is synchronous or asynchronous**
 
 JavaScript (JS) is inherently a single-threaded language, meaning it executes one operation at a time in a single sequence. However, JavaScript also supports asynchronous programming through features like callbacks, Promises, and async/await.
+
 Asynchronous programming allows certain operations, such as fetching data from a server or reading from a file, to be performed without blocking the main execution thread. Instead of waiting for the operation to complete, the program can continue with other tasks, and a callback function or a Promise resolution handles the result of the asynchronous operation when it's ready.
+
 So, while JavaScript has a synchronous execution model, it provides mechanisms for handling asynchronous tasks to ensure better responsiveness in web applications, especially when dealing with operations that might take time, such as network requests.
 
 _____________________________________________________________________________________________________________________
@@ -38,8 +49,11 @@ ________________________________________________________________________________
 **WHAT IS JAVASCRIPT IS SINGLE THREAD OR MULTI THREAD**
 
 JavaScript is inherently a single-threaded language, meaning it executes code in a single sequence or thread of execution. This single-threaded nature is due to the fact that JavaScript was originally designed to run in web browsers, where it is used to manipulate the Document Object Model (DOM), handle events, and interact with the user interface.
-The single-threaded model ensures that JavaScript code does not create conflicts or race conditions when modifying the DOM. However, this can sometimes lead to performance issues, especially when dealing with tasks that may take a significant amount of time, such as network requests or complex computations. Long-running tasks can cause the user interface to become unresponsbive.
+
+The single-threaded model ensures that JavaScript code does not create conflicts or race conditions when modifying the DOM. However, this can sometimes lead to performance issues, especially when dealing with tasks that may take a significant amount of time, such as network requests or complex computations. Long-running tasks can cause the user interface to become unresponsive.
+
 To address this limitation, modern JavaScript environments provide mechanisms for asynchronous programming. Callbacks, Promises, and the async/await syntax are examples of features introduced to handle asynchronous operations effectively. These mechanisms allow JavaScript to delegate time-consuming tasks to other threads (e.g., web workers in the browser or worker threads in Node.js) while keeping the main thread available for handling user interactions and maintaining a responsive user interface.
+
 It's important to note that while JavaScript itself is single-threaded, web browsers and server-side environments can use additional threads for certain tasks to improve overall performance and responsiveness. For example, web browsers may use separate threads for rendering, handling network requests, and executing JavaScript. This multi-threading is typically managed by the underlying runtime environment and is transparent to the JavaScript developer.
 
 
@@ -140,33 +154,56 @@ ________________________________________________________________________________
 The primary differences between primitive and non-primitive (reference) data types in JavaScript lie in their nature, behavior, and how they are stored and accessed. Here's a summary of the key distinctions:
 Primitive Data Types:
 1.	Immutability:
+   
 •	Primitive types are immutable: Once a primitive value is assigned, it cannot be changed. Any operation that appears to modify a primitive value actually creates a new value.
-2.	Pass by Value:
+
+3.	Pass by Value:
+
 •	Pass by value: When passing a primitive value to a function or assigning it to a variable, a copy of the value is made. Changes to the copied value do not affect the original.
-3.	Examples:
+
+4.	Examples:
+
 •	String, Number, Boolean, Undefined, Null, Symbol.
-4.	Direct Value Representation:
+
+5.	Direct Value Representation:
+   
 •	Direct value representation: Primitive values are directly stored in the memory location associated with the variable.
 
 
 Non-Primitive (Reference) Data Types:
+
 1.	Mutability:
+   
 •	Non-primitive types are mutable: Values of reference types can be modified directly by changing their properties or elements.
-2.	Pass by Reference:
+
+3.	Pass by Reference:
+   
 •	Pass by reference: When passing a reference-type value to a function or assigning it to a variable, a reference (memory address) to the original value is passed. Changes to the referenced value affect the original.
-3.	Examples:
+
+5.	Examples:
+   
 •	Object, Array, Function, Date, RegExp, Non-primitive wrapper objects.
-4.	Reference Representation:
+
+7.	Reference Representation:
+   
 •	Reference representation: Reference-type values store a reference to the memory location where the actual data is stored.
 Memory Allocation:
+
 1.	Primitive Types:
+2.	
 •	Stored directly: Primitive values are stored directly in the variable's memory location.
-2.	Reference Types:
+
+4.	Reference Types:
+   
 •	Reference stored: Reference values store a reference (memory address) to the actual data, which is stored elsewhere in memory.
 Usage:
+
 1.	Primitive Types:
+   
 •	Used for simple data: Primitive types are suitable for simple data storage and comparisons.
-2.	Reference Types:
+
+3.	Reference Types:
+   
 •	Used for complex data: Reference types are used for more complex structures and data manipulation, as they allow for the creation of
 
 
@@ -177,9 +214,13 @@ https://www.youtube.com/watch?v=EbsJHZ1C9C0
 **VAR**
 
 var, let, and const are all keywords used for variable declaration in JavaScript, but they have some key differences in terms of scope, hoisting, and reassignment. Here's an explanation of each:
+
 1.	var:
+   
 •	Variables declared with var are function-scoped, meaning their scope is limited to the function in which they are declared.
+
 •	var variables are hoisted, which means they are moved to the top of their scope during the compilation phase.
+
 •	var allows redeclaration and reassignment.
 
 
@@ -216,8 +257,10 @@ function exampleLet() {
 
 **const:**
 
-•	Variables declared with const are block-scoped like 
+•	Variables declared with const are block-scoped like
+
 •	const variables must be assigned a value during declaration, and once assigned, their value cannot be changed or reassigned.
+
 •	const does not allow redeclaration or reassignment.
 
 
@@ -557,20 +600,29 @@ In JavaScript, prototypes are a key part of the language's prototype-based inher
 Here's an overview of prototypes along with some built-in methods and properties related to prototypes:
 
 Prototype Property:
+
 Object.prototype:
+
 All objects in JavaScript inherit properties and methods from 
+
 Object.prototype.
+
 Example:
+
 ```javascript
 
 const myObject = {};
+
 console.log(myObject.toString());  // Outputs: [object Object]
 ```
 
 
 Constructor and Prototype Chain:
+
 constructor Property:
+
 The constructor property points back to the constructor function that created the instance.
+
 ```javascript
 
 function Person(name) {
@@ -582,7 +634,9 @@ console.log(person.constructor);  // Outputs: [Function: Person]
 ```
 
 hasOwnProperty:
+
 Checks if a property belongs directly to the object and not to its prototype chain.
+
 Example:
 ```javascript
 
@@ -593,6 +647,7 @@ console.log(myObject.hasOwnProperty("key"));  // Outputs: true
 Object Manipulation:
 
 Object.create:
+
 Creates a new object with the specified prototype object.
 
 
@@ -975,7 +1030,9 @@ let sentence = 'This is a sample sentence.';
 console.log(sentence.split(' '));  // Outputs: ['This', 'is', 'a', 'sample', 'sentence.']
 ```
 join(separator):
+
 Joins the elements of an array into a string using a specified separator
+
 ```javascript.
 let words = ['This', 'is', 'a', 'sample', 'sentence.'];
 console.log(words.join(' '));  // Outputs: This is a sample sentence. 

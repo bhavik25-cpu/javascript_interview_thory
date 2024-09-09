@@ -27,6 +27,11 @@ Here are some key characteristics and uses of JavaScript:
 13.	Node.js: While JavaScript is traditionally associated with front-end development, Node.js allows developers to use JavaScript on the server side as well. This enables full-stack JavaScript development, making it possible to use a single programming language for both the client and server.JavaScript is an essential skill for web developers, and it has
 _____________________________________________________________________________________________________________________
 
+
+https://www.youtube.com/watch?v=mbObLvXyv0E
+
+
+
 **js is static or dynamic**
 
 JavaScript (JS) is a dynamic programming language. It is often referred to as a "dynamic" language because it allows for runtime changes, such as modifying the structure of objects or adding and removing properties.
@@ -35,6 +40,7 @@ In contrast, static languages, like C or Java, require variable types to be decl
 
 JavaScript is commonly used for building dynamic web applications, where it can be executed in web browsers to create interactive and responsive user interfaces. Its dynamic nature allows developers to write flexible and adaptable code during runtime.
 _____________________________________________________________________________________________________________________
+
 
 **js is synchronous or asynchronous**
 
@@ -46,7 +52,10 @@ So, while JavaScript has a synchronous execution model, it provides mechanisms f
 
 _____________________________________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=pFvfB_g9aTs
+
 **WHAT IS JAVASCRIPT IS SINGLE THREAD OR MULTI THREAD**
+
 
 JavaScript is inherently a single-threaded language, meaning it executes code in a single sequence or thread of execution. This single-threaded nature is due to the fact that JavaScript was originally designed to run in web browsers, where it is used to manipulate the Document Object Model (DOM), handle events, and interact with the user interface.
 

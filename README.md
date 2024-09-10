@@ -67,7 +67,6 @@ It's important to note that while JavaScript itself is single-threaded, web brow
 
 
 _____________________________________________________________________________________________________________________
-https://www.youtube.com/watch?v=Gm4v6cbHxpk
 
 **primitive and non primitive data type in js**
 

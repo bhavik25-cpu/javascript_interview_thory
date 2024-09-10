@@ -5554,27 +5554,6 @@ You can also pass arguments to the function:
 
 This can be useful for creating modules, encapsulating code, or avoiding naming conflicts.
 
-Immediately Invoked Function in js
-
-An Immediately Invoked Function Expression (IIFE) in JavaScript is a function that is executed immediately after it is defined. It's a common pattern used to create a private scope for variables, preventing them from polluting the global namespace. Here's the basic syntax:
-
-```javascript
-(function() {
-    // code to be executed immediately
-})();
-```
-You define a function expression within parentheses (function() { /* code */ }), and then immediately invoke it by adding another pair of parentheses at the end ().
-
-You can also pass arguments to the function:
-```javascript
-(function(name) {
-    console.log('Hello, ' + name + '!');
-})('World');
-```
-
-This can be useful for creating modules, encapsulating code, or avoiding naming conflicts.
-
-
 
 _________________________________________________________________________________________________________
 

@@ -157,6 +157,8 @@ The main difference between primitive and non-primitive types is that primitive 
 
 
 ___________________________________________________________________________________________________
+
+
 **primitive and non primitive data type in js difference**
 
 The primary differences between primitive and non-primitive (reference) data types in JavaScript lie in their nature, behavior, and how they are stored and accessed. Here's a summary of the key distinctions:
@@ -453,7 +455,11 @@ const product = multiply(5, 6);  // product is 30
 ```
 
 __________________________________________________________________________________________________
+
+
 **Recursion javascript**
+
+
 Recursion is a programming concept where a function calls itself in its own definition. In JavaScript, recursion is commonly used for solving problems that can be broken down into smaller, similar subproblems. Recursive functions consist of a base case and a recursive case. Here's an example to illustrate the concept of recursion in JavaScript:
 
 // Example: Factorial Calculation using Recursion
@@ -500,6 +506,8 @@ Recursive functions can be elegant and expressive, but it's crucial to have a ba
 
 
 __________________________________________________________________________________________
+
+
 **JavaScript Objects**
 
 In JavaScript, an object is a complex data type that allows you to store and organize data using key-value pairs. Objects are a fundamental part of the language and are used to represent real-world entities, organize code, and facilitate data manipulation. Here's an overview of JavaScript objects:
@@ -603,6 +611,8 @@ JavaScript objects are versatile and form the basis of the language's flexible a
 
 
 _________________________________________________________________________________________
+
+
 **JavaScript Prototypes with all inbuild method**
 
 In JavaScript, prototypes are a key part of the language's prototype-based inheritance model. Objects in JavaScript can have a prototype, which is another object that the current object inherits properties and methods from. Every object in JavaScript has a prototype, and these prototypes form a chain, commonly known as the prototype chain.
@@ -714,6 +724,8 @@ console.log(myString.substring(0, 5));  // Outputs: Hello
 These are just a few examples of the built-in methods and properties related to prototypes in JavaScript. Understanding prototypes is crucial for effective object-oriented programming in JavaScript.
 
 ________________________________________________________________________________________________________
+
+
 **object method in javascript**
 
 JavaScript objects come with several built-in methods that can be used to manipulate and perform operations on objects. Here are some commonly used object methods:
@@ -1049,7 +1061,10 @@ console.log(words.join(' '));  // Outputs: This is a sample sentence.
 ```
 
 _________________________________________________________________________________________________________
+
 **Methods strings**
+
+
 Certainly! Here's a comprehensive list of common string methods in JavaScript:
 
 String Properties:
@@ -1652,7 +1667,10 @@ JavaScript Template Strings provide a cleaner and more readable way to work with
 
 
 __________________________________________________________________________________________________________________________________
+
+
 **JavaScript Arrays **
+
 JavaScript arrays are a type of object used for storing and manipulating collections of values. Unlike other programming languages, JavaScript arrays can hold values of different data types within the same array. Arrays in JavaScript are dynamic, meaning they can grow or shrink in size dynamically during runtime.
 
 Here's a basic overview of JavaScript arrays:
@@ -2470,6 +2488,9 @@ Remember that avoiding strict mode may lead to more subtle bugs and makes your c
 
 
 _______________________________________________________________________________________________________________________________
+
+
+
 **The JavaScript this Keyword_**
 
 In JavaScript, the this keyword is a special keyword that refers to the current context or object. The value of this depends on how a function is invoked. Understanding the various ways in which this is used is crucial for writing effective and reliable JavaScript code.
@@ -2567,6 +2588,7 @@ myObject.myMethod();  // Outputs: myObject
 
 
 _______________________________________________________________________________________________
+
 **Differences Between Normal Function and Arrow Function**
 
 No prototype object for Arrow Functions
@@ -2597,7 +2619,9 @@ arrowFunction();  // Outputs: Arrow function
 ```
 So, in the case of arrow functions, the variable arrowFunction is hoisted to the top of the scope, but the function's implementation remains in place.
 ___________________________________________________________________________________________________________________
+
 **What is ternary operator JavaScript? with example**
+
 The ternary operator, also known as the conditional operator, is a concise way to write an if...else statement in a single line. It's a shorthand for making decisions based on a condition. The syntax of the ternary operator is as follows:
 
 condition ? expressionIfTrue : expressionIfFalse;
@@ -2634,7 +2658,9 @@ console.log(message);  // Outputs: 'You are allowed to enter.' (because age is 2
 The ternary operator is handy when you need to make a quick decision based on a simple condition, and it can help write more concise and readable code. However, it's essential to use it judiciously, as overly complex expressions within the ternary operator might reduce code clarity.
 
 ______________________________________________________________________________________________________________________
+
 **What is a Higher Order Function?with example**
+
 A higher-order function is a function that takes one or more functions as arguments or returns a function as its result. In other words, a higher-order function treats functions as first-class citizens, allowing them to be manipulated and passed around like any other value. This concept is fundamental to functional programming and enables the creation of more expressive and modular code.
 
 Here's an example to illustrate the concept of a higher-order function:
@@ -2691,6 +2717,7 @@ Destructuring in JavaScript is a way to extract values from objects or arrays an
 
 
 Destructuring Arrays:
+
 Example 1: Basic Array Destructuring
 ```javascript
 
@@ -2754,6 +2781,7 @@ In this example, the variable make is renamed to brand during the destructuring 
 
 Destructuring Function Parameters:
 Example 5: Destructuring Function Parameters
+
 ```javascript
 
 function printPersonInfo({ firstName, lastName, age }) {
@@ -2761,13 +2789,14 @@ function printPersonInfo({ firstName, lastName, age }) {
 }
 
 const personData = { firstName: 'Alice', lastName: 'Johnson', age: 25 };
-```
+
 
 // Calling the function with destructuring
 printPersonInfo(personData);
-```javascript
+```
 
 // Outputs: 'Name: Alice Johnson, Age: 25'
+
 You can use destructuring in function parameters to extract values directly from an object passed as an argument.
 
 Destructuring is a powerful feature that enhances the readability and expressiveness of JavaScript code. It is widely used in modern JavaScript applications, especially in frameworks like React and libraries like Redux.
@@ -2857,6 +2886,8 @@ These methods are commonly used in scenarios where you need to control the conte
 ____________________________________________________________________________________________________________________________________________________
 
 **What is First Class Function in JavaScript**
+
+
 In JavaScript, functions are first-class citizens, which means that functions are treated as values and can be:
 
 Assigned to Variables:
@@ -2923,7 +2954,11 @@ The term "first-class function" implies that functions in JavaScript are treated
 Being able to work with functions as first-class citizens allows for the creation of higher-order functions, passing functions as arguments, and returning functions from other functions. This flexibility is a key feature of JavaScript that contributes to its versatility and the ability to express complex ideas concisely.
 
 _____________________________________________________________________________________________________________________________________
+
+
 **Shallow Copy and Deep Copy in JavaScript**
+
+
 In JavaScript, when you want to duplicate an object or an array, you can create either a shallow copy or a deep copy. Understanding the difference between the two is crucial, as they behave differently when dealing with nested objects or arrays.
 
 Shallow Copy:
@@ -2989,6 +3024,8 @@ Use a deep copy when you need a completely independent duplicate, especially whe
 
 
 _____________________________________________________________________________________________________________________
+
+
 **Difference between Map & Filter reduuce filter Functions in javascript**
 
 In JavaScript, map, filter, reduce, and forEach are higher-order functions that operate on arrays. Each of these functions serves a different purpose and provides a concise way to manipulate and transform arrays.
@@ -3172,6 +3209,7 @@ document.body.appendChild(myButton);
 ```
 
 Benefits of Closures:
+
 Encapsulation: Closures help in encapsulating and hiding the implementation details, promoting information hiding.
 
 Data Persistence: Variables within closures are not garbage collected when the outer function completes execution, allowing for the persistence of data.
@@ -3184,7 +3222,9 @@ Closures are a powerful feature in JavaScript that allows for the creation of el
 
 
 ____________________________________________________________________________________________________________________
+
 **JavaScript Callbacks** 
+
 In JavaScript, a callback is a function that is passed as an argument to another function and is executed after the completion of a certain task. Callbacks are a fundamental concept in asynchronous programming and are widely used in JavaScript, especially with functions that involve tasks such as handling events, making API calls, or performing other asynchronous operations.
 
 Basic Example:
@@ -3235,6 +3275,7 @@ console.log('After calling doAsyncTask');
 In this example, doAsyncTask represents an asynchronous operation, and onTaskComplete is a callback function. The doAsyncTask function is non-blocking, so the "After calling doAsyncTask" message is logged before the task completes and the callback is executed.
 
 Handling Errors with Callbacks:
+
 Callbacks are also used to handle errors in asynchronous operations. Conventionally, the first argument passed to the callback is reserved for an error object.
 
 ```javascript
@@ -3272,15 +3313,19 @@ In this example, the fetchDataWithCallback function can either succeed or fail r
 
 
 Advantages of Callbacks:
+
 Asynchronous Programming:
+
 Callbacks are essential for handling asynchronous operations, allowing non-blocking execution.
 
 
 Modularity:
+
 Callbacks promote modularity by allowing you to define separate functions for different tasks and compose them as needed.
 
 
 Error Handling:
+
 Callbacks can be used to handle errors in asynchronous operations by conventionally passing an error object as the first argument.
 
 
@@ -3414,7 +3459,10 @@ The use of Promises or async/await can significantly improve code readability an
 
 
 ______________________________________________________________________________________________________________________________________________________
+
 **js synchronous or asynchronous**
+
+
 javaScript is inherently a single-threaded, synchronous language. This means that it executes code line by line, in a sequential manner, and one operation must complete before moving on to the next. This is known as the JavaScript event loop, and it ensures that only one operation is in progress at any given time on the main thread.
 
 However, JavaScript also supports asynchronous programming through mechanisms like callbacks, Promises, and Async/Await. While the core language is synchronous, the runtime environment (such as web browsers or Node.js) provides APIs that allow certain operations to be executed asynchronously.
@@ -3485,14 +3533,16 @@ async function processData() {
 }
 
 processData();
-```javascript
+```
 
 While JavaScript itself is synchronous, its runtime environment provides asynchronous APIs for handling tasks like network requests, file operations, and timers. Asynchronous programming in JavaScript allows developers to write non-blocking code and create responsive applications.
 
 
 
 _______________________________________________________________________________________________________________________________________
+
 **Asynchronous JavaScript**
+
 Asynchronous JavaScript refers to the execution of code that doesn't run in a sequential order from top to bottom. Instead, it allows certain operations to be performed independently of the main program flow, particularly when dealing with tasks that may take time to complete, such as fetching data from a server, reading/writing to a file, or handling user interactions. Asynchronous programming helps prevent blocking the main thread, allowing the program to remain responsive.
 
 Here are key concepts and mechanisms for handling asynchronous JavaScript:
@@ -3517,6 +3567,7 @@ fetchData(processData);
 ```
 
 2. Promises:
+   
 Promises provide a cleaner and more structured way to handle asynchronous code compared to callbacks. A Promise represents a value that might be available now, or in the future, or never. It has three states: pending, resolved (fulfilled), and rejected.
 
 ```javascript
@@ -3581,6 +3632,8 @@ Asynchronous JavaScript is essential for building responsive and efficient web a
 
 
 ______________________________________________________________________________________________________________________________________________
+
+
 **synchronous in js**
 
 In JavaScript, synchronous code refers to code that is executed in a sequential manner, line by line. Each operation is completed before moving on to the next one. Synchronous execution is the default behavior of JavaScript, and it follows the single-threaded execution model.
@@ -3706,7 +3759,10 @@ Remember that the best strategy might depend on the specific requirements of you
 
 
 _____________________________________________________________________________________________________________________
+
 **difference between es6 and javascript**
+
+
 ES6 (ECMAScript 2015) is a specific version of the ECMAScript standard, which is the specification that JavaScript follows. ES6 introduced a significant update to the language, bringing many new features and enhancements to JavaScript. Therefore, when people refer to ES6, they are often referring to the features introduced in ECMAScript 2015 and subsequent versions.
 
 Here are some key differences and improvements introduced in ES6 compared to the previous versions of JavaScript:
@@ -3785,6 +3841,7 @@ class Person {
 
 
 Modules:
+
 ES6 introduced a standardized module system, allowing developers to organize code into reusable and maintainable modules.
 // ES5 (no built-in module system)
 // Module 1
@@ -3848,7 +3905,9 @@ const multiply = (a, b = 1) => a * b;
 These are just a few examples of the many features introduced in ES6. Subsequent ECMAScript versions, such as ES7, ES8, and so on, have continued to bring additional improvements and features to JavaScript. It's worth noting that modern JavaScript development often leverages features from ES6 and beyond, as they provide more expressive and efficient ways to write code.
 
 _____________________________________________________________________________________________________________________________
+
 **promises in js**
+
 Promises in JavaScript provide a clean and structured way to handle asynchronous operations. A Promise represents a value that might be available now, or in the future, or never. Promises have three states: pending, resolved (fulfilled), and rejected.
 
 Here's a basic overview of how promises work:
@@ -3881,6 +3940,7 @@ myPromise.then((result) => {
 ```
 
 Chaining Promises:
+
 Promises can be chained using multiple .then() calls. Each .then() receives the result of the previous one.
 ```javascript
 myPromise
@@ -3938,7 +3998,9 @@ Promises provide a more structured and readable way to handle asynchronous code 
 
 
 __________________________________________________________________________________________________________________________________
+
 **JavaScript Async and await**
+
 Async/await is a syntactic sugar introduced in ECMAScript 2017 (ES8) that simplifies the syntax of working with Promises, making asynchronous code more readable and easier to reason about. The async keyword is used to define an asynchronous function, and the await keyword is used within that function to wait for the resolution of a Promise.
 
 Here's a basic overview of how async/await works:
@@ -3954,6 +4016,7 @@ async function fetchData() {
 ```
 
 Using Await to Wait for Promises:
+
 Inside an async function, the await keyword is used to pause the execution of the function until the Promise is resolved.
 
 ```javascript
@@ -3997,6 +4060,7 @@ async function processData() {
 ```
 
 Async/Await with Promise.all:
+
 You can use Promise.all with async/await to execute multiple asynchronous operations concurrently.
 
 ```javascript
@@ -4011,6 +4075,7 @@ async function fetchAndProcessData() {
 ```
 
 Async/Await with For-of Loop:
+
 Async/await can be combined with a for-of loop to iterate over asynchronous tasks sequentially.
 ```javascript
 async function processMultipleItems(items) {
@@ -4024,14 +4089,20 @@ async function processMultipleItems(items) {
   }
 }
 ```
+
 Async/await is particularly useful when dealing with asynchronous code that involves Promises. It provides a more synchronous-like syntax, making the code easier to read and maintain compared to nested callbacks or Promise chaining. Async/await is widely adopted in modern JavaScript development for handling asynchronous operations
 
 __________________________________________________________________________________________
+
+
 **IF ELSE VS SWITCH CASE IN JS**
+
+
 In JavaScript, both if-else statements and switch-case statements are used for conditional branching, allowing you to execute different code blocks based on different conditions. However, they have some differences in terms of syntax, use cases, and readability.
 
 
 if-else Statements:
+
 ```javascript
 let condition = true;
 if (condition) {
@@ -4092,7 +4163,10 @@ Ultimately, the choice between if-else and switch-case depends on the specific r
 
 
 _____________________________________________________________________________________________________________
+
+
 **JSON.parse()**
+
 JSON.parse() is a built-in method in JavaScript used to parse a JSON string and convert it into a JavaScript object. JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate.
 
 The JSON.parse() method takes a JSON-formatted string as its parameter and returns a JavaScript object corresponding to the parsed JSON data.
@@ -4238,7 +4312,10 @@ In this example, attempting to stringify an object with a circular reference wil
 
 
 ______________________________________________________________________________________________________________
+
+
 **Infinity in js**
+
 In JavaScript, Infinity is a special value representing positive infinity. It is a global property and a valid number data type. The Infinity value is used to represent a mathematical concept where a quantity or value is larger than any finite number.
 
 Here's an example of using Infinity:
@@ -4288,7 +4365,9 @@ Both Infinity and -Infinity are often used in mathematical calculations or to re
 
 
 ______________________________________________________________________________________________________________________________________
+
 **Getters and Setters**
+
 In JavaScript, getters and setters are special methods that allow you to control access to the properties of an object. They provide a way to define custom behavior when getting or setting the values of an object's properties.
 
 Getters:
@@ -4341,6 +4420,7 @@ console.log(person.lastName);  // Output: Smith
 In this example, the fullName setter allows you to set the full name of the person by providing a single string. The setter then splits the string into first and last names and updates the corresponding properties.
 
 Using Getters and Setters:
+
 Getters and setters can be used to add additional logic, validation, or computations when accessing or modifying object properties.
 ```javascript
 
@@ -4369,12 +4449,15 @@ console.log(temperature.fahrenheit); // Output: 77
 In this example, the celsius setter ensures that the temperature cannot be set below absolute zero, and the fahrenheit getter converts the temperature from Celsius to Fahrenheit.
 
 Getters and setters provide a way to encapsulate the behavior of properties, allowing for more controlled and consistent manipulation of object data. They are commonly used in classes and object literals to create more flexible and maintainable code.
+
 _____________________________________________________________________________________________________________________________________________
+
 event js
 
 In JavaScript, getters and setters are special methods that allow you to control access to the properties of an object. They provide a way to define custom behavior when getting or setting the values of an object's properties.
 
 Getters:
+
 A getter is a method that gets the value of a specific property. It is defined using the get keyword followed by the property name.
 ```javascript
 
@@ -4395,6 +4478,7 @@ In this example, the fullName getter allows you to access the full name of the p
 
 
 Setters:
+
 A setter is a method that sets the value of a specific property. It is defined using the set keyword followed by the property name.
 ```javascript
 
@@ -4463,6 +4547,7 @@ myButton.addEventListener('click', function() {
 In this example, the click event listener is attached to a button with the ID myButton. When the button is clicked, the provided function is executed.
 
 Event Object:
+
 Event listeners receive an event object as an argument. This object contains information about the event, such as the type of the event, the target element, and more.
 ```javascript
 
@@ -4475,6 +4560,7 @@ myInput.addEventListener('input', function(event) {
 Here, the input event listener is attached to an input element. The event object (event) provides information about the input event, including the current value of the input.
 
 Event Types:
+
 There are various types of events, such as click, mouseover, mouseout, keydown, input, change, and more. You can listen for specific events based on your application's needs.
 
 ```javascript
@@ -4487,6 +4573,7 @@ myElement.addEventListener('mouseover', function() {
 ```
 
 Event Propagation:
+
 Events in the DOM propagate in two phases: the capturing phase and the bubbling phase. The addEventListener method can take an optional third parameter, useCapture, which determines the phase in which the event is handled.
 
 ```javascript
@@ -4501,6 +4588,7 @@ myElement.addEventListener('click', function() {
 ```
 
 Removing Event Listeners:
+
 You can remove an event listener using the removeEventListener method. It's important to provide the same function reference that was used when adding the listener.
 
 ```javascript
@@ -4696,10 +4784,14 @@ It's important to note that cookies have privacy implications, and regulations l
 
 
 _________________________________________________________________________________________________________________
+
+
 **Javascript oops concept**
+
 JavaScript supports object-oriented programming (OOP) concepts, and developers can use them to create and organize their code in a more modular and reusable way. Here are the key OOP concepts in JavaScript:
 
 Objects:
+
 JavaScript is an object-based language, and everything in JavaScript is an object or can be treated as an object.
 Objects in JavaScript are collections of key-value pairs, where keys are strings (or symbols) and values can be any data type, including other objects.
 ```javascript
@@ -4762,6 +4854,7 @@ myDog.speak();  // Output: Buddy barks
 ```
 
 Encapsulation:
+
 Encapsulation is the bundling of data (properties) and methods that operate on that data into a single unit (object or class).
 It helps in controlling access to certain properties and methods, allowing for better control and organization of code.
 
@@ -4798,6 +4891,7 @@ console.log(account.getBalance());  // Output: 1000
 
 
 Polymorphism:
+
 Polymorphism allows objects of different types to be treated as objects of a common type.
 In JavaScript, polymorphism is achieved through method overriding and the ability of objects to dynamically change their behavior at runtime.
 ```javascript
@@ -4845,7 +4939,9 @@ These OOP concepts in JavaScript provide a way to structure code, promote reusab
 ______________________________________________________________________________________________________
 
 **Describe the difference**
-between == and === in JavaScript. 
+between == and === in JavaScript.**
+
+
 
 In JavaScript, == and === are two different comparison operators used to compare values. They differ in terms of their type coercion behavior:
 
@@ -4865,6 +4961,7 @@ console.log("5" === 5);   // false (string "5" is not equal to number 5 in value
 console.log(true === 1);  // false (boolean true is not equal to number 1 in value or type)
 
 In summary:
+
 == performs type coercion and compares values after conversion.
 === does not perform type coercion and compares both values and types.
 It is generally considered good practice to use === for equality comparisons in JavaScript unless there is a specific need for type coercion. Using === helps prevent unexpected behavior that can arise from automatic type conversions.
@@ -4886,6 +4983,7 @@ let car = {
 ```
 
 Classes and Constructors:
+
 JavaScript supports the concept of classes, which can be used to create objects. Classes act as blueprints for object creation.
 Constructors are special functions that get called when an object is instantiated from a class. They initialize object properties.
 ```javascript
@@ -4904,6 +5002,7 @@ class Car {
 ```
 
 let myCar = new Car("Toyota", "Camry", 2022);
+
 Inheritance:Inheritance allows a class (subclass or child class) to inherit properties and methods from another class (superclass or parent class).
 JavaScript uses prototypal inheritance, where objects can inherit properties and methods directly from other objects.
 
@@ -5009,6 +5108,8 @@ These OOP concepts in JavaScript provide a way to structure code, promote reusab
 
 
 __________________________________________________________________________________________
+
+
 **set in js**
 
 In JavaScript, the Set object is a built-in data structure that allows you to store unique values of any type, whether primitive values or object references. A Set in JavaScript is similar to a mathematical set and has methods for adding, deleting, and checking the existence of elements.
@@ -5126,6 +5227,8 @@ The Set object provides a convenient way to work with unique values, perform set
 __________________________________________________________________________________________
 
 **PASS BY VALUE / REF in js**
+
+
 In JavaScript, the concept of "pass by value" and "pass by reference" can be a bit misleading. JavaScript is generally considered to be "pass by value," but it's essential to understand how this works with different types of values.
 
 Primitive Types - Pass by Value:
@@ -5187,6 +5290,8 @@ It's worth noting that the term "pass by reference" can be misleading in JavaScr
 
 
 __________________________________________________________________________________________
+
+
 **EXCEPTION HANDLING**
 
 Exception handling in JavaScript is a mechanism for dealing with errors and unexpected situations in a program. The try, catch, finally, and throw statements are used to implement exception handling.
@@ -5283,7 +5388,10 @@ try {
 Exception handling is essential for robust and reliable code, especially in scenarios where errors may occur during runtime. It helps prevent unexpected crashes and allows developers to gracefully handle exceptional conditions.
 
 _____________________________________________________________________________________________________________________________________
+
+
 **WEBPACK**
+
 Webpack is a popular open-source JavaScript module bundler that helps developers manage and organize the assets and dependencies in a web project. It takes various assets, such as JavaScript files, stylesheets, and images, and transforms them into a bundled output that is optimized for web deployment.
 
 Here are key features and concepts associated with Webpack:
@@ -5325,6 +5433,7 @@ module: {
 }
 Plugins:
 ```
+
 Plugins extend the functionality of Webpack by performing tasks like minification, code splitting, and environment-specific configuration.
 Popular plugins include uglifyjs-webpack-plugin for minification and HtmlWebpackPlugin for generating HTML files.
 Example:
@@ -5381,7 +5490,10 @@ Webpack has become a standard tool in modern web development for managing depend
 
 
 __________________________________________________________________________________________
+
+
 **Overloading in JavaScript**
+
 In JavaScript, function overriding is typically associated with inheritance in the context of object-oriented programming. When you have a base class and a derived class, the derived class can override a method from the base class.
 ```javascript
 class Animal {
@@ -5409,6 +5521,7 @@ myDog.speak();     // Output: Dog barks
 
 __________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=kcElZorPa7c&t=33s
 
 **prototype chaining in javascript**
 
@@ -5417,18 +5530,22 @@ Prototype chaining is a fundamental concept in JavaScript that allows objects to
 Here's a basic explanation of how prototype chaining works:
 
 Objects and Prototypes:
+
 Every object in JavaScript has an associated prototype object.
 The prototype object is essentially another object from which the current object inherits properties and methods.
 
 Object Creation:
+
 Objects in JavaScript can be created using constructor functions, object literals, or classes.
 When an object is created, it has a reference to its prototype.
 
 Prototype Chain:
+
 Objects can be linked in a chain where one object's prototype is another object.
 If a property or method is not found on an object, JavaScript looks for it in the prototype chain.
 
 Object.prototype:
+
 At the top of the prototype chain is the Object.prototype object, which is a built-in object in JavaScript.
 It contains common properties and methods that are inherited by all objects.
 Here's a simple example to illustrate prototype chaining:
@@ -5457,7 +5574,9 @@ console.log(dog.name); // Output: Buddy
 dog.sound(); // Output: Some generic sound
 ```
 // The prototype chain:
+
 // dog -> Animal.prototype -> Object.prototype
+
 In this example, the dog object inherits the sound method from the Animal.prototype. If the sound method were not found in Animal.prototype, JavaScript would continue looking in the Object.prototype. This forms the prototype chain.
 
 

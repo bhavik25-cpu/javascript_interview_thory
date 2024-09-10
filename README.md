@@ -68,6 +68,8 @@ It's important to note that while JavaScript itself is single-threaded, web brow
 
 _____________________________________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=sRpW6SFlZrQ
+
 **primitive and non primitive data type in js**
 
 In JavaScript, data types can be broadly categorized into two main groups: primitive types and non-primitive types (also known as reference types). Here's an explanation of each:

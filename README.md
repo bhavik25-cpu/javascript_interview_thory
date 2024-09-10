@@ -5577,6 +5577,7 @@ Avoid Polluting Global Scope: Variables inside an IIFE are not accessible from t
 
 // `message` is not accessible here
 console.log(message);  // Uncaught ReferenceError
+```
 
 Module Pattern: IIFEs are often used to create modules that encapsulate private variables and expose only specific methods.
 

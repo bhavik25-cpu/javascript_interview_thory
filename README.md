@@ -30,8 +30,6 @@ ________________________________________________________________________________
 
 https://www.youtube.com/watch?v=mbObLvXyv0E
 
-
-
 **js is static or dynamic**
 
 JavaScript (JS) is a dynamic programming language. It is often referred to as a "dynamic" language because it allows for runtime changes, such as modifying the structure of objects or adding and removing properties.

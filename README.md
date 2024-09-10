@@ -200,7 +200,7 @@ Non-Primitive (Reference) Data Types:
 Memory Allocation:
 
 1.	Primitive Types:
-2.	
+	
 •	Stored directly: Primitive values are stored directly in the variable's memory location.
 
 4.	Reference Types:

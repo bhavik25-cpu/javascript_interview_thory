@@ -5408,6 +5408,8 @@ myDog.speak();     // Output: Dog barks
 
 
 __________________________________________________________________________________________
+
+
 **prototype chaining in javascript**
 
 Prototype chaining is a fundamental concept in JavaScript that allows objects to inherit properties and methods from other objects through a prototype chain. Each object in JavaScript has an associated prototype object, and when a property or method is accessed on an object, if it's not found directly on the object, JavaScript looks for it in the prototype chain.
@@ -5462,6 +5464,8 @@ In this example, the dog object inherits the sound method from the Animal.protot
 __________________________________________________________________________________________
 
 
+https://www.youtube.com/watch?v=0P_YvC6Gg0c
+
 https://www.youtube.com/watch?v=erB8wqpyFck
 
 
@@ -5473,6 +5477,7 @@ In JavaScript, control flow refers to the order in which statements are executed
 Sequential Execution: As mentioned, JavaScript executes statements one after the other, from top to bottom, in the order they appear in the script.
 
 1. Sequential Execution
+
 JavaScript code runs line by line, from top to bottom, unless interrupted by control structures (loops, conditionals, etc.).
 
 ```javascript
@@ -5616,9 +5621,11 @@ for (var i = 0; i < 5; i++) {
 ```
 
 9. Asynchronous Control Flow (Promises, async/await)
+    
 JavaScript is single-threaded, but asynchronous programming allows it to handle non-blocking operations like network requests or timers.
 
 Promises:
+
 ```javascript
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => resolve("Task completed"), 1000);
@@ -5637,6 +5644,7 @@ async function fetchData() {
 ```
 
 10. Event Loop
+    
 JavaScript's event loop handles asynchronous operations (such as timers, I/O operations) by placing them in the call stack when they are ready to be executed.
 
 ```javascript

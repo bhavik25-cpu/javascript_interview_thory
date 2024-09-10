@@ -5578,6 +5578,10 @@ This can be useful for creating modules, encapsulating code, or avoiding naming 
 
 _________________________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=Cdc_cO5Zlx8
+
+https://www.youtube.com/watch?v=vQcCNpuaJO8
+
 **curring in js**
 
 In JavaScript, "curring" refers to the process of converting a function that takes multiple arguments into a sequence of functions that each take a single argument. This technique allows you to partially apply arguments to a function, creating a new function with fewer parameters.

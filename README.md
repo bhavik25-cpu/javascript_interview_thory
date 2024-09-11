@@ -163,6 +163,7 @@ ________________________________________________________________________________
 
 The primary differences between primitive and non-primitive (reference) data types in JavaScript lie in their nature, behavior, and how they are stored and accessed. Here's a summary of the key distinctions:
 Primitive Data Types:
+
 1.	Immutability:
    
 •	Primitive types are immutable: Once a primitive value is assigned, it cannot be changed. Any operation that appears to modify a primitive value actually creates a new value.
@@ -219,6 +220,7 @@ Usage:
 
 
 _____________________________________________________________________________________________________________________
+
 https://www.youtube.com/watch?v=EbsJHZ1C9C0
 
 **VAR**
@@ -400,6 +402,7 @@ closureFn();  // Outputs: I am outer
 ```
 
 Callback Functions:
+
 Functions can be passed as arguments to other functions:
 ```javascript
 
@@ -427,6 +430,7 @@ console.log(double(5));
 ```
  
 // Outputs: 10
+
 These are some of the fundamental concepts related to JavaScript functions. Understanding functions is essential for writing modular, reusable, and maintainable code.
 
 
@@ -435,6 +439,7 @@ Anonymous Function
 An anonymous function in JavaScript is a function that is declared without a name. It can be defined using a function expression or an arrow function. Anonymous functions are often used when a function is needed temporarily or as an argument to other functions. Here are examples of both types of anonymous functions:
 
 Anonymous Function using Function Expression:
+
 ```javascript
 
 const add = function(x, y) {
@@ -446,23 +451,26 @@ const result = add(3, 4);  // result is 7
 In this example, add is an anonymous function created using a function expression. It takes two parameters (x and y) and returns their sum.
 
 Anonymous Function using Arrow Function:
+
 ```javascript
 
 const multiply = (a, b) => {
   return a * b;
 };
 const product = multiply(5, 6);  // product is 30
+
 ```
 
 __________________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=8NZZSgtTelc&t=281s
 
 **Recursion javascript**
-
 
 Recursion is a programming concept where a function calls itself in its own definition. In JavaScript, recursion is commonly used for solving problems that can be broken down into smaller, similar subproblems. Recursive functions consist of a base case and a recursive case. Here's an example to illustrate the concept of recursion in JavaScript:
 
 // Example: Factorial Calculation using Recursion
+
 ```javascript
 
 function factorial(n) {
@@ -490,6 +498,7 @@ factorial(1) returns 1 (base case)
 ```
 
 The calculations are then propagated back up:
+
 ```javascript
 
 
@@ -536,7 +545,9 @@ console.log(person["lastName"]); // Outputs: Doe
 ```
 
 Adding and Modifying Properties:
+
 You can add new properties or modify existing ones:
+
 ```javascript
 
 person.email = "john.doe@example.com";
@@ -547,6 +558,7 @@ person["age"] = 31;
 
 
 Methods:
+
 Methods are functions stored as object properties:
 ```javascript
 
@@ -562,6 +574,7 @@ person.greet();  // Outputs: Hello, John!
 ```
 
 Object Constructor:
+
 You can create objects using a constructor function:
 ```javascript
 
@@ -574,6 +587,7 @@ const myCar = new Car("Toyota", "Camry", 2022);
 ```
 
 Object Destructuring:
+
 Extract values from objects and assign them to variables:
 ```javascript
 
@@ -592,6 +606,7 @@ console.log(parsedObject.name);  // Outputs: Alice
 ```
 
 Prototypes and Inheritance:
+
 JavaScript is a prototype-based language, and objects can inherit properties and methods from other objects through their prototypes.
 ```javascript
 
@@ -692,7 +707,9 @@ console.log(myArray.map(x => x * 2));  // Outputs: [2, 4, 6]
 ```
 
 Array.isArray:
+
 Checks if a value is an array.
+
 Example:
 ```javascript
 
@@ -701,7 +718,9 @@ console.log(Array.isArray(myArray));  // Outputs: true
 ```
 
 String Manipulation:
+
 String.prototype:
+
 Strings inherit methods from String.prototype.
 Example:
 ```javascript
@@ -711,7 +730,9 @@ console.log(myString.toUpperCase());  // Outputs: HELLO, WORLD!
 ```
 
 charAt, indexOf, substring:
+
 String manipulation methods.
+
 Example:
 ```javascript
 
@@ -729,8 +750,11 @@ ________________________________________________________________________________
 **object method in javascript**
 
 JavaScript objects come with several built-in methods that can be used to manipulate and perform operations on objects. Here are some commonly used object methods:
+
 1. Object.keys():
+   
 Returns an array of a given object's own enumerable property names.
+
 ```javascript
 
 const myObject = {
@@ -740,10 +764,13 @@ const myObject = {
 };
 const keys = Object.keys(myObject);
 console.log(keys);  // Outputs: ['name', 'age', 'city']
+
 ```
 
 2. Object.values():
+   
 Returns an array of a given object's own enumerable property values.
+
 ```javascript
 
 const myObject = {
@@ -759,6 +786,7 @@ console.log(values);  // Outputs: ['John', 30, 'New York']
 
 
 3. Object.entries():
+   
 Returns an array of a given object's own enumerable property [key, value] pairs.
 ```javascript
 
@@ -773,17 +801,22 @@ console.log(entries);
 ```
 
 4. Object.assign():
+5. 
 Copies the values of all enumerable own properties from one or more source objects to a target object.
+
 ```javascript
 
 const target = { a: 1, b: 2 };
 const source = { b: 3, c: 4 };
 const result = Object.assign(target, source);
 console.log(result);  // Outputs: { a: 1, b: 3, c: 4 }
+
 ```
 
 5. Object.freeze():
+   
 Freezes an object, preventing new properties from being added and existing properties from being removed or modified.
+
 ```javascript
 
 const myObject = {
@@ -794,9 +827,11 @@ Object.freeze(myObject);
 // Trying to add a new property
 myObject.city = "New York";  
 console.log(myObject.city);  // Outputs: undefined
+
 ```
 
 6. Object.seal():
+7. 
 Seals an object, preventing new properties from being added and marking all existing properties as non-configurable.
 ```javascript
 
@@ -812,6 +847,7 @@ console.log(myObject.city);  // Outputs: undefined
 ```
 
 7. Object.getOwnPropertyNames():
+   
 Returns an array of all properties (enumerable or not) found directly upon a given object.
 
 ```javascript
@@ -823,10 +859,12 @@ const myObject = {
 ```
 
 const properties = Object.getOwnPropertyNames(myObject);
+
 console.log(properties);  // Outputs: ['name', 'age']
 
 
 8. Object.create():
+   
 Creates a new object with the specified prototype object and properties.
 
 ```javascript
@@ -840,6 +878,7 @@ console.log(cat.sound);  // Outputs: Make a sound
 ```
 
 9. Object.defineProperty() and Object.defineProperties():
+    
 Defines new or modifies existing properties directly on an object, or modifies attributes of existing properties.
 
 ```javascript
@@ -857,6 +896,7 @@ console.log(person.name);  // Outputs: John
 ```
 
 10. Object.getOwnPropertyDescriptor():
+    
 Returns an object describing the configuration of a specific property.
 ```javascript
 
@@ -869,7 +909,9 @@ console.log(propertyDescriptor);
 ```
 
 // Outputs: { value: 'John', writable: true, enumerable: true, configurable: true }
+
 11. Object.getPrototypeOf():
+
 Returns the prototype of the specified object.
 
 ```javascript
@@ -883,7 +925,9 @@ console.log(Object.getPrototypeOf(cat) === animal);  // Outputs: true
 ```
 
 12. Object.is():
+    
 Compares two values for equality, similar to the === operator.
+
 ```javascript
 
 console.log(Object.is(5, '5'));  // Outputs: false
@@ -891,6 +935,7 @@ console.log(Object.is(NaN, NaN));  // Outputs: true
 ```
 
 13. Object.keys() and Object.values():
+    
 These methods were mentioned earlier, but it's worth emphasizing their usefulness:
 
 ```javascript
@@ -908,6 +953,7 @@ console.log(values);  // Outputs: ['John', 30]
 ```
 
 14. Object.preventExtensions():
+    
 Prevents new properties from being added to an object.
 
 ```javascript
@@ -923,6 +969,7 @@ console.log(myObject.city);  // Outputs: undefined
 ```
 
 15. Object.getOwnPropertySymbols():
+    
 Returns an array of all symbol properties found directly upon a given object.
 
 ```javascript
@@ -938,12 +985,15 @@ console.log(symbols);  // Outputs: [Symbol(one), Symbol(two)]
 
 
 ___________________________________________________________________________
+
 **JavaScript Strings**
 
 Strings in JavaScript represent sequences of characters and are a fundamental data type in the language. Here's an overview of JavaScript strings, including common methods and operations:
 
 Creating Strings:
+
 Single or Double Quotes:
+
 ```javascript
 
 let singleQuoted = 'Hello, World!';
@@ -951,6 +1001,7 @@ let doubleQuoted = "Hello, World!";
 ```
 
 Template Literals (ES6+):
+
 ```javascript
 
 let name = 'John';
@@ -960,6 +1011,7 @@ let greeting = `Hello, ${name}!`;
 String Properties and Methods:
 
 length:
+
 Returns the length of the string.
 ```javascript
 
@@ -970,6 +1022,7 @@ console.log(greeting.length);  // Outputs: 13
 charAt(index):
 
 Returns the character at the specified index.
+
 ```javascript
 let message = 'JavaScript';
 console.log(message.charAt(4));  // Outputs: S
@@ -977,6 +1030,7 @@ concat(str1, str2, ...):
 ```
 
 Concatenates two or more strings.
+
 ```javascript
 
 let str1 = 'Hello';
@@ -987,6 +1041,7 @@ toUpperCase() and toLowerCase():
 
 
 Converts a string to uppercase or lowercase.
+
 ```javascript
 
 let text = 'Hello, World!';
@@ -995,6 +1050,7 @@ console.log(text.toLowerCase());  // Outputs: hello, world!
 ```
 
 String Searching and Extraction:
+
 indexOf(substring) and lastIndexOf(substring):
 
 Returns the index of the first/last occurrence of a substring.
@@ -1006,6 +1062,7 @@ slice(start, end):
 ```
 
 Extracts a portion of a string.
+
 ```javascript
 let phrase = 'JavaScript is amazing!';
 console.log(phrase.slice(0, 10));  // Outputs: JavaScript
@@ -1014,21 +1071,25 @@ replace(searchValue, replaceValue):
 ```
 
 Replaces a specified value with another value in a string.
+
 ```javascript
 let message = 'Hello, World!';
 console.log(message.replace('World', 'Universe'));  // Outputs: Hello, Universe!
 trim():
 ```
 Removes whitespace from both ends of a string.
+
 ```javascript
 let spacedText = '   Trim me!   ';
 console.log(spacedText.trim());  // Outputs: Trim me!
 ```
 
 String Conversion:
+
 toString():
 
 Converts a value to a string.
+
 ```javascript
 let number = 42;
 let strNumber = number.toString();
@@ -1037,6 +1098,7 @@ String.fromCharCode(code):
 ```
 
 Returns a string created by using the specified sequence of Unicode values.
+
 ```javascript
 console.log(String.fromCharCode(65, 66, 67));  // Outputs: ABC
 ```
@@ -1078,6 +1140,7 @@ console.log(greeting.length);  // Outputs: 13
 
 
 String Methods:
+
 charAt(index):
 
 Returns the character at the specified index.
@@ -1122,6 +1185,7 @@ startsWith(prefix) and endsWith(suffix):
 ```
 
 Checks if a string starts/ends with a specified prefix/suffix.
+
 ```javascript
 
 const message = 'Hello, World!';
@@ -1219,6 +1283,7 @@ console.log(word.repeat(3));  // Outputs: hellohellohello
 
 
 padStart(targetLength, padString) and padEnd(targetLength, padString):
+
 Pads a string with a specified character (or spaces) to reach a specified length.
 ```javascript
 
@@ -1256,6 +1321,7 @@ console.log(spacedText.trimEnd());    // Outputs: '   Trim me!'
 
 
 String Encoding/Decoding:
+
 encodeURI() and decodeURI():
 
 Encodes and decodes a complete URI.
@@ -1302,6 +1368,7 @@ word.split('').forEach(char => console.log(char));
 
 
 String Representation:
+
 toString():
 
 Returns a string representing the specified object.
@@ -1313,6 +1380,7 @@ console.log(num.toString());  // Outputs: '42'
 
 
 valueOf():
+
 Returns the primitive value of the specified object.
 ```javascript
 const strObject = new String('Hello');
@@ -1320,7 +1388,9 @@ console.log(strObject.valueOf());  // Outputs: 'Hello'
 ```
 
 String Comparison:
+
 localeCompare():
+
 Compares two strings in the current locale.
 ```javascript
 
@@ -1334,12 +1404,14 @@ These are additional string methods and operations available in JavaScript. Unde
 
 
 String Inspection:
+
 ```javascript
 
 startsWith(searchString [, position]):
 ```
 
 Checks if a string starts with a specified substring.
+
 ```javascript
 
 const message = 'Hello, World!';
@@ -1349,6 +1421,7 @@ console.log(message.startsWith('Hello'));  // Outputs: true
 
 
 endsWith(searchString [, length]):
+
 Checks if a string ends with a specified substring.
 ```javascript
 const message = 'Hello, World!';
@@ -1356,7 +1429,9 @@ console.log(message.endsWith('World!'));  // Outputs: true
 ```
 
 String Padding:
+
 padStart(targetLength, padString):
+
 Pads a string with a specified character (or spaces) from the start.
 ```javascript
 
@@ -1377,9 +1452,11 @@ console.log(number.padEnd(5, '0'));  // Outputs: 42000
 
 
 String Searching:
+
 search(regexp):
 
 Searches a string for a specified pattern and returns the index of the first match.
+
 ```javascript
 
 const text = 'The quick brown fox';
@@ -1387,7 +1464,9 @@ console.log(text.search(/brown/));  // Outputs: 10
 ```
 
 String Iteration:
+
 split(separator, limit):
+
 Splits a string into an array of substrings based on a specified separator.
 ```javascript
 
@@ -1405,6 +1484,7 @@ word.split('').forEach(char => console.log(char));
 ```
 
 String Conversion:
+
 toString():
 
 Returns a string representing the specified object.
@@ -1417,6 +1497,7 @@ console.log(num.toString());  // Outputs: '42'
 
 
 String Comparison:
+
 localeCompare():
 
 Compares two strings in the current locale.
@@ -1429,7 +1510,9 @@ console.log(str1.localeCompare(str2));  // Outputs: -1 (less than)
 
 
 String Matching:
+
 match(regexp):
+
 Searches a string for a specified pattern and returns the matched substrings as an array.
 
 ```javascript
@@ -1441,7 +1524,9 @@ console.log(text.match(/e/g));  // Outputs: ['e', 'e']
 
 
 matchAll(regexp):
+
 Returns an iterator of all matched substrings in a string.
+
 ```javascript
 
 const text = 'The quick brown fox';
@@ -1453,9 +1538,11 @@ for (const match of matches) {
 ```
 
 String Conversion:
+
 String.fromCharCode(code):
 
 Returns a string created by using the specified sequence of Unicode values.
+
 ```javascript
 
 console.log(String.fromCharCode(65, 66, 67));  // Outputs: ABC
@@ -1465,6 +1552,7 @@ These additional methods provide more functionality for string manipulation, sea
 
 
 String.raw():
+
 Returns a raw string representation of a template literal.
 ```
 
@@ -1477,8 +1565,11 @@ String substr()
 The substr() method in JavaScript is used to extract a portion of a string, starting from a specified index and extending for a specified number of characters. The syntax of the substr() method is as follows:
 
 string.substr(startIndex, length);
+
 startIndex: The index at which to start the extraction.
+
 length (optional): The number of characters to extract. If this parameter is omitted, the substr() method extracts characters to the end of the string.
+
 Here's an example:
 ```javascript
 const originalString = "Hello, World!";
@@ -1609,6 +1700,7 @@ Outputs:
 Template strings make it easy to create multiline strings without the need for concatenation or escape characters.
 
 3. Expression Interpolation:
+   
 ```javascript
 
 const a = 5;
@@ -1622,6 +1714,7 @@ console.log(result);  // Outputs: The sum of 5 and 10 is 15.
 Expressions inside ${} are evaluated and their values are included in the resulting string.
 
 4. Tagged Template Literals:
+   
 Tagged template literals allow you to process template literals with a function. The function (tag function) receives the template literals and evaluated expressions as arguments.
 ```javascript
 
@@ -1652,6 +1745,7 @@ Outputs:
 
 
 5. Escaping Characters:
+   
 Template strings make it easier to include special characters without escaping them:
 ```javascript
 

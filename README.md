@@ -2783,6 +2783,11 @@ The ternary operator is handy when you need to make a quick decision based on a 
 
 ______________________________________________________________________________________________________________________
 
+
+https://www.youtube.com/watch?v=HkWxvB1RJq0&t=1247s
+
+https://www.youtube.com/watch?v=xILF_Z8e9yU
+
 **What is a Higher Order Function?with example**
 
 A higher-order function is a function that takes one or more functions as arguments or returns a function as its result. In other words, a higher-order function treats functions as first-class citizens, allowing them to be manipulated and passed around like any other value. This concept is fundamental to functional programming and enables the creation of more expressive and modular code.

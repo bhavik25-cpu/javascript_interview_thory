@@ -2480,6 +2480,11 @@ Understanding hoisting is essential for writing predictable and bug-free JavaScr
 
 
 ____________________________________________________________________________________________________________________________________
+
+https://www.youtube.com/watch?v=2zJpDzyxQXM
+
+https://www.youtube.com/watch?v=c94Aryh8I-U
+
 **JavaScript Use Strict with code example**
 
 The "use strict" directive is used to enable a strict mode in JavaScript, which helps catch common coding mistakes and prevents the use of certain error-prone features. When strict mode is enabled, the JavaScript interpreter enforces stricter parsing and error handling rules.
@@ -2541,12 +2546,18 @@ By using strict mode, you can catch these types of errors early in development, 
 how to avoid useStrict
 
 The "use strict" directive in JavaScript is generally beneficial for writing more reliable and bug-resistant code by catching common mistakes and preventing the use of certain error-prone features. However, if for some reason you need to avoid using strict mode, here are a few ways to do so:
+
 Exclude the Directive:
+
 Simply don't include the "use strict" directive at the beginning of your script or function.
+
 // Not using strict mode
 // Your code here
+
 This is the most straightforward way, but it's generally recommended to use strict mode for the reasons mentioned earlier.
+
 Use a Script Block:
+
 If you have a larger script and want to use strict mode in some parts while avoiding it in others, you can use script blocks without the directive.
 
 

@@ -1026,8 +1026,9 @@ Returns the character at the specified index.
 ```javascript
 let message = 'JavaScript';
 console.log(message.charAt(4));  // Outputs: S
-concat(str1, str2, ...):
+
 ```
+concat(str1, str2, ...):
 
 Concatenates two or more strings.
 
@@ -1037,6 +1038,8 @@ let str1 = 'Hello';
 let str2 = 'World';
 console.log(str1.concat(', ', str2, '!'));  // Outputs: Hello, World!
 ```
+
+
 toUpperCase() and toLowerCase():
 
 
@@ -1054,32 +1057,40 @@ String Searching and Extraction:
 indexOf(substring) and lastIndexOf(substring):
 
 Returns the index of the first/last occurrence of a substring.
+
 ```javascript
 let sentence = 'This is a sentence.';
 console.log(sentence.indexOf('is'));  // Outputs: 2
 console.log(sentence.lastIndexOf('is'));  // Outputs: 5
-slice(start, end):
+
 ```
 
+slice(start, end):
 Extracts a portion of a string.
 
 ```javascript
 let phrase = 'JavaScript is amazing!';
 console.log(phrase.slice(0, 10));  // Outputs: JavaScript
-String Modification:
-replace(searchValue, replaceValue):
 ```
+String Modification:
+
+replace(searchValue, replaceValue):
+
+replace(searchValue, replaceValue):
 
 Replaces a specified value with another value in a string.
 
 ```javascript
 let message = 'Hello, World!';
 console.log(message.replace('World', 'Universe'));  // Outputs: Hello, Universe!
-trim():
+
 ```
+trim():
+
 Removes whitespace from both ends of a string.
 
 ```javascript
+
 let spacedText = '   Trim me!   ';
 console.log(spacedText.trim());  // Outputs: Trim me!
 ```
@@ -1091,16 +1102,20 @@ toString():
 Converts a value to a string.
 
 ```javascript
+
 let number = 42;
 let strNumber = number.toString();
 console.log(typeof strNumber);  // Outputs: string
-String.fromCharCode(code):
+
 ```
 
+String.fromCharCode(code):
 Returns a string created by using the specified sequence of Unicode values.
 
 ```javascript
+
 console.log(String.fromCharCode(65, 66, 67));  // Outputs: ABC
+
 ```
 
 

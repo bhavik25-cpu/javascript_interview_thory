@@ -2709,6 +2709,10 @@ myObject.myMethod();  // Outputs: myObject
 
 _______________________________________________________________________________________________
 
+https://www.youtube.com/shorts/yIz25w9kes4
+
+https://www.youtube.com/watch?v=Wdlu_wlj6as&t=330s
+
 **Differences Between Normal Function and Arrow Function**
 
 No prototype object for Arrow Functions

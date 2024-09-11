@@ -4217,8 +4217,9 @@ console.log(parsedObjectWithDate.date instanceof Date); // Output: true
 In this example, the reviver function converts the "date" property value from a string to a Date object during the parsing process.
 
 
-
+___________________________________________________________________________________________________________________________________________________________
 JSON.stringify() 
+
 JSON.stringify() is a built-in method in JavaScript used to convert a JavaScript object or value into a JSON-formatted string. This method is often used when you need to send data to a server, store data in a file, or transmit data between different parts of an application.
 Here's a basic example:
 ```javascript
@@ -4235,10 +4236,12 @@ console.log(jsonString);
 ```
 
 // Output: {"name":"John","age":30,"city":"New York"}
+
 JSON.stringify() can take additional parameters to customize the conversion process:
 
 
 Replacer Function:
+
 You can provide a replacer function as the second parameter to selectively include or transform values during the stringification process.
 ```javascript
 
@@ -4266,7 +4269,9 @@ console.log(jsonString);
 
 
 Spaces or Indentation:
+
 You can provide a third parameter, which is the number of spaces to use for indentation, to make the resulting JSON string more readable.
+
 ```javascript
 
 const person = {
@@ -4280,6 +4285,7 @@ const jsonString = JSON.stringify(person, null, 2);
 
 console.log(jsonString);
 ```
+
 ```javascript
 
 /*
@@ -4295,6 +4301,7 @@ console.log(jsonString);
 JSON.stringify() also handles arrays, strings, numbers, booleans, null, and nested objects or arrays.
 
 Keep in mind that not all JavaScript values can be converted to JSON. Functions and properties with undefined values are excluded from the stringification process. Circular references (objects that refer to themselves) are also not supported.
+
 ```javascript
 
 const circularObject = {};
@@ -4371,6 +4378,7 @@ ________________________________________________________________________________
 In JavaScript, getters and setters are special methods that allow you to control access to the properties of an object. They provide a way to define custom behavior when getting or setting the values of an object's properties.
 
 Getters:
+
 A getter is a method that gets the value of a specific property. It is defined using the get keyword followed by the property name.
 ```javascript
 
@@ -4511,6 +4519,7 @@ In this example, the fullName setter allows you to set the full name of the pers
 
 
 Using Getters and Setters:
+
 Getters and setters can be used to add additional logic, validation, or computations when accessing or modifying object properties.
 
 ```javascript
@@ -4530,9 +4539,11 @@ const temperature = {
 ```
 
 In JavaScript, events are interactions or occurrences in the browser that can trigger specific actions or functions. Handling events is a fundamental aspect of building interactive and dynamic web applications. Here's an overview of handling events in JavaScript:
+
 ```javascript
 
 Event Listeners:
+
 Event listeners are functions that wait for a specific event to occur and then execute a specified function in response. You can attach event listeners to HTML elements using the addEventListener method.
 ```javascript
 
@@ -4605,8 +4616,9 @@ myButton.removeEventListener('click', myHandler);
 ```
 
 Event Delegation:
-Event delegation involves attaching a single event listener to a common ancestor of multiple elements. This can improve performance and simplify event handling, especially when dealing with dynamically added elements.
 
+Event delegation involves attaching a single event listener to a common ancestor of multiple elements. This can improve performance and simplify event handling, especially when dealing with dynamically added elements.
+```javascript
 const parentList = document.getElementById('parentList');
 
 parentList.addEventListener('click', function(event) {
@@ -4614,17 +4626,22 @@ parentList.addEventListener('click', function(event) {
     console.log('List item clicked:', event.target.textContent);
   }
 });
-
+```
 In this example, the click event is delegated to the parent list (parentList), and the specific list item clicked is identified within the event handler.
 
 Understanding and effectively using events is crucial for building interactive and responsive web applications. Different events and event handling techniques can be employed based on the requirements of your application.
+
+```javascript
     }
     this._celsius = value;
   }
 };
 
 temperature.celsius = 25;
+
 console.log(temperature.fahrenheit); // Output: 77
+```
+
 In this example, the celsius setter ensures that the temperature cannot be set below absolute zero, and the fahrenheit getter converts the temperature from Celsius to Fahrenheit.
 
 Getters and setters provide a way to encapsulate the behavior of properties, allowing for more controlled and consistent manipulation of object data. They are commonly used in classes and object literals to create more flexible and maintainable code.
@@ -4642,6 +4659,7 @@ ________________________________________________________________________________
 The spread operator (...) in JavaScript is a versatile syntax that allows you to spread elements of an iterable (like an array or a string) into places where multiple elements or arguments are expected. It's commonly used for array manipulation, function arguments, and object properties.
 
 Spread in Arrays:
+
 Copying Arrays:
 
 Create a shallow copy of an array.
@@ -4948,24 +4966,43 @@ In JavaScript, == and === are two different comparison operators used to compare
 Equality Operator (==):
 
 The equality operator (==) compares values for equality after performing type coercion if the operands have different types.
+
 If the operands are of different types, JavaScript will attempt to convert them to a common type before making the comparison.
+
 For example, when using ==, the string "5" would be considered equal to the number 5, and the boolean true would be considered equal to the number 1.
+```javascript
+
 console.log("5" == 5);    // true (string "5" is coerced to number 5)
 console.log(true == 1);   // true (boolean true is coerced to number 1)
+```
+
 Strict Equality Operator (===):
 
 The strict equality operator (===) compares both value and type. It does not perform type coercion.
+
 The operands must be of the same type to be considered equal. If the types are different, the comparison evaluates to false.
 The strict equality check is often recommended because it avoids unexpected type coercion, leading to more predictable and safer code.
+```javascript
+
 console.log("5" === 5);   // false (string "5" is not equal to number 5 in value or type)
 console.log(true === 1);  // false (boolean true is not equal to number 1 in value or type)
+```
 
 In summary:
 
 == performs type coercion and compares values after conversion.
+
 === does not perform type coercion and compares both values and types.
+
 It is generally considered good practice to use === for equality comparisons in JavaScript unless there is a specific need for type coercion. Using === helps prevent unexpected behavior that can arise from automatic type conversions.
+
+
+_________________________________________________________________________________________________________________
+
 Javascript oops concept 
+
+
+
 JavaScript supports object-oriented programming (OOP) concepts, and developers can use them to create and organize their code in a more modular and reusable way. Here are the key OOP concepts in JavaScript:
 
 Objects:JavaScript is an object-based language, and everything in JavaScript is an object or can be treated as an object.

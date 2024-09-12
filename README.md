@@ -3084,6 +3084,8 @@ Being able to work with functions as first-class citizens allows for the creatio
 
 _____________________________________________________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=OIQk3uxnEPc
+
 
 **Shallow Copy and Deep Copy in JavaScript**
 

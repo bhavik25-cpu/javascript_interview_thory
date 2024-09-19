@@ -2840,6 +2840,7 @@ console.log(addFive(3));  // Outputs: 8 (5 + 3)
 In this example, createAdder is a higher-order function because it returns a new function. The returned function acts as an "adder" that adds the base value to a given number.
 
 Higher-order functions are powerful and provide a flexible way to create reusable and modular code. They are commonly used in functional programming paradigms and are foundational to many JavaScript libraries and frameworks.
+
 What is destructuring in JavaScript?example
 Destructuring in JavaScript is a way to extract values from objects or arrays and assign them to variables in a concise and expressive manner. It provides a more convenient syntax for extracting specific values and properties, making code shorter and more readable.
 
@@ -2848,6 +2849,7 @@ Destructuring in JavaScript is a way to extract values from objects or arrays an
 Destructuring Arrays:
 
 Example 1: Basic Array Destructuring
+
 ```javascript
 
 const numbers = [1, 2, 3, 4, 5];
@@ -2878,6 +2880,7 @@ console.log(b); // Outputs: 1
 This example demonstrates how destructuring can be used to swap the values of two variables without using a temporary variable.
 
 Destructuring Objects:
+
 Example 3: Basic Object Destructuring
 ```javascript
 
@@ -2931,6 +2934,7 @@ You can use destructuring in function parameters to extract values directly from
 Destructuring is a powerful feature that enhances the readability and expressiveness of JavaScript code. It is widely used in modern JavaScript applications, especially in frameworks like React and libraries like Redux.
 
 __________________________________________________________________________________________________
+
 https://www.youtube.com/watch?v=rRAvhzux-7Y&list=PLp18NAIKHWnsuszuBZoOye5SpSTgtDTl5&index=8
 
 **Call Apply and Bind Method in JavaScript**
@@ -2979,11 +2983,13 @@ introduce.apply(person, [30, 'female']);
 ```
 
 // Outputs: 'I am Alice, 30 years old, and female.'
+
 Here, apply() is used to invoke the introduce function with the person object as the this context and an array [30, 'female'] as multiple arguments.
 
 
 
 3. bind() Method:
+   
 The bind() method creates a new function with the same body as the original function but with a fixed this value.
 
 Example:
@@ -3006,13 +3012,19 @@ saySomethingAsBob('Hello!');
 In this example, bind() is used to create a new function (saySomethingAsBob) with the person object as the fixed this context. The new function can be invoked separately.
 
 When to Use Each Method:
+
 Use call() when you know the number of arguments and want to pass them individually.
+
 Use apply() when you have an array or an array-like object of arguments.
+
 Use bind() when you want to create a new function with a fixed this value for later invocation.
+
 These methods are commonly used in scenarios where you need to control the context of a function, especially in event handling, asynchronous callbacks, or when working with libraries/frameworks.
 
 
 ____________________________________________________________________________________________________________________________________________________
+
+https://www.youtube.com/watch?v=SHINoHxvTso&t=1054s
 
 **What is First Class Function in JavaScript**
 

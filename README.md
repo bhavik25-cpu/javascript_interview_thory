@@ -4504,6 +4504,8 @@ Both Infinity and -Infinity are often used in mathematical calculations or to re
 
 ______________________________________________________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=_tsG9ahYBvk&ab_channel=TechGun
+
 **Getters and Setters**
 
 In JavaScript, getters and setters are special methods that allow you to control access to the properties of an object. They provide a way to define custom behavior when getting or setting the values of an object's properties.
@@ -4527,8 +4529,6 @@ console.log(person.fullName); // Output: John Doe
 ```
 
 In this example, the fullName getter allows you to access the full name of the person as if it were a property, even though it's generated dynamically.
-
-
 
 Setters:A setter is a method that sets the value of a specific property. It is defined using the set keyword followed by the property name.
 ```javascript
@@ -4585,89 +4585,13 @@ temperature.celsius = 25;
 console.log(temperature.fahrenheit); // Output: 77
 ```
 
-In this example, the celsius setter ensures that the temperature cannot be set below absolute zero, and the fahrenheit getter converts the temperature from Celsius to Fahrenheit.
-
-Getters and setters provide a way to encapsulate the behavior of properties, allowing for more controlled and consistent manipulation of object data. They are commonly used in classes and object literals to create more flexible and maintainable code.
-
-_____________________________________________________________________________________________________________________________________________
-
-event js
-
-In JavaScript, getters and setters are special methods that allow you to control access to the properties of an object. They provide a way to define custom behavior when getting or setting the values of an object's properties.
-
-Getters:
-
-A getter is a method that gets the value of a specific property. It is defined using the get keyword followed by the property name.
-```javascript
-
-const person = {
-  firstName: 'John',
-  lastName: 'Doe',
-  
-  // Getter for the full name
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-};
-
-console.log(person.fullName); // Output: John Doe
-```
-
-In this example, the fullName getter allows you to access the full name of the person as if it were a property, even though it's generated dynamically.
-
-
-Setters:
-
-A setter is a method that sets the value of a specific property. It is defined using the set keyword followed by the property name.
-```javascript
-
-
-const person = {
-  firstName: 'John',
-  lastName: 'Doe',
-  
-  // Getter for the full name
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-  
-  // Setter for the full name
-  set fullName(name) {
-    const parts = name.split(' ');
-    this.firstName = parts[0];
-    this.lastName = parts[1];
-  }
-};
-
-person.fullName = 'Jane Smith';
-
-console.log(person.firstName); // Output: Jane
-console.log(person.lastName);  // Output: Smith
-```
-
-In this example, the fullName setter allows you to set the full name of the person by providing a single string. The setter then splits the string into first and last names and updates the corresponding properties.
 
 
 
-Using Getters and Setters:
 
-Getters and setters can be used to add additional logic, validation, or computations when accessing or modifying object properties.
+_______________________________________________________________________________________
 
-```javascript
-
-const temperature = {
-  _celsius: 0,
-
-  // Getter for temperature in Fahrenheit
-  get fahrenheit() {
-    return this._celsius * 9/5 + 32;
-  },
-
-  // Setter for temperature in Celsius
-  set celsius(value) {
-    if (value < -273.15) {
-      throw new Error('Temperature cannot be less than -273.15°C (absolute zero).');
-```
+**event js**
 
 In JavaScript, events are interactions or occurrences in the browser that can trigger specific actions or functions. Handling events is a fundamental aspect of building interactive and dynamic web applications. Here's an overview of handling events in JavaScript:
 

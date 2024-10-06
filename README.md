@@ -6022,3 +6022,135 @@ console.log(addTwo(3)); // Outputs: 5
 In this example, curriedAdd is a curried version of the add function. It takes one argument x and returns a function that takes another argument y and performs the addition. This allows for partial application, where you can pass one argument to curriedAdd to create a new function (addTwo) that adds 2 to any number passed to it.
 
 
+______________________________________________________________________
+
+
+Complete implementation of EventEmitter Class
+expected 2 methods: 
+a. on to register and listen to event
+b. emit : to trigger event
+
+```javascript
+
+class EventEmitter {
+ 
+ 
+}
+ 
+const eventEmitter = new EventEmitter();
+const hello = () => console.log('hello')
+const hello1 = () => console.log('hello1')
+const world = () => console.log('world')
+ 
+eventEmitter.on('hello', hello)
+eventEmitter.on('world', world)
+eventEmitter.on('hello1', hello1)
+ 
+eventEmiitter.emit('hello')
+eventEmiitter.emit('hello1')
+
+```
+
+```javascript
+class EventEmitter {
+  constructor() {
+    this.events = {};
+  }
+
+  // Register and listen to an event
+  on(eventName, listener) {
+    if (!this.events[eventName]) {
+      this.events[eventName] = [];
+    }
+    this.events[eventName].push(listener);
+  }
+
+  // Trigger an event
+  emit(eventName, ...
+  ) {
+    if (this.events[eventName]) {
+      this.events[eventName].forEach(listener => listener(...args));
+    }
+  }
+}
+
+// Create an instance of EventEmitter
+const eventEmitter = new EventEmitter();
+
+// Event listeners
+const hello = () => console.log('hello');
+const hello1 = () => console.log('hello1');
+const world = () => console.log('world');
+
+// Register events
+eventEmitter.on('hello', hello);
+eventEmitter.on('world', world);
+eventEmitter.on('hello1', hello1);
+
+// Trigger events
+eventEmitter.emit('hello');  // Outputs: hello
+eventEmitter.emit('world');  // Outputs: world
+eventEmitter.emit('hello1'); // Outputs: hello1
+
+```
+
+____________________________________________________________________________
+
+
+Node js express js api 
+
+Method type: GET Input: [1,2,3,4,5,6,7,8,9]
+
+output: product of numbers in given array
+{
+  "newarray": 362880
+}
+
+```javascript
+
+ server.js
+const express = require('express')
+const app = express()
+const port = 3000
+
+
+app.get('/newarray', (req,res)=>{
+    const numbers = req.query.numbers;
+
+    if (!numbers) {
+        return res.status(400).send('Array numbers are required');
+    }
+
+const newone = numbers.split(',').map(Number);
+const newarray = newone.reduce((one, two) => one * two)
+console.log(newarray)
+
+res.json({newarray})
+
+})
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+})
+
+```
+
+run 
+http://localhost:3000/newarray?numbers=1,2,3,4,5,6,7,8,9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

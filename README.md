@@ -6168,10 +6168,10 @@ output: product of numbers in given array
 {
   "newarray": 362880
 }
+ server.js
 
 ```javascript
 
- server.js
 const express = require('express')
 const app = express()
 const port = 3000

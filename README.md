@@ -4730,7 +4730,61 @@ Getters and setters provide a way to encapsulate the behavior of properties, all
 
 
 
+__________________________________________________________________________________________________
 
+**Rest operator in js**
+
+The rest operator (...) in JavaScript allows you to represent an indefinite number of arguments as an array. It is used in function parameters to gather all remaining arguments into an array and can be handy for functions that accept multiple arguments.
+
+In JavaScript, the rest operator (...) is used to gather multiple elements into an array or object. It's typically used in function parameters to accept a variable number of arguments or to collect properties in an object. Here’s how it works in different scenarios:
+
+1. Rest Operator in Function Parameters
+   
+The rest operator allows a function to accept any number of arguments as an array.
+```javascript
+
+
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4)); // Output: 10
+```
+
+In this example, ...numbers collects all arguments passed to sum into an array called numbers.
+
+2. Rest Operator with Destructuring
+   
+You can also use the rest operator with array or object destructuring to collect remaining elements.
+
+Array Destructuring
+```javascript
+
+const [first, second, ...rest] = [1, 2, 3, 4, 5];
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+console.log(rest);   // Output: [3, 4, 5]
+
+```
+
+Object Destructuring
+```javascript
+
+const person = { name: "Alice", age: 25, city: "New York" };
+const { name, ...rest } = person;
+console.log(name); // Output: "Alice"
+console.log(rest); // Output: { age: 25, city: "New York" }
+
+```
+
+
+3. Key Points of the Rest Operator
+   
+Rest operator must always be the last parameter in function parameters or destructuring.
+
+It’s useful for functions where the exact number of arguments may vary, or for capturing "leftover" elements or properties in arrays and objects.
+
+The rest operator is different from the spread operator, although they both use .... The spread operator expands elements (for example, in arrays or function arguments), while the rest operator collects them.
 
 
 ___________________________________________________________________________________________________________________

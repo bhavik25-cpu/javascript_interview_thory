@@ -57,6 +57,8 @@ https://www.youtube.com/watch?v=pFvfB_g9aTs
 **WHAT IS JAVASCRIPT IS SINGLE THREAD OR MULTI THREAD**
 
 
+JavaScript is inherently single-threaded, meaning it executes code in a single sequence. However, it uses an event-driven, non-blocking model to handle asynchronous tasks efficiently. This model allows JavaScript to perform tasks like I/O operations without blocking the main thread, keeping the application responsive. In environments like Node.js, additional libraries like worker_threads can introduce multi-threading for more complex operations.
+
 JavaScript is inherently a single-threaded language, meaning it executes code in a single sequence or thread of execution. This single-threaded nature is due to the fact that JavaScript was originally designed to run in web browsers, where it is used to manipulate the Document Object Model (DOM), handle events, and interact with the user interface.
 
 The single-threaded model ensures that JavaScript code does not create conflicts or race conditions when modifying the DOM. However, this can sometimes lead to performance issues, especially when dealing with tasks that may take a significant amount of time, such as network requests or complex computations. Long-running tasks can cause the user interface to become unresponsive.

@@ -6159,8 +6159,40 @@ eventEmitter.emit('hello1'); // Outputs: hello1
 
 ____________________________________________________________________________
 
+show output
+
+```javascript
+
+function varScoping() {
+  var x = 3;
+
+  function varScope() {
+    var x = 4; // This `x` is local to `varScope`
+    console.log(x); // Outputs 4
+  }
+
+  varScope();
+  console.log(x); // Outputs 3 because `x` in `varScoping` remains unchanged
+}
+
+function letScoping() {
+  let x = 0;
+
+  function letScope() {
+    let x = 1; // This `x` is local to `letScope`
+    console.log(x); // Outputs 1
+  }
+
+  letScope();
+  console.log(x); // Outputs 0 because `x` in `letScoping` remains unchanged
+}
+
+// Call the functions
+varScoping();
+letScoping();
 
 
+```
 
 
 

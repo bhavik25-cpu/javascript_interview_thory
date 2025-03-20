@@ -1,4 +1,4 @@
-# javascript_interview_thory
+![image](https://github.com/user-attachments/assets/760aaa29-038c-4992-ac4b-e7d19a97924b)# javascript_interview_thory
 
 [https://github.com/BilgeGates/Js-Interview-Questions?tab=readme-ov-file#what-is-a-freeze-method
 ](https://github.com/BilgeGates/Js-Interview-Questions)
@@ -270,8 +270,8 @@ function exampleLet() {
   }
   // console.log(y);  // Error: y is not defined (out of scope)
 	}
-
- ```
+```
+ 
 
 **const:**
 
@@ -290,6 +290,7 @@ function exampleConst() {
   // const z = 40;  // Error: Identifier 'z' has already been declared
 }
 ```
+
 _____________________________________________________________________________________________________________________
 
 **JavaScript Functions**
@@ -4625,11 +4626,11 @@ ________________________________________________________________________________
 
 In JavaScript, events are interactions or occurrences in the browser that can trigger specific actions or functions. Handling events is a fundamental aspect of building interactive and dynamic web applications. Here's an overview of handling events in JavaScript:
 
-```javascript
 
 Event Listeners:
 
 Event listeners are functions that wait for a specific event to occur and then execute a specified function in response. You can attach event listeners to HTML elements using the addEventListener method.
+
 ```javascript
 
 // Example: Adding a click event listener to a button
@@ -5932,9 +5933,13 @@ const promise = new Promise((resolve, reject) => {
 });
 
 promise.then(result => console.log(result)); // Outputs after 1 second: Task completed
+
+```
+
 Async/Await:
-javascript
-Copy code
+```javascript
+
+
 async function fetchData() {
   let response = await fetch("https://api.example.com/data");
   let data = await response.json();

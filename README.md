@@ -4163,6 +4163,8 @@ Promises provide a more structured and readable way to handle asynchronous code 
 
 __________________________________________________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=bLre6Uf4Op0&ab_channel=CodeWithHarry
+
 **JavaScript Async and await**
 
 Async/await is a syntactic sugar introduced in ECMAScript 2017 (ES8) that simplifies the syntax of working with Promises, making asynchronous code more readable and easier to reason about. The async keyword is used to define an asynchronous function, and the await keyword is used within that function to wait for the resolution of a Promise.

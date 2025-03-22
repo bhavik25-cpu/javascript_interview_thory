@@ -2404,6 +2404,8 @@ console.log(hasEven);  // Outputs: false
 
 ____________________________________________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=CNk33k5nScg&ab_channel=CodeWithHarry
+
 **Scope In JavaScript**
 
 Global Scope:

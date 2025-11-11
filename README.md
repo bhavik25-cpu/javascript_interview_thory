@@ -168,6 +168,7 @@ ________________________________________________________________________________
 **primitive and non primitive data type in js difference**
 
 The primary differences between primitive and non-primitive (reference) data types in JavaScript lie in their nature, behavior, and how they are stored and accessed. Here's a summary of the key distinctions:
+
 Primitive Data Types:
 
 1.	Immutability:

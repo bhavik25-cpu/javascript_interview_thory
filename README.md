@@ -601,13 +601,20 @@ Extract values from objects and assign them to variables:
 
 const { firstName, lastName } = person;
 console.log(firstName, lastName);  // Outputs: John Doe
+```
+
 Object Methods:
 Objects have built-in methods for manipulation:
 Object.keys(obj): Returns an array of an object's keys.
+
 Object.values(obj): Returns an array of an object's values.
+
 Object.entries(obj): Returns an array of an object's key-value pairs.
+
 JSON (JavaScript Object Notation):
 JSON is a text format for representing objects and is widely used for data exchange:
+```javascript
+
 const jsonString = '{"name": "Alice", "age": 25}';
 const parsedObject = JSON.parse(jsonString);
 console.log(parsedObject.name);  // Outputs: Alice

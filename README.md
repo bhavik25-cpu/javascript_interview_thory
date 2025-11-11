@@ -3838,6 +3838,7 @@ It's important to note that while JavaScript itself is synchronous, it can inter
 
 _________________________________________________________________________________________________________________________
 **How to avoid callback hell in js**
+
 Callback hell, also known as the pyramid of doom, occurs when you have multiple nested callbacks within callbacks in asynchronous JavaScript, leading to code that is difficult to read and maintain. There are several strategies to avoid callback hell and write more maintainable and readable asynchronous code:
 
 Named Functions:

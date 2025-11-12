@@ -645,6 +645,9 @@ ________________________________________________________________________________
 
 **JavaScript Prototypes with all inbuild method**
 
+In JavaScript, a prototype is an object that other objects can inherit properties and methods from. It's how JavaScript implements inheritance. When you try to access a property on an object, the JavaScript engine looks for that property on the object itself. If it doesn't find it, it then looks at the prototype of that object, and so on, forming a chain of prototypes. To explain it in an interview, you could say that prototypes are a mechanism for inheritance in JavaScript, allowing objects to share properties and methods, and that they form a prototype chain that's used for resolving property lookups. You might also mention that JavaScript uses prototypal inheritance as opposed to classical inheritance, which is more common in other programming languages.
+
+
 In JavaScript, prototypes are a key part of the language's prototype-based inheritance model. Objects in JavaScript can have a prototype, which is another object that the current object inherits properties and methods from. Every object in JavaScript has a prototype, and these prototypes form a chain, commonly known as the prototype chain.
 
 Here's an overview of prototypes along with some built-in methods and properties related to prototypes:

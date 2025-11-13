@@ -654,6 +654,34 @@ In JavaScript, a prototype is an object that other objects can inherit propertie
 
 In JavaScript, prototypes are a key part of the language's prototype-based inheritance model. Objects in JavaScript can have a prototype, which is another object that the current object inherits properties and methods from. Every object in JavaScript has a prototype, and these prototypes form a chain, commonly known as the prototype chain.
 
+
+Why Do We Use Prototypes in JavaScript?
+
+Prototypes are essentially JavaScript’s way of handling inheritance and sharing functionality across objects. Here’s why they’re useful:
+
+Memory Efficiency: Instead of each object having its own copy of every method, methods are defined once on the prototype and shared. This makes your code more memory efficient.
+
+Inheritance: Prototypes allow objects to inherit properties and methods from other objects. If you have a bunch of objects that need to share the same behavior (like all instances of a class), you define that behavior on the prototype.
+
+Dynamic Lookup: With prototypes, JavaScript can look up properties dynamically. If a property isn’t found on the object itself, it will look up the prototype chain, which gives a lot of flexibility.
+
+
+
+
+Where Can Prototypes Be Used?
+
+Prototypes are used everywhere in JavaScript, but some common scenarios include:
+
+Object-Oriented Programming (OOP): When you’re creating classes and instances (using ES6 classes or traditional constructor functions), you’re leveraging prototypes under the hood.
+
+Shared Methods: If you have a type of object (like a User or Product) and you want all of them to have the same methods, you define those methods on the prototype so each instance can use them without duplicating code.
+
+Frameworks and Libraries: Many JavaScript frameworks and libraries rely on prototypes to provide consistent methods. For example, in older versions of React, components are created using React.Component.prototype.
+
+
+
+
+
 Here's an overview of prototypes along with some built-in methods and properties related to prototypes:
 
 Prototype Property:
@@ -764,6 +792,10 @@ console.log(myString.indexOf("o"));  // Outputs: 4
 console.log(myString.substring(0, 5));  // Outputs: Hello
 ```
 
+
+
+
+
 Common Prototype Types
 
 In JavaScript, the most commonly used built-in prototype types are associated with basic objects and data structures. For example:
@@ -775,7 +807,11 @@ Array.prototype: All arrays inherit methods like push, pop, map, and filter from
 Function.prototype: All functions inherit from this prototype, which includes methods like call, apply, and bind.
 
 
+
+
+
 Common Prototype Methods
+
 
 Here are some key methods that are available on these prototypes and often used:
 

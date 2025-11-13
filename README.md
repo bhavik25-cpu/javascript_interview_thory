@@ -832,7 +832,7 @@ In an interview, you might say something like this:
 Date.prototype, RegExp.prototype, and so on for other built-in types like dates and regular expressions.
 These are just a few examples of the built-in methods and properties related to prototypes in JavaScript. Understanding prototypes is crucial for effective object-oriented programming in JavaScript.
 
-________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________________________________________________
 
 
 **object method in javascript**

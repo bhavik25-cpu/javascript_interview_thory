@@ -5756,6 +5756,10 @@ https://www.youtube.com/watch?v=kcElZorPa7c&t=33s
 
 **prototype chaining in javascript**
 
+Prototype chaining is the process by which JavaScript objects look up properties and methods not directly on themselves, but on their prototype, and if not found there, on the prototype’s prototype, and so on.
+
+So if you have an object and you try to access a property on it, JavaScript will first check if the object itself has that property. If it doesn't, it'll check the object's prototype, then the prototype's prototype, and so forth, until it either finds what it's looking for or reaches the end of the chain (which is usually null).
+
 
 Prototype chaining in JavaScript is a mechanism where objects inherit properties and methods from other objects through their prototype. Each object has a prototype, and if a property or method isn't found on the object itself, JavaScript looks up the chain to the prototype. This continues until it reaches Object.prototype, or null, if not found. This chain allows for efficient code reuse and inheritance.
 
@@ -5813,6 +5817,10 @@ dog.sound(); // Output: Some generic sound
 
 In this example, the dog object inherits the sound method from the Animal.prototype. If the sound method were not found in Animal.prototype, JavaScript would continue looking in the Object.prototype. This forms the prototype chain.
 
+
+In an interview, you might say:
+
+"JavaScript uses something called prototypes to enable inheritance. Each object has a prototype, which is another object it inherits properties from. When you access a property that isn't on the object itself, JavaScript looks up the prototype chain to find it. This chain continues until it either finds the property or runs out of prototypes to check."
 
 __________________________________________________________________________________________
 

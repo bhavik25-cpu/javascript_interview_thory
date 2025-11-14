@@ -9,7 +9,18 @@ https://github.com/Aakashdeveloper/JavaScript-Interview-Question?tab=readme-ov-f
 
 **WHAT IS JAVASCRIPT**
 
+
 JavaScript is a high-level, interpreted programming language primarily used for creating interactive and dynamic content on websites. It is a core technology for web development and is supported by all major web browsers, making it a crucial part of front-end development. JavaScript allows developers to add functionality, interactivity, and dynamic behavior to web pages.
+
+avaScript was originally created by a developer named Brendan Eich in 1995. He developed it while working at Netscape, and he actually created the first version in just about 10 days. Of course, it has evolved a lot since then.
+
+Now, what is JavaScript exactly? In simple terms, it's a programming language that's mainly used inside web browsers to make websites do more than just sit there and look pretty. It makes them respond to user actions, like clicking buttons or filling out forms, and it can update parts of the page without reloading everything.
+
+As for how it works, when you open a webpage, your browser runs the JavaScript code that the page includes. The browser has something called a JavaScript engine (like V8 in Chrome) that reads and executes the code, making the page interactive.
+
+So in an interview, you might say: "JavaScript was created by Brendan Eich in the mid-90s to make web pages interactive. It works by running inside your web browser and lets websites respond to what you do, making the whole experience a lot more dynamic." That should give them a clear and easy-to-understand answer!
+
+
 Here are some key characteristics and uses of JavaScript:
 
 1.	Client-Side Scripting: JavaScript is primarily used on the client side (in the web browser) to enhance the user experience by providing dynamic content, form validation, and interactivity.

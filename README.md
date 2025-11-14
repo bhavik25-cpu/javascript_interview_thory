@@ -12,7 +12,7 @@ https://github.com/Aakashdeveloper/JavaScript-Interview-Question?tab=readme-ov-f
 
 JavaScript is a high-level, interpreted programming language primarily used for creating interactive and dynamic content on websites. It is a core technology for web development and is supported by all major web browsers, making it a crucial part of front-end development. JavaScript allows developers to add functionality, interactivity, and dynamic behavior to web pages.
 
-avaScript was originally created by a developer named Brendan Eich in 1995. He developed it while working at Netscape, and he actually created the first version in just about 10 days. Of course, it has evolved a lot since then.
+JavaScript was originally created by a developer named Brendan Eich in 1995. He developed it while working at Netscape, and he actually created the first version in just about 10 days. Of course, it has evolved a lot since then.
 
 Now, what is JavaScript exactly? In simple terms, it's a programming language that's mainly used inside web browsers to make websites do more than just sit there and look pretty. It makes them respond to user actions, like clicking buttons or filling out forms, and it can update parts of the page without reloading everything.
 

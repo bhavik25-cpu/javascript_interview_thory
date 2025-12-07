@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/760aaa29-038c-4992-ac4b-e7d19a97924b)# javascript_interview_thory
+# javascript_interview_thory
 
 [https://github.com/BilgeGates/Js-Interview-Questions?tab=readme-ov-file#what-is-a-freeze-method
 ](https://github.com/BilgeGates/Js-Interview-Questions)

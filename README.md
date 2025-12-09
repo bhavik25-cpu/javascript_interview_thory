@@ -6218,6 +6218,13 @@ https://www.youtube.com/watch?v=vQcCNpuaJO8
 
 **curring in js**
 
+Currying in JavaScript is basically a technique where you transform a function with multiple arguments into a sequence of functions that each take a single argument. In other words, instead of having one function that takes all arguments at once, you have a series of functions that each take one argument and return a new function to handle the next argument.
+
+So if you had a function that normally takes three parameters, currying would let you call it by passing one parameter at a time. This can be really useful for creating more reusable and flexible functions.
+
+the reason we use currying is mainly to make our functions more flexible and reusable. It lets you create specialized functions from more general ones by presetting some of the arguments. For example, if you have a function that adds two numbers, currying lets you turn it into a function that adds a specific number to any other number you give it later.
+
+
 In JavaScript, "curring" refers to the process of converting a function that takes multiple arguments into a sequence of functions that each take a single argument. This technique allows you to partially apply arguments to a function, creating a new function with fewer parameters.
 ```javascript
 // Non-curried function
@@ -6242,6 +6249,9 @@ console.log(addTwo(3)); // Outputs: 5
 ```
 
 In this example, curriedAdd is a curried version of the add function. It takes one argument x and returns a function that takes another argument y and performs the addition. This allows for partial application, where you can pass one argument to curriedAdd to create a new function (addTwo) that adds 2 to any number passed to it.
+
+
+In an interview, you can explain it in simple terms like this: Currying is just a way to break down a function that takes multiple arguments into a series of functions that each take one argument at a time. It’s useful because it helps you reuse functions and create more modular and maintainable code.
 
 
 ______________________________________________________________________

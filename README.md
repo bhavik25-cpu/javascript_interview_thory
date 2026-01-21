@@ -97,6 +97,7 @@ If the interviewer asks about TypeScript, you can say:
 “TypeScript adds static types on top of JavaScript, so you get the benefits of a static language while still writing JavaScript.”
 _____________________________________________________________________________________________________________________
 
+https://www.youtube.com/watch?v=LxaXjuG_SmU
 
 **js is synchronous or asynchronous**
 

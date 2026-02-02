@@ -6268,6 +6268,44 @@ In an interview, you can explain it in simple terms like this: Currying is just 
 ______________________________________________________________________
 
 
+What is the observable in JavaScript, why it is used, show me example, and how can I explain in the interview.”
+
+In JavaScript, observables come from reactive programming, often associated with libraries like RxJS. An observable is essentially a source that can emit multiple values over time. You can think of it like a stream of data—events, HTTP responses, user inputs—that observers subscribe to. When subscribed, you get notified each time there’s a new value, and you can react accordingly.
+
+We use observables when we deal with asynchronous data streams—like handling multiple events over time or continuous data flows (e.g., live user input, WebSockets, or repeated API calls).
+
+For example, using RxJS:
+```javascript
+
+const { Observable } = require('rxjs');
+
+// Create an observable
+const observable = new Observable(subscriber => {
+  subscriber.next('First value');
+  setTimeout(() => subscriber.next('Second value'), 1000);
+  setTimeout(() => subscriber.complete(), 2000);
+});
+
+// Subscribe to the observable
+observable.subscribe({
+  next(value) { console.log(value); },
+  complete() { console.log('Done!'); }
+});
+
+```
+
+In an interview, explain that observables are like a pipeline of ongoing data. Unlike promises, which handle one eventual value, observables handle sequences of values over time. They give you powerful ways to react to continuous streams, making them useful in event-driven or asynchronous scenarios.
+
+“is used in Javascript or in Node.js.”
+
+Observables are not built into vanilla JavaScript or Node.js by default. They typically come from libraries, most commonly RxJS. While you can use them in both browser-based JavaScript and Node.js, they’re especially popular in frontend frameworks (like Angular) to handle complex asynchronous event streams, but can also be used in Node.js for tasks like handling streams of data or events.
+
+“It will predict observable use in Node.js or React.js also.”
+
+Absolutely! In Node.js, you might use observables for things like handling data streams (file streams, WebSockets, or event emitters). In React, observables can help manage complex async flows—user interactions, HTTP requests, or state management. With libraries like RxJS, you can easily integrate observables in both environments. In React, you’d likely use them alongside state or effect hooks. In Node, you'd subscribe to them to react to data as it arrives. So yes, observables are perfectly usable in both!
+
+
+
 
 
 

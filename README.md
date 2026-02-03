@@ -763,7 +763,6 @@ console.log(entries);
 ```
 
 4. Object.assign():
-5. 
 Copies the values of all enumerable own properties from one or more source objects to a target object.
 
 ```javascript

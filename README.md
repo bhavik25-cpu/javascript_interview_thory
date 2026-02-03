@@ -709,201 +709,6 @@ cat.sayHello();  // Outputs: Hello, my name is Fluffy
 JavaScript objects are versatile and form the basis of the language's flexible and dynamic nature. They play a central role in web development, where they are extensively used to represent and manipulate data.
 
 
-_________________________________________________________________________________________
-
-
-**JavaScript Prototypes with all inbuild method**
-
-In JavaScript, every object has a hidden property called [[Prototype]] (sometimes accessed via __proto__ or Object.getPrototypeOf()), and this prototype is basically a reference to another object. This "other object" is often where shared properties and methods are defined.
-
-In other words, a prototype is like a template or a blueprint that objects can inherit methods and properties from.
-
-In JavaScript, a prototype is an object that other objects can inherit properties and methods from. It's how JavaScript implements inheritance. When you try to access a property on an object, the JavaScript engine looks for that property on the object itself. If it doesn't find it, it then looks at the prototype of that object, and so on, forming a chain of prototypes. To explain it in an interview, you could say that prototypes are a mechanism for inheritance in JavaScript, allowing objects to share properties and methods, and that they form a prototype chain that's used for resolving property lookups. You might also mention that JavaScript uses prototypal inheritance as opposed to classical inheritance, which is more common in other programming languages.
-
-
-In JavaScript, prototypes are a key part of the language's prototype-based inheritance model. Objects in JavaScript can have a prototype, which is another object that the current object inherits properties and methods from. Every object in JavaScript has a prototype, and these prototypes form a chain, commonly known as the prototype chain.
-
-
-Why Do We Use Prototypes in JavaScript?
-
-Prototypes are essentially JavaScript’s way of handling inheritance and sharing functionality across objects. Here’s why they’re useful:
-
-Memory Efficiency: Instead of each object having its own copy of every method, methods are defined once on the prototype and shared. This makes your code more memory efficient.
-
-Inheritance: Prototypes allow objects to inherit properties and methods from other objects. If you have a bunch of objects that need to share the same behavior (like all instances of a class), you define that behavior on the prototype.
-
-Dynamic Lookup: With prototypes, JavaScript can look up properties dynamically. If a property isn’t found on the object itself, it will look up the prototype chain, which gives a lot of flexibility.
-
-
-
-
-Where Can Prototypes Be Used?
-
-Prototypes are used everywhere in JavaScript, but some common scenarios include:
-
-Object-Oriented Programming (OOP): When you’re creating classes and instances (using ES6 classes or traditional constructor functions), you’re leveraging prototypes under the hood.
-
-Shared Methods: If you have a type of object (like a User or Product) and you want all of them to have the same methods, you define those methods on the prototype so each instance can use them without duplicating code.
-
-Frameworks and Libraries: Many JavaScript frameworks and libraries rely on prototypes to provide consistent methods. For example, in older versions of React, components are created using React.Component.prototype.
-
-
-
-
-
-Here's an overview of prototypes along with some built-in methods and properties related to prototypes:
-
-Prototype Property:
-
-Object.prototype:
-
-All objects in JavaScript inherit properties and methods from 
-
-Object.prototype.
-
-Example:
-
-```javascript
-
-const myObject = {};
-
-console.log(myObject.toString());  // Outputs: [object Object]
-```
-
-
-Constructor and Prototype Chain:
-
-constructor Property:
-
-The constructor property points back to the constructor function that created the instance.
-
-```javascript
-
-function Person(name) {
-  this.name = name;
-}
-
-const person = new Person("John");
-console.log(person.constructor);  // Outputs: [Function: Person]
-```
-
-hasOwnProperty:
-
-Checks if a property belongs directly to the object and not to its prototype chain.
-
-Example:
-```javascript
-
-const myObject = { key: "value" };
-console.log(myObject.hasOwnProperty("key"));  // Outputs: true
-```
-
-Object Manipulation:
-
-Object.create:
-
-Creates a new object with the specified prototype object.
-
-
-
-
-Example:
-```javascript
-
-const animal = { sound: "Make a sound" };
-const cat = Object.create(animal);
-console.log(cat.sound);  // Outputs: Make a sound
-```
-
-Array Manipulation:
-Array.prototype:
-Arrays inherit methods from Array.prototype.
-Example:
-```javascript
-
-const myArray = [1, 2, 3];
-console.log(myArray.map(x => x * 2));  // Outputs: [2, 4, 6]
-```
-
-Array.isArray:
-
-Checks if a value is an array.
-
-Example:
-```javascript
-
-const myArray = [1, 2, 3];
-console.log(Array.isArray(myArray));  // Outputs: true
-```
-
-String Manipulation:
-
-String.prototype:
-
-Strings inherit methods from String.prototype.
-Example:
-```javascript
-
-const myString = "Hello, World!";
-console.log(myString.toUpperCase());  // Outputs: HELLO, WORLD!
-```
-
-charAt, indexOf, substring:
-
-String manipulation methods.
-
-Example:
-```javascript
-
-const myString = "Hello, World!";
-console.log(myString.charAt(0));     // Outputs: H
-console.log(myString.indexOf("o"));  // Outputs: 4
-console.log(myString.substring(0, 5));  // Outputs: Hello
-```
-
-
-
-
-
-Common Prototype Types
-
-In JavaScript, the most commonly used built-in prototype types are associated with basic objects and data structures. For example:
-
-Object.prototype: The base prototype for all plain objects. Any object you create with {} or new Object() ultimately inherits from Object.prototype.
-
-Array.prototype: All arrays inherit methods like push, pop, map, and filter from Array.prototype.
-
-Function.prototype: All functions inherit from this prototype, which includes methods like call, apply, and bind.
-
-
-
-
-
-Common Prototype Methods
-
-
-Here are some key methods that are available on these prototypes and often used:
-
-Object.prototype.hasOwnProperty(): Checks if an object has a property as its own (not inherited).
-
-Object.prototype.toString(): Returns a string representation of the object.
-
-Array.prototype.forEach(): Iterates over each element in an array.
-
-Array.prototype.map(): Creates a new array with the results of calling a provided function on every element in the array.
-
-Function.prototype.call() / apply() / bind(): Allows you to call a function with a given this value and arguments.
-
-In an interview, you might say something like this:
-
-"JavaScript’s prototypes are essentially objects that other objects inherit from. Each built-in type—like Object, Array, or Function—has a prototype that provides common methods. For instance, arrays inherit methods like map and forEach from Array.prototype, and all objects inherit methods like hasOwnProperty from Object.prototype. This prototype chain is what makes inheritance work in JavaScript."
-
-Date.prototype, RegExp.prototype, and so on for other built-in types like dates and regular expressions.
-These are just a few examples of the built-in methods and properties related to prototypes in JavaScript. Understanding prototypes is crucial for effective object-oriented programming in JavaScript.
-
-___________________________________________________________________________________________________________________________________________________________
-
-
 **object method in javascript**
 
 JavaScript objects come with several built-in methods that can be used to manipulate and perform operations on objects. Here are some commonly used object methods:
@@ -1141,7 +946,202 @@ console.log(symbols);  // Outputs: [Symbol(one), Symbol(two)]
 ```
 
 
-___________________________________________________________________________
+
+_________________________________________________________________________________________
+
+
+**JavaScript Prototypes with all inbuild method**
+
+In JavaScript, every object has a hidden property called [[Prototype]] (sometimes accessed via __proto__ or Object.getPrototypeOf()), and this prototype is basically a reference to another object. This "other object" is often where shared properties and methods are defined.
+
+In other words, a prototype is like a template or a blueprint that objects can inherit methods and properties from.
+
+In JavaScript, a prototype is an object that other objects can inherit properties and methods from. It's how JavaScript implements inheritance. When you try to access a property on an object, the JavaScript engine looks for that property on the object itself. If it doesn't find it, it then looks at the prototype of that object, and so on, forming a chain of prototypes. To explain it in an interview, you could say that prototypes are a mechanism for inheritance in JavaScript, allowing objects to share properties and methods, and that they form a prototype chain that's used for resolving property lookups. You might also mention that JavaScript uses prototypal inheritance as opposed to classical inheritance, which is more common in other programming languages.
+
+
+In JavaScript, prototypes are a key part of the language's prototype-based inheritance model. Objects in JavaScript can have a prototype, which is another object that the current object inherits properties and methods from. Every object in JavaScript has a prototype, and these prototypes form a chain, commonly known as the prototype chain.
+
+
+Why Do We Use Prototypes in JavaScript?
+
+Prototypes are essentially JavaScript’s way of handling inheritance and sharing functionality across objects. Here’s why they’re useful:
+
+Memory Efficiency: Instead of each object having its own copy of every method, methods are defined once on the prototype and shared. This makes your code more memory efficient.
+
+Inheritance: Prototypes allow objects to inherit properties and methods from other objects. If you have a bunch of objects that need to share the same behavior (like all instances of a class), you define that behavior on the prototype.
+
+Dynamic Lookup: With prototypes, JavaScript can look up properties dynamically. If a property isn’t found on the object itself, it will look up the prototype chain, which gives a lot of flexibility.
+
+
+
+
+Where Can Prototypes Be Used?
+
+Prototypes are used everywhere in JavaScript, but some common scenarios include:
+
+Object-Oriented Programming (OOP): When you’re creating classes and instances (using ES6 classes or traditional constructor functions), you’re leveraging prototypes under the hood.
+
+Shared Methods: If you have a type of object (like a User or Product) and you want all of them to have the same methods, you define those methods on the prototype so each instance can use them without duplicating code.
+
+Frameworks and Libraries: Many JavaScript frameworks and libraries rely on prototypes to provide consistent methods. For example, in older versions of React, components are created using React.Component.prototype.
+
+
+
+
+
+Here's an overview of prototypes along with some built-in methods and properties related to prototypes:
+
+Prototype Property:
+
+Object.prototype:
+
+All objects in JavaScript inherit properties and methods from 
+
+Object.prototype.
+
+Example:
+
+```javascript
+
+const myObject = {};
+
+console.log(myObject.toString());  // Outputs: [object Object]
+```
+
+
+Constructor and Prototype Chain:
+
+constructor Property:
+
+The constructor property points back to the constructor function that created the instance.
+
+```javascript
+
+function Person(name) {
+  this.name = name;
+}
+
+const person = new Person("John");
+console.log(person.constructor);  // Outputs: [Function: Person]
+```
+
+hasOwnProperty:
+
+Checks if a property belongs directly to the object and not to its prototype chain.
+
+Example:
+```javascript
+
+const myObject = { key: "value" };
+console.log(myObject.hasOwnProperty("key"));  // Outputs: true
+```
+
+Object Manipulation:
+
+Object.create:
+
+Creates a new object with the specified prototype object.
+
+
+
+
+Example:
+```javascript
+
+const animal = { sound: "Make a sound" };
+const cat = Object.create(animal);
+console.log(cat.sound);  // Outputs: Make a sound
+```
+
+Array Manipulation:
+Array.prototype:
+Arrays inherit methods from Array.prototype.
+Example:
+```javascript
+
+const myArray = [1, 2, 3];
+console.log(myArray.map(x => x * 2));  // Outputs: [2, 4, 6]
+```
+
+Array.isArray:
+
+Checks if a value is an array.
+
+Example:
+```javascript
+
+const myArray = [1, 2, 3];
+console.log(Array.isArray(myArray));  // Outputs: true
+```
+
+String Manipulation:
+
+String.prototype:
+
+Strings inherit methods from String.prototype.
+Example:
+```javascript
+
+const myString = "Hello, World!";
+console.log(myString.toUpperCase());  // Outputs: HELLO, WORLD!
+```
+
+charAt, indexOf, substring:
+
+String manipulation methods.
+
+Example:
+```javascript
+
+const myString = "Hello, World!";
+console.log(myString.charAt(0));     // Outputs: H
+console.log(myString.indexOf("o"));  // Outputs: 4
+console.log(myString.substring(0, 5));  // Outputs: Hello
+```
+
+
+
+
+
+Common Prototype Types
+
+In JavaScript, the most commonly used built-in prototype types are associated with basic objects and data structures. For example:
+
+Object.prototype: The base prototype for all plain objects. Any object you create with {} or new Object() ultimately inherits from Object.prototype.
+
+Array.prototype: All arrays inherit methods like push, pop, map, and filter from Array.prototype.
+
+Function.prototype: All functions inherit from this prototype, which includes methods like call, apply, and bind.
+
+
+
+
+
+Common Prototype Methods
+
+
+Here are some key methods that are available on these prototypes and often used:
+
+Object.prototype.hasOwnProperty(): Checks if an object has a property as its own (not inherited).
+
+Object.prototype.toString(): Returns a string representation of the object.
+
+Array.prototype.forEach(): Iterates over each element in an array.
+
+Array.prototype.map(): Creates a new array with the results of calling a provided function on every element in the array.
+
+Function.prototype.call() / apply() / bind(): Allows you to call a function with a given this value and arguments.
+
+In an interview, you might say something like this:
+
+"JavaScript’s prototypes are essentially objects that other objects inherit from. Each built-in type—like Object, Array, or Function—has a prototype that provides common methods. For instance, arrays inherit methods like map and forEach from Array.prototype, and all objects inherit methods like hasOwnProperty from Object.prototype. This prototype chain is what makes inheritance work in JavaScript."
+
+Date.prototype, RegExp.prototype, and so on for other built-in types like dates and regular expressions.
+These are just a few examples of the built-in methods and properties related to prototypes in JavaScript. Understanding prototypes is crucial for effective object-oriented programming in JavaScript.
+
+___________________________________________________________________________________________________________________________________________________________
+
+
 
 **JavaScript Strings**
 

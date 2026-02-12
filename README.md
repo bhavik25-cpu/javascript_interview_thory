@@ -275,7 +275,6 @@ In this example, the order of log statements will be "Start," "End," and "Timeou
 Asynchronous JavaScript is essential for building responsive and efficient web applications, especially in scenarios where operations may take time to complete. Callbacks, Promises, and Async/Await are tools that developers use to manage asynchronous code effectively.
 
 
-______________________________________________________________________________________________________________________________________________
 
 
 **synchronous in js**

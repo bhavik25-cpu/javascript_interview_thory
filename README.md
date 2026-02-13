@@ -988,7 +988,7 @@ console.log(myObject.city);  // Outputs: undefined
 ```
 
 6. Object.seal():
-7. 
+
 Seals an object, preventing new properties from being added and marking all existing properties as non-configurable.
 ```javascript
 
@@ -1137,6 +1137,29 @@ const myObject = {
 };
 const symbols = Object.getOwnPropertySymbols(myObject);
 console.log(symbols);  // Outputs: [Symbol(one), Symbol(two)]
+
+16 Object.setPrototypeOf()
+  Sets the object's prototype (its internal [[Prototype]] property).
+
+17 Object.isSealed()
+   Determines if an object is sealed.
+
+18 Object.isFrozen()
+   Determines if an object was frozen.
+
+19 Object.isExtensible()
+   Determines if extending of an object is allowed.
+
+
+20 Object.hasOwn()
+   Returns true if the specified object has the indicated property as its own property, or false if the property is inherited or does not exist.
+
+21 Object.groupBy()
+Groups the elements of a given iterable according to the string values returned by a provided callback function. The returned object has separate properties for each group,      containing arrays with the elements in the group.
+
+22 Object.fromEntries()
+  Returns a new object from an iterable of [key, value] pairs. (This is the reverse of Object.entries).
+
 
 ```
 

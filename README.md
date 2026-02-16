@@ -6592,7 +6592,42 @@ ________________________________________________________________________________
 
 https://medium.com/@rajeswaridepala/garbage-collection-in-javascript-2a7862efa577
 
-Garbage Collection
+**Garbage Collection**
+
+
+Garbage Collection (GC) in JavaScript is an automatic memory management process that reclaims memory occupied by objects that are no longer in use by the program. This means developers don't have to manually allocate or deallocate memory, unlike in lower-level languages such as C or C++. 
+
+How It Works: The "Reachability" Concept
+
+The core principle of JavaScript garbage collection is reachability. A value is considered "reachable" if it is accessible or usable by the running program, either directly or indirectly. 
+
+Roots: There is a base set of inherently reachable values called "roots" that cannot be deleted. These include global variables, local variables and parameters of the currently executing function, and other functions on the current call stack
+.
+Reachability Chain: Any other object is considered reachable if it can be accessed from a root through a chain of references. 
+
+Objects that are not reachable from the roots are considered "garbage" and are eligible for collection. 
+
+The Mark-and-Sweep Algorithm
+
+Modern JavaScript engines, such as the V8 engine used in Chrome and Node.js, primarily use an optimized mark-and-sweep algorithm to perform garbage collection. This process typically occurs in the background: 
+
+Mark Phase: The garbage collector starts from the roots and traverses all reachable objects, marking them as "alive".
+
+Sweep Phase: The collector then scans the entire memory heap and removes all objects that were not marked during the mark phase, freeing up their memory space.
+
+Compaction (Optimization): Some engines also compact the remaining live objects to reduce memory fragmentation and make future allocations more efficient. 
+
+This algorithm effectively handles complex scenarios like circular references, where two objects reference each other but are no longer reachable from the main application flow. 
+
+Why Developers Should Care
+
+While automatic, understanding garbage collection is important for:
+
+Preventing Memory Leaks: Certain coding patterns (like forgotten event listeners, accidental global variables, or long-lived closures) can unintentionally keep objects reachable, preventing the garbage collector from freeing memory.
+
+Performance Optimization: Frequent or intensive garbage collection cycles can introduce brief "stop-the-world" pauses in program execution, affecting performance. Writing memory-efficient code can help minimize these pauses.
+
+Debugging: Tools within browser DevTools, such as the Memory tab, allow developers to monitor memory usage and identify potential leaks. 
 
 1️⃣ What is Garbage Collection in JavaScript?
 

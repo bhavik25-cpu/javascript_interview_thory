@@ -6590,5 +6590,129 @@ Scope	                                        Function or Global scope.	        
 
 __________________________________________________________________________________________________
 
+https://medium.com/@rajeswaridepala/garbage-collection-in-javascript-2a7862efa577
+
+Garbage Collection
+
+1️⃣ What is Garbage Collection in JavaScript?
+
+Garbage collection is the automatic process by which JavaScript frees memory that is no longer being used by the program.
+
+👉 In simple words:
+
+JavaScript automatically removes unused objects from memory so your application doesn’t leak memory.
+
+You do not manually free memory in JavaScript like in C or C++.
+
+Example
+
+```javascript
+
+let user = {
+  name: "John"
+};
+
+user = null; // object is no longer reachable
+```
+
+
+✔ The object { name: "John" } becomes garbage and will be cleaned up.
+
+2️⃣ How does JavaScript handle Garbage Collection?
+
+JavaScript uses an automatic garbage collector inside the JavaScript engine (like V8, SpiderMonkey, etc.).
+
+Key idea: Reachability
+
+JavaScript checks whether a value is reachable or not.
+
+Reachable means:
+
+Can be accessed directly or indirectly
+
+Still needed by the program
+
+Root objects (always reachable):
+
+Global variables
+
+Current function variables
+
+Parameters
+
+Closures
+
+If an object is not reachable from any root, it is garbage-collected.
+
+Example: Reachable vs Unreachable
+
+```javascript
+
+function test() {
+  let obj = { value: 10 };
+}
+test();
+```
+
+
+✔ After test() finishes, obj is unreachable
+✔ Memory is cleaned automatically
+
+3️⃣ Which Algorithm is Used for Garbage Collection in JavaScript?
+✅ Mark-and-Sweep Algorithm (MAIN)
+
+This is the core algorithm used by JavaScript engines.
+
+🔹 How Mark-and-Sweep Works:
+
+Mark phase
+
+Start from root objects
+
+Mark all reachable objects as “in use”
+
+Sweep phase
+
+Remove all unmarked (unreachable) objects
+
+Free their memory
+
+Simple Visualization
+Roots → reachable objects → keep
+Unreachable objects → delete
+
+Example
+```javascript
+
+let a = { name: "A" };
+let b = { name: "B" };
+
+a.ref = b;
+b = null; // still reachable via a.ref
+
+a = null; // now both objects are unreachable
+
+```
+
+✔ Both objects are garbage collected
+
+⚠️ Common Memory Leak Scenario
+```javascript
+
+let users = [];
+
+function addUser(name) {
+  users.push({ name });
+}
+```
+
+
+❌ Objects stay reachable through users array
+❌ Garbage collector cannot clean them
+
+🎯 Interview Answer (Short & Strong)
+
+“Garbage collection in JavaScript is an automatic memory management process where unused objects are removed from memory. JavaScript determines this using reachability. The primary algorithm used is Mark-and-Sweep, where reachable objects are marked and unreachable ones are cleaned up.”
+
 
 

@@ -6284,7 +6284,7 @@ In an interview, you can explain it in simple terms like this: Currying is just 
 ______________________________________________________________________
 
 
-What is the observable in JavaScript, why it is used, show me example, and how can I explain in the interview.”
+**What is the observable in JavaScript, why it is used, show me example, and how can I explain in the interview.”**
 
 In JavaScript, observables come from reactive programming, often associated with libraries like RxJS. An observable is essentially a source that can emit multiple values over time. You can think of it like a stream of data—events, HTTP responses, user inputs—that observers subscribe to. When subscribed, you get notified each time there’s a new value, and you can react accordingly.
 
@@ -6324,8 +6324,9 @@ Absolutely! In Node.js, you might use observables for things like handling data 
 
 
 ___________________________________________________________________________________________
+https://medium.com/@mila.mirovic98/javascript-fundamentals-type-conversion-coercion-8bbba10c9925
 
-“What is Type Coercion in JavaScript?”
+**What is Type Coercion in JavaScript?**
 
 Type coercion in JavaScript is basically the automatic or implicit conversion of values from one data type to another. For example, if you add a number and a string, JavaScript will convert the number into a string so that both operands are strings. This can happen in comparisons, arithmetic operations, and more. It's one of the reasons why JavaScript can sometimes behave in unexpected ways.
 
@@ -6358,16 +6359,162 @@ console.log(5 == "5"); // This will output true
 
 Here, the string "5" is converted into a number before the comparison, so both sides are numbers, and they match.
 
+_____________________________________________________________________________________________________________________
+
+**What is implicit and explicit in JavaScript?**
+
+
+"implicit" usually refers to something that happens automatically or behind the scenes. For example, implicit type coercion happens when JavaScript converts values to different types on its own (like converting a number to a string during a comparison).
+
+"Explicit," on the other hand, means you intentionally write code to make something happen. For example, explicitly converting a string to a number using Number("42") is explicit type conversion.
+
+In essence, implicit actions are automatic and sometimes hidden, while explicit actions are deliberate and clearly shown in your code.
+
+Let’s take type conversion as an example.
+
+Implicit:
+When you add a number and a string, JavaScript implicitly converts the number into a string.
+
+```javascript
+
+let result = 5 + "10";  // result is "510" (number 5 was implicitly turned into a string)
+```
+
+
+Explicit:
+You manually convert a string to a number before adding.
+
+```javascript
+
+let result = 5 + Number("10");  // result is 15 (you explicitly converted "10" into a number)
+```
+
+
+So, implicit conversion happens automatically, while explicit conversion is when you take control.
+
+1. Implicit vs. Explicit Type Conversion (Coercion)
+
+Type conversion is the process of changing a value from one data type to another. 
+Implicit Type Conversion (or Type Coercion): This is an automatic conversion performed by the JavaScript engine when an operation involves operands of different data types. The language implicitly decides how to handle the conversion.
+Example:
+```javascript
+let numberVar = 10;
+let stringVar = "20";
+let result = numberVar + stringVar;
+```
+
+// JavaScript implicitly converts numberVar (10) to a string "10"
+// and performs string concatenation.
+// result is the string "1020".
+
+Explicit Type Conversion (or Type Casting): This is a manual conversion done by the programmer using built-in functions or operators to control the conversion process.
+
+Example:
+```javascript
+
+let numberVar = 10;
+let stringVar = "20";
+let result = numberVar + Number(stringVar);
+// The programmer explicitly converts stringVar to a number using Number().
+// result is the number 30.
+ ```
+
+2. Implicit vs. Explicit Function Returns
+
+These terms are used in the context of ES6 arrow functions to describe how values are returned from a function. 
+Explicit Return: The function uses the return keyword to clearly indicate the value being sent back.
+Example:
+```javascript
+const add = (a, b) => {
+  return a + b; // Explicitly using the 'return' keyword
+};
+```
+
+Implicit Return: In a concise arrow function, the return keyword is omitted, and the expression's result is automatically returned.
+Example:
+```javascript
+
+const add = (a, b) => a + b; // Implicit return: the result of a + b is returned
+ 
+```
+
+In JavaScript, implicit means something happens automatically, without direct code from you. For instance, implicit type coercion converts values (like a number to a string) automatically when you use operators. Explicit means you, as the developer, deliberately write code to make something happen. For example, using Number() to convert a string to a number is explicit.
+
+In an interview, you can say: “Implicit actions happen behind the scenes, like automatic type conversion. Explicit actions require me to write code to achieve a conversion or behavior directly, like calling a specific function.”
+
+__________________________________________________________________________________________________________________
+https://dev.to/jyotich15/implicit-and-explicit-binding-in-js-59g7
+
+**Implicit and Explicit Binding in JS**
+In JavaScript, both implicit and explicit binding relate to how the this keyword gets its value inside a function.
+
+Implicit binding happens when you call a function via an object. The this inside that function is implicitly bound to that object. For example:
+
+```javascript
+
+const obj = {
+  name: "Alice",
+  greet: function() {
+    console.log("Hello, " + this.name);
+  }
+};
+obj.greet(); // "this" is implicitly bound to obj
+```
+
+
+Explicit binding, on the other hand, is when you manually control what this refers to using functions like call, apply, or bind. For example:
+```javascript
+
+function greet() {
+  console.log("Hello, " + this.name);
+}
+const user = { name: "Bob" };
+greet.call(user); // "this" is explicitly bound to user
+```
+
+
+So, implicit binding happens automatically when a function is called as a method on an object, while explicit binding gives you direct control over what this should be.
+
+ Implicit vs. Explicit this Binding
+This concept relates to how the this keyword's value is determined within a function. 
+Implicit Binding: The value of this is automatically bound to the object that "owns" the method (the object that calls the function using dot notation).
+Example:
+```javascript
+const person = {
+  name: 'John',
+  greet() {
+    console.log(`Hello, my name is ${this.name}`); // 'this' implicitly bound to 'person'
+  }
+};
+person.greet(); // Outputs "Hello, my name is John"
+```
+
+Explicit Binding: The programmer manually sets the value of this using methods like call(), apply(), or bind().
+Example:
+```javascript
+const person = { name: 'John' };
+function greet(greeting) {
+  console.log(`${greeting}, my name is ${this.name}`);
+}
+greet.call(person, 'Hello'); // Explicitly binds 'this' to 'person'
+// Outputs "Hello, my name is John"
+```
+
+In an interview, keep it concise and clear. You can say something like this:
+
+"Implicit binding is when this is automatically set based on how a function is called—like calling a method on an object, where this refers to that object. Explicit binding is when we directly control what this refers to by using methods like call, apply, or bind to specify the context."
+
+
 
 _____________________________________________________________________________________________________________________
 
-“What is a Polyfill in JavaScript ?“
+**“What is a Polyfill in JavaScript ?“**
 
 https://medium.com/@Bharat2044/what-is-a-polyfill-in-javascript-3dcbcb57b526
 
 _________________________________________________________________________________________________
 
-What is the Temporal Dead Zone (TDZ)?
+**What is the Temporal Dead Zone (TDZ)?**
 
 The temporal dead zone is that brief period between the start of a block of code and the point where a let or const variable is actually declared. During that period, the variable exists but can’t yet be accessed, and if you try, you’ll get a ReferenceError. This helps prevent accidental use of variables before they are initialized, making your code more predictable. In other words, you can’t use a let or const variable before it’s actually declared, even though the declaration is “hoisted” in the background.
 
@@ -6435,4 +6582,11 @@ Hoisting	                                    Hoisted and initialized as undefine
 
 Access Before Declaring	                        Returns undefined.	                          Throws ReferenceError (due to TDZ).
 
-Scope	                                        Function or Global scope.	                       Block scope.
+Scope	                                        Function or Global scope.	                   Block scope.
+
+
+
+__________________________________________________________________________________________________
+
+
+

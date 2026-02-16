@@ -6446,6 +6446,8 @@ ________________________________________________________________________________
 https://dev.to/jyotich15/implicit-and-explicit-binding-in-js-59g7
 
 **Implicit and Explicit Binding in JS**
+
+
 In JavaScript, both implicit and explicit binding relate to how the this keyword gets its value inside a function.
 
 Implicit binding happens when you call a function via an object. The this inside that function is implicitly bound to that object. For example:

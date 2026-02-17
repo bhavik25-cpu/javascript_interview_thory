@@ -4398,6 +4398,7 @@ promise
 
 
 🔹 Promise Methods (MOST IMPORTANT)
+
 1️⃣ .then()
 
 Handles success
@@ -4409,6 +4410,7 @@ promise.then(data => {
 });
 
 2️⃣ .catch()
+
 ```
 
 
@@ -4441,6 +4443,7 @@ Promise.resolve("Success").then(console.log);
 
 
 2️⃣ Promise.reject()
+
 ```javascript
 
 Promise.reject("Error").catch(console.log);

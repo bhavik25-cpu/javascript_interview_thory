@@ -6992,4 +6992,199 @@ function addUser(name) {
 “Garbage collection in JavaScript is an automatic memory management process where unused objects are removed from memory. JavaScript determines this using reachability. The primary algorithm used is Mark-and-Sweep, where reachable objects are marked and unreachable ones are cleaned up.”
 
 
+______________________________________________________________________________________________________________________
+
+
+**What is the difference between in js event bubbling and event capturing?**
+
+🔹 What is Event Propagation?
+
+Event propagation is the way an event travels through the DOM when it occurs on an element.
+
+There are 3 phases:
+
+Capturing phase
+
+Target phase
+
+Bubbling phase
+
+🔹 Event Capturing (Trickling Phase)
+
+📌 Definition
+
+Event starts from the outermost element and travels down to the target element.
+
+➡️ document → html → body → parent → child
+
+📌 How to use capturing?
+
+Pass true as the third parameter in addEventListener.
+```javascript
+
+parent.addEventListener("click", () => {
+  console.log("Parent - Capturing");
+}, true);
+```
+
+🔹 Event Bubbling (Default Behavior)
+
+📌 Definition
+
+Event starts from the target element and bubbles up to the outer elements.
+
+⬅️ child → parent → body → html → document
+
+📌 Default behavior
+
+No third argument or false.
+```javascript
+
+parent.addEventListener("click", () => {
+  console.log("Parent - Bubbling");
+});
+```
+
+
+🔹 Example (Very Important)
+
+HTML
+```javascript
+
+<div id="parent">
+  <button id="child">Click Me</button>
+</div>
+```
+
+JavaScript
+
+```javascript
+
+document.getElementById("parent").addEventListener(
+  "click",
+  () => console.log("Parent"),
+  false
+);
+
+document.getElementById("child").addEventListener(
+  "click",
+  () => console.log("Child"),
+  false
+);
+```
+
+👉 Output when clicking button:|
+```javascript
+
+Child
+Parent
+
+```
+
+✔️ Because bubbling is default
+
+🔹 Event Capturing Example
+
+```javascript
+
+document.getElementById("parent").addEventListener(
+  "click",
+  () => console.log("Parent"),
+  true
+);
+
+document.getElementById("child").addEventListener(
+  "click",
+  () => console.log("Child"),
+  true
+);
+```
+
+👉 Output:
+```javascript
+
+Parent
+Child
+```
+
+
+🔹 stopPropagation()
+
+Stops event from moving further.
+
+child.addEventListener("click", (e) => {
+  e.stopPropagation();
+  console.log("Child only");
+});
+
+🔹 event.target vs event.currentTarget (INTERVIEW GOLD)
+
+Property	                  Meaning
+event.target	        Actual clicked element
+event.currentTarget	    Element handling the event
+
+🔹 Event Bubbling vs Capturing (TABLE)
+
+Feature     	 Event Bubbling	             Event Capturing
+
+Direction	     Child → Parent	             Parent → Child
+
+Default      	  ✅ Yes	                         ❌ No
+ 
+Third parameter	  false / omitted	                  true
+
+Use case	      Event delegation	              Rare but useful
+
+Performance	       Efficient	                   Less used
+
+
+🔹 Real Use Case – Event Delegation (Uses Bubbling)
+```javascript
+
+document.getElementById("parent").addEventListener("click", (e) => {
+  if (e.target.tagName === "BUTTON") {
+    console.log("Button clicked");
+  }
+});
+
+```
+
+✔️ One event listener for multiple children
+
+✔️ Better performance
+
+🔹 Interview Answer (BEST)
+
+“Event bubbling and capturing are phases of event propagation in JavaScript.
+
+In capturing, the event travels from the root element down to the target element.
+
+In bubbling, the event travels from the target element up to the root.
+
+Bubbling is the default behavior and is commonly used for event delegation.
+
+We can control propagation using stopPropagation().”
+
+🔹 One-Line Memory Trick 🧠
+
+Bubbling → Bottom to Top
+
+Capturing → Top to Bottom
+
+🔹 Common Interview Questions
+
+❓ Which is default?
+
+✔️ Event bubbling
+
+❓ Can we use both together?
+
+✔️ Yes, capturing → target → bubbling
+
+❓ Why event delegation works?
+
+✔️ Because of bubbling
+
+
+
 

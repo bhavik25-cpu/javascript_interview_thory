@@ -7185,6 +7185,138 @@ Capturing → Top to Bottom
 
 ✔️ Because of bubbling
 
+_____________________________________________________________________________________________________
 
+**what is garbage collector**
+
+Garbage collection is basically the process where the JavaScript engine automatically reclaims memory that’s no longer being used. So, when you create objects or variables, the garbage collector tracks them. Once there are no more references to a piece of memory, it cleans it up, freeing the space. This helps prevent memory leaks and keeps your app efficient.
+
+In JavaScript, the garbage collector (GC) is a background process within the engine (like V8 in Chrome or Node.js) that automatically manages memory by reclaiming space occupied by objects that are no longer needed. 
+
+Core Principles
+
+Automatic Memory Management: Unlike languages like C, where you must manually allocate and free memory, JavaScript does this for you.
+
+Reachability: This is the fundamental concept. An object is "reachable" if it can be accessed from a set of roots (e.g., the global object, current local variables, or function parameters).
+
+Garbage: Any object that is "unreachable" is considered garbage and is eligible for collection.
+
+
+
+“How does the JavaScript handle garbage collection?”
+
+JavaScript typically uses a mark-and-sweep algorithm for garbage collection. Basically, the engine goes through memory and "marks" all the objects that are still reachable, starting from things like global variables, active function scopes, and so on. Once it’s done, it sweeps through and clears any objects that weren't marked. This happens automatically in the background, so you don’t have to manually free memory—it's all handled by the engine.
+
+mark-and-sweep algorithm
+
+So, the mark-and-sweep algorithm basically works in two phases. 
+
+First, the "mark" phase: the garbage collector starts from roots—things like global variables, active function scopes, or closures. It visits all reachable objects and marks them as "in use." 
+The collector starts at the roots and "marks" every object it can reach
+
+
+"sweep" phase, it goes through all the memory and deallocates any objects that weren't marked. This ensures that only the ones still in use stick around, and everything else is freed up. So, it's a neat, systematic way to clean up memory! 
+It then scans the entire memory and "sweeps" away any objects that were not marked, freeing their memory.
+
+
+
+“Why we use garbage collector?”
+
+Exactly! So, we use garbage collection primarily to make memory management automatic and safer. Without it, developers would have to manually free memory, which is error-prone—leading to memory leaks or even crashes. It’s used in web development (like in browsers), server-side JavaScript (like Node.js), and basically any environment where JavaScript runs. It just takes a big burden off the developer, letting them focus on the actual logic.
+
+
+How to Help the Garbage Collector
+
+While automatic, you can still cause memory leaks if you keep references to objects you no longer need: 
+
+Nullify References: Set variables to null when you're done with them.
+
+Remove Listeners: Manually remove DOM event listeners if elements are deleted.
+
+Use Weak Collections: Use WeakMap or WeakSet if you want keys to be collectable even if they exist in the collection. 
+
+
+EXAMPLE
+
+
+ So, let's say you create some objects or arrays but don't keep any references to them—they're just sitting unused. For example, if you do something like:
+```javascript
+
+function createSomething() {
+    let obj = { name: 'example' };
+    // After this function ends, we don't keep any reference to `obj`
+}
+
+```
+
+In modern JavaScript engines, circular references are usually handled well, but closures can still lead to unexpected memory retention if not managed carefully.
+
+1. The Closure Trap
+
+A closure keeps a reference to its outer lexical environment. If a function is held in memory, everything it "sees" in its parent scope stays in memory too, even if never used.
+```javascript
+function createLeakyFunction() {
+  const largeData = new Array(1000000).fill("huge data"); // Consumes lots of memory
+
+  return function() {
+    // This inner function creates a closure.
+    // Even if it doesn't use 'largeData', some engines may retain it 
+    // as long as this returned function exists.
+    console.log("I'm still here!");
+  };
+}
+
+const leakyFunc = createLeakyFunction(); 
+
+```
+
+// 'largeData' cannot be garbage collected because 'leakyFunc' is still reachable.
+Use code with caution.
+
+2. Circular References (The Old Way)
+
+
+```javascript
+
+function createCycle() {
+  let objectA = {};
+  let objectB = {};
+
+  objectA.next = objectB; // A points to B
+  objectB.prev = objectA; // B points to A
+
+  return "Done";
+}
+
+createCycle();
+```
+
+// Once the function ends, objectA and objectB are no longer reachable 
+
+// from the global root, so the Garbage Collector deletes both, 
+
+// even though they point to each other.
+
+Use code with caution.
+
+How to Prevent Leaks
+
+Clear Intervals: Always call clearInterval() when a timer is no longer needed.
+
+Remove Listeners: If you add an event listener to window, remove it when the related component is destroyed.
+
+WeakMap/WeakSet: Use these for metadata; they do not prevent the garbage collector from reclaiming the objects used as keys.
+
+
+Once that function finishes, the obj is no longer accessible. The garbage collector will eventually notice that there are no references to it and will clean it up. Another example is when you have event listeners or DOM nodes you remove references from—if you stop pointing to them, the garbage collector can free that memory as well. So, it’s all about not keeping unnecessary references!
+
+
+
+
+
+
+explain garbage collection in interview?
+
+Ah, that's a great point! In an interview, you want to keep it clear and concise. So you could say something like: "Garbage collection in JavaScript is an automatic process where the engine reclaims memory by identifying objects that are no longer reachable. Typically, it uses a mark-and-sweep algorithm—first marking what’s still in use, then sweeping away anything unused. This helps prevent memory leaks and keeps applications efficient, without the developer having to manually manage memory." That usually hits the key points!
 
 
